@@ -1,0 +1,10 @@
+body{
+	font-family:'Inter',sans-serif;
+	min-height:200vh;
+	background:#f8fafc;
+}
+
+.hero{
+	padding-top:120px;
+	text-align:center;
+}

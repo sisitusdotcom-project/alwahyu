@@ -1,0 +1,343 @@
+.header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:9999;
+    background:rgba(255,255,255,.92);
+    backdrop-filter:blur(18px);
+    border-bottom:1px solid rgba(0,0,0,.05);
+}
+
+.navbar{
+    max-width:1400px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:14px 18px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    text-decoration:none;
+}
+
+.logo-badge{
+    width:44px;
+    height:44px;
+    border-radius:14px;
+    background:linear-gradient(135deg, var(--alwahyu-primary), var(--alwahyu-primary-2));
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:800;
+    font-size:14px;
+}
+
+.logo-text{
+    display:flex;
+    flex-direction:column;
+}
+
+.logo-text strong{
+    color:var(--alwahyu-dark);
+    font-size:15px;
+}
+
+.logo-text span{
+    color:#64748b;
+    font-size:12px;
+}
+
+.nav-menu{
+    list-style:none;
+    display:flex;
+    align-items:center;
+    gap:32px;
+}
+
+.nav-menu > li{
+    position:relative;
+}
+
+.nav-menu > li > a{
+    text-decoration:none;
+    color:var(--alwahyu-dark);
+    font-weight:600;
+    font-size:15px;
+}
+
+.dropdown-menu{
+    position:absolute;
+    top:160%;
+    left:0;
+    min-width:240px;
+    background:white;
+    border-radius:18px;
+    box-shadow:0 20px 50px rgba(0,0,0,.08);
+    opacity:0;
+    visibility:hidden;
+    transform:translateY(10px);
+    transition:.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dropdown:hover .dropdown-menu{
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0);
+}
+
+.dropdown-menu a{
+    display:block;
+    padding:14px 18px;
+    text-decoration:none;
+    color:var(--alwahyu-text);
+    transition:background .2s;
+}
+
+.dropdown-menu a:hover{
+    background:#f8fafc;
+}
+
+.btn-daftar{
+    padding:12px 18px;
+    border-radius:999px;
+    text-decoration:none;
+    color:white;
+    font-weight:600;
+    background:linear-gradient(135deg, var(--alwahyu-primary), var(--alwahyu-primary-2));
+    transition:transform .2s, box-shadow .2s;
+}
+
+.btn-daftar:hover{
+    transform:translateY(-1px);
+    box-shadow:0 8px 20px rgba(15, 118, 110, .25);
+}
+
+.menu-btn{
+    display:none;
+    width:48px;
+    height:48px;
+    border:none;
+    cursor:pointer;
+    background:white;
+    border-radius:12px;
+    box-shadow:0 4px 12px rgba(0,0,0,.05);
+    position:relative;
+    transition:all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.menu-btn:active{
+    transform:scale(0.95);
+    box-shadow:0 2px 6px rgba(0,0,0,.08);
+}
+
+.dot{
+    position:absolute;
+    background:var(--alwahyu-primary);
+    border-radius:3px;
+    transition:all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    transform-origin:center center;
+}
+
+.d1{
+    width:8px;
+    height:8px;
+    top:12px;
+    left:12px;
+}
+
+.d2{
+    width:10px;
+    height:10px;
+    top:12px;
+    right:12px;
+}
+
+.d3{
+    width:10px;
+    height:10px;
+    bottom:12px;
+    left:12px;
+}
+
+.d4{
+    width:8px;
+    height:8px;
+    bottom:12px;
+    right:12px;
+}
+
+.menu-btn.active .dot{
+    transform:scale(0);
+    opacity:0;
+}
+
+.menu-btn::before,
+.menu-btn::after{
+    content:"";
+    position:absolute;
+    background:var(--alwahyu-primary);
+    border-radius:2px;
+    left:50%;
+    top:50%;
+    transform:translate(-50%, -50%) scale(0);
+    transform-origin:center center;
+    transition:all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.menu-btn::before{
+    width:22px;
+    height:2px;
+}
+
+.menu-btn::after{
+    width:2px;
+    height:22px;
+}
+
+.menu-btn.active::before{
+    transform:translate(-50%, -50%) scale(1) rotate(45deg);
+}
+
+.menu-btn.active::after{
+    transform:translate(-50%, -50%) scale(1) rotate(45deg);
+}
+
+.menu-btn:not(.active)::before,
+.menu-btn:not(.active)::after{
+    transform:translate(-50%, -50%) scale(0) rotate(0);
+    opacity:0;
+}
+
+.menu-btn:not(.active) .dot{
+    transform:scale(1);
+    opacity:1;
+}
+
+.mobile-panel{
+    position:fixed;
+    top:75px;
+    left:-100%;
+    width:100%;
+    height:calc(100vh - 75px);
+    background:white;
+    overflow:auto;
+    transition:.4s cubic-bezier(0.16, 1, 0.3, 1);
+    padding:18px;
+    box-shadow:inset 0 2px 10px rgba(0,0,0,.03);
+}
+
+.mobile-panel.show{
+    left:0;
+}
+
+.mobile-item{
+    border-bottom:1px solid var(--alwahyu-border);
+}
+
+.mobile-link,
+.mobile-dropdown-btn{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:16px 0;
+    text-decoration:none;
+    background:none;
+    border:none;
+    color:var(--alwahyu-dark);
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    transition:color .2s;
+}
+
+.mobile-link:hover,
+.mobile-dropdown-btn:hover{
+    color:var(--alwahyu-primary);
+}
+
+.dropdown-icon{
+    font-size:10px;
+    width:24px;
+    height:24px;
+    display:grid;
+    place-items:center;
+    border-radius:6px;
+    background:#f1f5f9;
+    color:var(--alwahyu-primary);
+    transition:all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mobile-dropdown-btn.open .dropdown-icon{
+    transform:rotate(180deg);
+    background:var(--alwahyu-primary);
+    color:white;
+}
+
+.mobile-submenu{
+    max-height:0;
+    overflow:hidden;
+    transition:.4s cubic-bezier(0.16, 1, 0.3, 1);
+    background:#f9fafb;
+    border-radius:12px;
+    margin:0 4px;
+}
+
+.mobile-submenu.open{
+    max-height:300px;
+    padding:8px 0;
+}
+
+.mobile-submenu a{
+    display:block;
+    padding:12px 0 12px 18px;
+    text-decoration:none;
+    color:#64748b;
+    transition:color .2s, transform .2s;
+}
+
+.mobile-submenu a:hover{
+    color:var(--alwahyu-primary);
+    transform:translateX(4px);
+}
+
+.mobile-daftar{
+    display:block;
+    margin-top:20px;
+    text-align:center;
+    padding:14px;
+    border-radius:14px;
+    text-decoration:none;
+    color:white;
+    font-weight:600;
+    background:linear-gradient(135deg, var(--alwahyu-primary), var(--alwahyu-primary-2));
+    transition:transform .2s, box-shadow .2s;
+}
+
+.mobile-daftar:hover{
+    transform:translateY(-2px);
+    box-shadow:0 10px 25px rgba(15, 118, 110, .25);
+}
+
+@media (max-width:1100px){
+    .nav-menu,
+    .btn-daftar{
+        display:none;
+    }
+
+    .menu-btn{
+        display:block;
+    }
+}
+
+@media (min-width:1101px){
+    .mobile-panel{
+        display:none;
+    }
+}
