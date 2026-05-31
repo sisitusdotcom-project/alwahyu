@@ -1,0 +1,117 @@
+/* Halaman Informasi & Kegiatan CSS */
+
+/* Table Agenda */
+.agenda-card {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+.agenda-header {
+    background: linear-gradient(135deg, var(--alwahyu-primary), var(--alwahyu-primary-2));
+    padding: 20px 30px;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.agenda-header h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.agenda-body {
+    padding: 10px 0;
+}
+
+.agenda-row-header {
+    display: grid;
+    grid-template-columns: 120px 180px 1fr;
+    gap: 15px;
+    font-weight: 700;
+    padding: 15px 30px;
+    background: #f8fafc;
+    color: var(--alwahyu-dark);
+}
+
+.agenda-row {
+    display: grid;
+    grid-template-columns: 120px 180px 1fr;
+    gap: 15px;
+    padding: 16px 30px;
+    border-top: 1px solid var(--alwahyu-border);
+    align-items: center;
+    transition: background 0.2s ease;
+}
+
+.agenda-row:hover {
+    background: #f1f5f9;
+}
+
+.agenda-row:nth-child(even) {
+    background: #f8fafc;
+}
+
+.agenda-row:nth-child(even):hover {
+    background: #f1f5f9;
+}
+
+.agenda-date {
+    color: var(--alwahyu-primary);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.agenda-tag {
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    width: fit-content;
+    text-align: center;
+}
+
+.tag-akademik {
+    background: #dcfce7;
+    color: var(--alwahyu-primary);
+}
+
+.tag-kegiatan {
+    background: #dbeafe;
+    color: #1d4ed8;
+}
+
+.tag-ujian {
+    background: #fef9c3;
+    color: #854d0e;
+}
+
+.tag-nasional {
+    background: #ffe4e6;
+    color: #9f1239;
+}
+
+.agenda-desc {
+    color: var(--alwahyu-dark);
+    font-weight: 500;
+}
+
+@media (max-width: 600px) {
+    .agenda-row-header {
+        display: none;
+    }
+    
+    .agenda-row {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 20px;
+    }
+    
+    .agenda-tag {
+        margin-top: 5px;
+    }
+}

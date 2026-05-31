@@ -196,31 +196,31 @@ Daftar Santri
                 </ul>
             </div>
         </div>
-        <div style="max-width:440px; margin:0 auto; background:white; padding:50px 40px; border-radius:24px; box-shadow:0 20px 60px rgba(0,0,0,0.1);">
-            <div style="text-align:center; margin-bottom:30px;">
-                <div style="width:64px; height:64px; background:linear-gradient(135deg,var(--alwahyu-primary),var(--alwahyu-primary-2)); border-radius:18px; display:flex; align-items:center; justify-content:center; margin:0 auto 16px;">
-                    <i class="fa-solid fa-lock" style="color:white; font-size:1.5rem;"></i>
+        <div class="login-card">
+            <div class="text-center">
+                <div class="login-icon-box">
+                    <i class="fa-solid fa-lock"></i>
                 </div>
-                <h2 style="color:var(--alwahyu-dark); font-size:1.5rem;">Masuk ke E-Ponpes</h2>
-                <p style="color:#64748b; font-size:0.9rem; margin-top:6px;">Akses terbatas untuk pengguna terdaftar.</p>
+                <h2>Masuk ke E-Ponpes</h2>
+                <p class="subtitle">Akses terbatas untuk pengguna terdaftar.</p>
             </div>
-            <form style="display:flex; flex-direction:column; gap:18px;">
-                <div>
-                    <label for="ep-username" style="display:block; margin-bottom:8px; font-weight:600; color:var(--alwahyu-dark); font-size:0.9rem;">Username / NIS</label>
-                    <input type="text" id="ep-username" placeholder="Masukkan username Anda" style="width:100%; padding:12px 16px; border:1.5px solid var(--alwahyu-border); border-radius:10px; font-size:1rem; font-family:inherit; outline:none; box-sizing:border-box;">
+            <form class="login-form">
+                <div class="form-group">
+                    <label for="ep-username">Username / NIS</label>
+                    <input type="text" id="ep-username" placeholder="Masukkan username Anda">
                 </div>
-                <div>
-                    <label for="ep-password" style="display:block; margin-bottom:8px; font-weight:600; color:var(--alwahyu-dark); font-size:0.9rem;">Password</label>
-                    <input type="password" id="ep-password" placeholder="Masukkan password Anda" style="width:100%; padding:12px 16px; border:1.5px solid var(--alwahyu-border); border-radius:10px; font-size:1rem; font-family:inherit; outline:none; box-sizing:border-box;">
+                <div class="form-group">
+                    <label for="ep-password">Password</label>
+                    <input type="password" id="ep-password" placeholder="Masukkan password Anda">
                 </div>
-                <button type="submit" class="btn-primary" style="width:100%; padding:14px; font-size:1rem; cursor:pointer; border:none; border-radius:10px; margin-top:6px;">
+                <button type="submit" class="btn-primary btn-login">
                     <i class="fa-solid fa-right-to-bracket"></i> Masuk
                 </button>
             </form>
-            <p style="text-align:center; margin-top:20px; font-size:0.85rem; color:#64748b;">Lupa password? Hubungi admin: <strong>0812 3020 0098</strong></p>
-            <div style="margin-top:20px; padding:14px; background:#fef9c3; border-radius:10px; text-align:center;">
-                <i class="fa-solid fa-circle-info" style="color:#854d0e;"></i>
-                <span style="color:#854d0e; font-size:0.85rem;"> Sistem ini masih dalam tahap pengembangan. <em>(Data Dummy)</em></span>
+            <p class="login-footer">Lupa password? Hubungi admin: <strong>0812 3020 0098</strong></p>
+            <div class="info-alert">
+                <i class="fa-solid fa-circle-info"></i>
+                <span> Sistem ini masih dalam tahap pengembangan. <em>(Data Dummy)</em></span>
             </div>
         </div>
     </div>

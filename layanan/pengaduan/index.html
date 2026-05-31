@@ -166,39 +166,39 @@ Daftar Santri
     <div class="container" style="max-width:900px;">
         <div style="display:grid; grid-template-columns:1fr 1fr; gap:30px; margin-bottom:40px;">
             <div class="feature-card">
-                <div class="card-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                <div class="card-icon"><i class="fa-brands fa-whatsapp" style="color:#25d366;"></i></div>
                 <h3>WhatsApp</h3>
                 <p>Hubungi kami langsung via WhatsApp untuk pengaduan yang bersifat mendesak.</p>
-                <a href="https://wa.me/6281230200098" target="_blank" class="btn-primary" style="margin-top:10px; display:inline-block;">Chat Sekarang</a>
+                <a href="https://wa.me/6281230200098" target="_blank" class="btn-primary wa-btn" style="margin-top:10px; display:inline-block;">Chat Sekarang</a>
             </div>
             <div class="feature-card">
-                <div class="card-icon"><i class="fa-solid fa-envelope"></i></div>
+                <div class="card-icon"><i class="fa-solid fa-envelope" style="color:var(--alwahyu-primary);"></i></div>
                 <h3>Formulir Online</h3>
                 <p>Sampaikan pengaduan atau saran Anda melalui formulir di bawah ini.</p>
             </div>
         </div>
-        <div style="background:white; padding:40px; border-radius:20px; box-shadow:0 10px 30px rgba(0,0,0,0.05);">
+        <div class="form-card">
             <h2 class="section-title">Formulir Pengaduan</h2>
-            <form id="form-pengaduan" style="display:flex; flex-direction:column; gap:20px;">
-                <div>
-                    <label for="nama-pengadu" style="display:block; margin-bottom:8px; font-weight:600; color:var(--alwahyu-dark);">Nama Lengkap</label>
-                    <input type="text" id="nama-pengadu" name="nama" placeholder="Masukkan nama Anda" style="width:100%; padding:12px 16px; border:1px solid var(--alwahyu-border); border-radius:10px; font-size:1rem; font-family:inherit; outline:none; transition:border 0.3s;" required>
+            <form id="form-pengaduan" class="custom-form">
+                <div class="form-row">
+                    <label for="nama-pengadu">Nama Lengkap</label>
+                    <input type="text" id="nama-pengadu" name="nama" placeholder="Masukkan nama Anda" required>
                 </div>
-                <div>
-                    <label for="kontak-pengadu" style="display:block; margin-bottom:8px; font-weight:600; color:var(--alwahyu-dark);">Nomor HP / WhatsApp</label>
-                    <input type="tel" id="kontak-pengadu" name="kontak" placeholder="08xxxxxxxxxx" style="width:100%; padding:12px 16px; border:1px solid var(--alwahyu-border); border-radius:10px; font-size:1rem; font-family:inherit; outline:none; transition:border 0.3s;">
+                <div class="form-row">
+                    <label for="kontak-pengadu">Nomor HP / WhatsApp</label>
+                    <input type="tel" id="kontak-pengadu" name="kontak" placeholder="08xxxxxxxxxx">
                 </div>
-                <div>
-                    <label for="jenis-pengaduan" style="display:block; margin-bottom:8px; font-weight:600; color:var(--alwahyu-dark);">Jenis Laporan</label>
-                    <select id="jenis-pengaduan" name="jenis" style="width:100%; padding:12px 16px; border:1px solid var(--alwahyu-border); border-radius:10px; font-size:1rem; font-family:inherit; outline:none; background:white;">
+                <div class="form-row">
+                    <label for="jenis-pengaduan">Jenis Laporan</label>
+                    <select id="jenis-pengaduan" name="jenis">
                         <option>Pengaduan</option>
                         <option>Saran</option>
                         <option>Pertanyaan</option>
                     </select>
                 </div>
-                <div>
-                    <label for="isi-pengaduan" style="display:block; margin-bottom:8px; font-weight:600; color:var(--alwahyu-dark);">Isi Pesan</label>
-                    <textarea id="isi-pengaduan" name="isi" rows="5" placeholder="Tuliskan pengaduan atau saran Anda..." style="width:100%; padding:12px 16px; border:1px solid var(--alwahyu-border); border-radius:10px; font-size:1rem; font-family:inherit; outline:none; resize:vertical; transition:border 0.3s;" required></textarea>
+                <div class="form-row">
+                    <label for="isi-pengaduan">Isi Pesan</label>
+                    <textarea id="isi-pengaduan" name="isi" rows="5" placeholder="Tuliskan pengaduan atau saran Anda..." required></textarea>
                 </div>
                 <button type="submit" class="btn-primary" style="width:100%; padding:16px; font-size:1rem; cursor:pointer; border:none;">Kirim Pengaduan</button>
             </form>

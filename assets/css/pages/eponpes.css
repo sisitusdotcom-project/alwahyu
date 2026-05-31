@@ -1,0 +1,116 @@
+/* Portal E-Ponpes CSS */
+
+.login-card {
+    max-width: 440px;
+    margin: 0 auto;
+    background: white;
+    padding: 50px 40px;
+    border-radius: 24px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 70px rgba(0,0,0,0.1);
+}
+
+.login-icon-box {
+    width: 64px;
+    height: 64px;
+    background: linear-gradient(135deg, var(--alwahyu-primary), var(--alwahyu-primary-2));
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+}
+
+.login-icon-box i {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.login-card h2 {
+    color: var(--alwahyu-dark);
+    font-size: 1.5rem;
+    margin-bottom: 6px;
+    font-weight: 700;
+}
+
+.login-card .subtitle {
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-top: 24px;
+}
+
+.form-group {
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--alwahyu-dark);
+    font-size: 0.9rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1.5px solid var(--alwahyu-border);
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: inherit;
+    outline: none;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: var(--alwahyu-primary);
+    box-shadow: 0 0 0 4px rgba(62, 125, 55, 0.1);
+}
+
+.btn-login {
+    width: 100%;
+    padding: 14px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    margin-top: 6px;
+}
+
+.login-footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.85rem;
+    color: #64748b;
+}
+
+.info-alert {
+    margin-top: 20px;
+    padding: 14px;
+    background: #fef9c3;
+    border-radius: 10px;
+    text-align: center;
+    border-left: 4px solid #ca8a04;
+}
+
+.info-alert i {
+    color: #854d0e;
+    margin-right: 6px;
+}
+
+.info-alert span {
+    color: #854d0e;
+    font-size: 0.85rem;
+}

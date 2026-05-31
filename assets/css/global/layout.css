@@ -72,3 +72,19 @@ body {
     background: var(--alwahyu-primary);
     color: white;
 }
+
+/* Page Header (Global banner for subpages) */
+.page-header {
+    padding: 140px 0 60px 0;
+    background: linear-gradient(135deg, var(--alwahyu-dark), #1e293b);
+    color: white;
+}
+
+.page-header .section-title {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.page-header .section-desc {
+    color: #cbd5e1;
+}
