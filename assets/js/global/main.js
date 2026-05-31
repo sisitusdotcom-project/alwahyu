@@ -17,4 +17,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const animatedElements = document.querySelectorAll('.fade-in-up, .slide-in-left, .slide-in-right');
     animatedElements.forEach(el => observer.observe(el));
+
+    // Hero Slideshow
+    const slides = document.querySelectorAll('.hero-slideshow .slide');
+    if (slides.length > 0) {
+        let currentSlide = 0;
+        setInterval(() => {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }, 5000);
+    }
 });
