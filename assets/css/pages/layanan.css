@@ -24,11 +24,12 @@
 }
 
 .bank-number {
-    font-size: 2rem;
+    font-size: clamp(1.4rem, 6vw, 2rem);
     font-weight: 800;
     color: var(--alwahyu-dark);
-    letter-spacing: 4px;
+    letter-spacing: clamp(1px, 1vw, 4px);
     margin-bottom: 8px;
+    word-break: break-word;
 }
 
 .bank-holder {
@@ -132,4 +133,9 @@
     border-bottom: none;
     margin-bottom: 0;
     padding-bottom: 0;
+}
+
+@media (max-width: 600px) {
+    .donation-card, .form-card { padding: 24px; }
+    .bank-detail-box { padding: 16px; }
 }

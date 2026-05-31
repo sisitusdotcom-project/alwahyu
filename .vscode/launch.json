@@ -10,7 +10,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Open index.html",
-            "file": "/home/mikubuntu/Documents/project kerjoan/alwahyu/index.html"
+            "file": "${workspaceFolder}/index.html"
         }
     ]
 }
