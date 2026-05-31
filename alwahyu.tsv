@@ -1,0 +1,54 @@
+#table:users
+id	name	email	password	role
+1	Admin Alwahyu	admin@alwahyu.com	admin123	admin
+2	Ustadz Abdullah	ustadz@alwahyu.com	ustadz123	pengurus
+3	Muhammad Fatih	fatih@alwahyu.com	fatih123	santri
+4	Ahmad Rayhan	rayhan@alwahyu.com	rayhan123	santri
+
+#table:santri
+id	user_id	nis	kelas	kamar	nama_ayah	nama_ibu	wa_wali	status_aktif
+1	3	202601001	Class 7A	Kamar Abu Bakar	Bapak H. Syarif	Ibu Aminah	081230200098	Aktif
+2	4	202601002	Class 8B	Kamar Umar bin Khattab	Bapak Budi	Ibu Siti	081234567890	Aktif
+
+#table:pengurus
+id	user_id	nip	nama	jabatan	mapel
+1	2	NIP1001	Ustadz Abdullah Faqih, Lc.	Kepala Madrasah Diniyah	Fiqih, Aqidah
+
+#table:pembayaran
+id	santri_id	jenis	nominal	status	bukti_transfer	tanggal
+1	1	Syahriyah Bulanan (Juni 2026)	1200000	Belum Bayar	-	2026-06-01
+2	1	Uang Makan (Juni 2026)	600000	Lunas	-	2026-05-25
+3	2	Syahriyah Bulanan (Juni 2026)	1200000	Menunggu Verifikasi	bukti_spp_juni.jpg	2026-05-30
+
+#table:hafalan
+id	santri_id	surat	ayat_awal	ayat_akhir	nilai	catatan	tanggal
+1	1	Al-Mulk	1	15	90	Sangat baik, terus pertahankan	2026-05-28
+2	1	Al-Mulk	16	30	85	Lancar, perhatikan makhraj huruf	2026-05-30
+3	2	Ar-Rahman	1	20	95	Sangat tajwid dan fasih	2026-05-29
+
+#table:nilai
+id	santri_id	mapel	nilai	semester
+1	1	Fiqih	85	Genap 2025/2026
+2	1	Aqidah	90	Genap 2025/2026
+3	1	Bahasa Arab	78	Genap 2025/2026
+4	2	Fiqih	92	Genap 2025/2026
+5	2	Aqidah	88	Genap 2025/2026
+
+#table:absensi
+id	santri_id	tanggal	status
+1	1	2026-05-28	Hadir
+2	1	2026-05-29	Hadir
+3	1	2026-05-30	Sakit
+4	2	2026-05-28	Hadir
+5	2	2026-05-29	Hadir
+6	2	2026-05-30	Hadir
+
+#table:perizinan
+id	santri_id	jenis	keterangan	status	tanggal_pengajuan	tanggal_kembali
+1	1	Izin Pulang (Sakit)	Demam tinggi, disarankan istirahat di rumah	Disetujui	2026-05-29	2026-06-02
+2	2	Izin Keluar Pondok	Membeli kitab ke toko buku	Selesai	2026-05-27	2026-05-27
+
+#table:pengumuman
+id	judul	isi	tanggal	pembuat
+1	Jadwal Liburan Idul Adha 1447 H	Libur santri dimulai pada tanggal 10 Juni 2026 s/d 18 Juni 2026. Harap wali santri menjemput tepat waktu.	2026-05-25	Admin Alwahyu
+2	Ujian Akhir Semester Genap	Ujian lisan dan tulis kepesantrenan akan diadakan mulai tanggal 3 Juni 2026. Persiapkan hafalan dan pelajaran masing-masing.	2026-05-28	Admin Alwahyu
