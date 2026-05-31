@@ -2,8 +2,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // Intersection Observer for animations
     const observerOptions = {
         root: null,
-        rootMargin: '0px',
-        threshold: 0.15
+        rootMargin: '0px 0px -30px 0px',
+        threshold: 0
     };
 
     const observer = new IntersectionObserver((entries, observer) => {
