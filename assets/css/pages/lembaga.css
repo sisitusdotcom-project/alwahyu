@@ -24,3 +24,195 @@
     flex-shrink: 0;
     margin-top: 1px;
 }
+
+/* Redesigned Yayasan Page Components */
+
+/* Vision & Mission Styles */
+.visimisi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.visimisi-card {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    border-top: 4px solid var(--alwahyu-primary);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.visimisi-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+.visimisi-card h3 {
+    font-size: 1.6rem;
+    color: var(--alwahyu-dark);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.visimisi-card h3 i {
+    color: var(--alwahyu-primary);
+}
+
+.visimisi-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.visimisi-list li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 16px;
+    line-height: 1.6;
+    color: var(--alwahyu-text);
+}
+
+.visimisi-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 20px;
+    height: 20px;
+    background: rgba(62, 125, 55, 0.1);
+    color: var(--alwahyu-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+.visimisi-list li:last-child {
+    margin-bottom: 0;
+}
+
+/* Legal Box Styles */
+.legal-card {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    border-left: 4px solid var(--alwahyu-accent);
+    margin-bottom: 50px;
+}
+
+.legal-card h2 {
+    margin-bottom: 24px;
+}
+
+.legal-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.legal-list li {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--alwahyu-border);
+}
+
+.legal-list li:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.legal-list li strong {
+    color: var(--alwahyu-dark);
+}
+
+.legal-list li span {
+    color: var(--alwahyu-text);
+}
+
+.dummy-badge {
+    font-size: 0.75rem;
+    background-color: rgba(62, 125, 55, 0.08);
+    color: var(--alwahyu-primary);
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-left: 8px;
+    font-weight: 600;
+}
+
+/* Organization Structure Styles */
+.org-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.org-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px 24px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--alwahyu-border);
+}
+
+.org-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+    border-color: var(--alwahyu-primary);
+}
+
+.org-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--alwahyu-primary), var(--alwahyu-primary-2));
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin: 0 auto 20px;
+    box-shadow: 0 8px 20px rgba(62, 125, 55, 0.15);
+}
+
+.org-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--alwahyu-dark);
+    margin-bottom: 8px;
+}
+
+.org-role {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--alwahyu-primary);
+    background: rgba(62, 125, 55, 0.08);
+    padding: 4px 12px;
+    border-radius: 99px;
+    display: inline-block;
+}
+
+@media (max-width: 768px) {
+    .visimisi-grid {
+        grid-template-columns: 1fr;
+    }
+    .legal-list li {
+        grid-template-columns: 1fr;
+        gap: 6px;
+    }
+    .visimisi-card, .legal-card {
+        padding: 24px;
+    }
+}
+
