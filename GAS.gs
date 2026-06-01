@@ -14,84 +14,51 @@
  * - pengumuman  : id, judul, isi, tanggal, pembuat
  */
 
-// Handle GET requests
+// Handle semua requests via GET (query params) - menghindari CORS preflight
 function doGet(e) {
-  var action = e.parameter.action;
-  
   try {
+    // Guard: e atau e.parameter bisa undefined saat diuji dari editor
+    var p = (e && e.parameter) ? e.parameter : {};
+    var action = p.action;
+    
     if (!action) {
       return jsonResponse("error", "Action parameter is missing", null);
     }
     
-    var db = getCompleteDatabase();
-    
+    // ── READ ACTIONS ──────────────────────────────────────────
     if (action === "getDb") {
+      var db = getCompleteDatabase();
       return jsonResponse("success", "Database loaded", db);
-    } else if (action === "getPengumuman") {
-      return jsonResponse("success", "Pengumuman loaded", db.pengumuman);
-    } else {
-      return jsonResponse("error", "Unknown GET action: " + action, null);
     }
+    
+    if (action === "getPengumuman") {
+      return jsonResponse("success", "Pengumuman loaded", getSheetData("pengumuman"));
+    }
+    
+    // ── WRITE ACTIONS (dikirim lewat GET + query params) ───────
+    if (action === "login")                return handleLogin(p);
+    if (action === "addSantri")            return handleAddSantri(p);
+    if (action === "addPengurus")          return handleAddPengurus(p);
+    if (action === "addPembayaran")        return handleAddPembayaran(p);
+    if (action === "uploadBuktiTransfer")  return handleUploadBukti(p);
+    if (action === "verifikasiPembayaran") return handleVerifikasiPembayaran(p);
+    if (action === "inputSetoran")         return handleInputSetoran(p);
+    if (action === "inputNilai")           return handleInputNilai(p);
+    if (action === "inputAbsensi")         return handleInputAbsensi(p);
+    if (action === "submitIzin")           return handleSubmitIzin(p);
+    if (action === "updateIzinStatus")     return handleUpdateIzinStatus(p);
+    if (action === "addPengumuman")        return handleAddPengumuman(p);
+    
+    return jsonResponse("error", "Unknown action: " + action, null);
+    
   } catch (error) {
     return jsonResponse("error", error.toString(), null);
   }
 }
 
-// Handle POST requests
+// doPost tetap ada sebagai fallback (tidak dipakai frontend)
 function doPost(e) {
-  try {
-    var requestData = JSON.parse(e.postData.contents);
-    var action = requestData.action;
-    
-    if (!action) {
-      return jsonResponse("error", "Action parameter is missing in payload", null);
-    }
-    
-    var ss = SpreadsheetApp.getActiveSpreadsheet();
-    
-    switch (action) {
-      case "login":
-        return handleLogin(requestData);
-        
-      case "addSantri":
-        return handleAddSantri(requestData);
-        
-      case "addPengurus":
-        return handleAddPengurus(requestData);
-        
-      case "addPembayaran":
-        return handleAddPembayaran(requestData);
-        
-      case "uploadBuktiTransfer":
-        return handleUploadBukti(requestData);
-        
-      case "verifikasiPembayaran":
-        return handleVerifikasiPembayaran(requestData);
-        
-      case "inputSetoran":
-        return handleInputSetoran(requestData);
-        
-      case "inputNilai":
-        return handleInputNilai(requestData);
-        
-      case "inputAbsensi":
-        return handleInputAbsensi(requestData);
-        
-      case "submitIzin":
-        return handleSubmitIzin(requestData);
-        
-      case "updateIzinStatus":
-        return handleUpdateIzinStatus(requestData);
-        
-      case "addPengumuman":
-        return handleAddPengumuman(requestData);
-        
-      default:
-        return jsonResponse("error", "Unknown POST action: " + action, null);
-    }
-  } catch (error) {
-    return jsonResponse("error", error.toString(), null);
-  }
+  return doGet(e);
 }
 
 // Logika Handlers
