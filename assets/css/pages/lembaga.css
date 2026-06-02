@@ -184,6 +184,15 @@
     font-weight: 800;
     margin: 0 auto 20px;
     box-shadow: 0 8px 20px rgba(62, 125, 55, 0.15);
+    overflow: hidden;
+}
+
+.org-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
 }
 
 .org-name {

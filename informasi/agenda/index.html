@@ -177,27 +177,27 @@ Daftar Santri
                 <div class="agenda-row-header">
                     <span>Tanggal</span><span>Jenis</span><span>Kegiatan</span>
                 </div>
-                <div class="agenda-row">
+                <div class="agenda-row" data-date="2026-06-01">
                     <span class="agenda-date">1 Jun 2026</span>
                     <span class="agenda-tag tag-akademik">Akademik</span>
                     <span class="agenda-desc">Awal Tahun Ajaran Baru 2026/2027</span>
                 </div>
-                <div class="agenda-row">
+                <div class="agenda-row" data-date="2026-06-15">
                     <span class="agenda-date">15 Jun 2026</span>
                     <span class="agenda-tag tag-kegiatan">Kegiatan</span>
                     <span class="agenda-desc">Masa Ta'aruf Santri Baru (MATSANBAR)</span>
                 </div>
-                <div class="agenda-row">
+                <div class="agenda-row" data-date="2026-07-01">
                     <span class="agenda-date">1 Jul 2026</span>
                     <span class="agenda-tag tag-ujian">Ujian</span>
                     <span class="agenda-desc">Ujian Tahfidz Semester I</span>
                 </div>
-                <div class="agenda-row">
+                <div class="agenda-row" data-date="2026-08-17">
                     <span class="agenda-date">17 Agt 2026</span>
                     <span class="agenda-tag tag-nasional">Nasional</span>
                     <span class="agenda-desc">Peringatan Hari Kemerdekaan RI ke-81</span>
                 </div>
-                <div class="agenda-row">
+                <div class="agenda-row" data-date="2026-12-01">
                     <span class="agenda-date">1 Des 2026</span>
                     <span class="agenda-tag tag-akademik">Akademik</span>
                     <span class="agenda-desc">Ujian Akhir Semester &amp; Kenaikan Kelas</span>
@@ -238,5 +238,43 @@ Daftar Santri
 
 <script src="../../assets/js/global/navigation.js"></script>
 <script src="../../assets/js/global/main.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    
+    const rows = document.querySelectorAll(".agenda-row");
+    let visibleCount = 0;
+    
+    rows.forEach(row => {
+        const dateStr = row.getAttribute("data-date");
+        if (dateStr) {
+            const eventDate = new Date(dateStr);
+            eventDate.setHours(0, 0, 0, 0);
+            
+            if (eventDate < today) {
+                row.style.display = 'none';
+            } else {
+                visibleCount++;
+            }
+        }
+    });
+    
+    if (visibleCount === 0) {
+        const body = document.querySelector(".agenda-body");
+        const headerRow = document.querySelector(".agenda-row-header");
+        if (headerRow) headerRow.style.display = 'none';
+        
+        const emptyState = document.createElement("div");
+        emptyState.className = "agenda-empty-state";
+        emptyState.innerHTML = `
+            <i class="fa-regular fa-calendar-xmark" style="font-size: 3rem; color: #cbd5e1; margin-bottom: 15px; display: block; text-align: center;"></i>
+            <p style="font-weight: 600; color: #64748b; text-align: center;">Belum ada agenda terdekat dalam waktu dekat.</p>
+        `;
+        emptyState.style.padding = "60px 20px";
+        body.appendChild(emptyState);
+    }
+});
+</script>
 </body>
 </html>

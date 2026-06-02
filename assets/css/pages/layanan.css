@@ -298,7 +298,26 @@
 }
 
 /* Responsive fixes */
+.layanan-split-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+.pengaduan-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
 @media (max-width: 768px) {
+    .layanan-split-grid,
+    .pengaduan-grid {
+        grid-template-columns: 1fr;
+    }
+    
     .form-grid-2 {
         grid-template-columns: 1fr;
         gap: 0;

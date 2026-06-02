@@ -80,6 +80,19 @@ body {
     color: white;
 }
 
+.page-header-logo {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.page-header-logo img {
+    height: 90px;
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.3));
+}
+
 .page-header .section-title {
     color: white;
     margin-bottom: 10px;

@@ -453,6 +453,22 @@
 .card-icon {
     font-size: 3rem;
     margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-icon svg,
+.card-icon img {
+    height: 52px;
+    width: 52px;
+    object-fit: contain;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.feature-card:hover .card-icon svg,
+.feature-card:hover .card-icon img {
+    transform: scale(1.12);
 }
 
 .feature-card h3 {
