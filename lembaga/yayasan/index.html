@@ -227,26 +227,52 @@ Daftar Santri
         <div style="margin-top: 60px;">
             <h2 class="section-title text-center">Struktur Kepengurusan</h2>
             <p class="section-desc text-center">Susunan kepengurusan struktural Yayasan Al Wahyu Cahaya Islam periode aktif saat ini.</p>
-            <div class="org-grid">
-                <div class="org-card">
-                    <div class="org-avatar"><img src="../../assets/img/yayasan/pembina.png" alt="H. Abdi Santoso, M.Pd.I."></div>
-                    <div class="org-name">H. Abdi Santoso, M.Pd.I.</div>
-                    <div class="org-role">Pembina Yayasan</div>
-                </div>
-                <div class="org-card">
-                    <div class="org-avatar"><img src="../../assets/img/yayasan/ketua.png" alt="Ust. H. Abdullah Faqih, Lc."></div>
-                    <div class="org-name">Ust. H. Abdullah Faqih, Lc.</div>
-                    <div class="org-role">Ketua Yayasan</div>
-                </div>
-                <div class="org-card">
-                    <div class="org-avatar"><img src="../../assets/img/yayasan/sekretaris.png" alt="Ahmad Wijaya, S.E."></div>
-                    <div class="org-name">Ahmad Wijaya, S.E.</div>
-                    <div class="org-role">Sekretaris</div>
-                </div>
-                <div class="org-card">
-                    <div class="org-avatar"><img src="../../assets/img/yayasan/bendahara.png" alt="Hj. Siti Aminah, S.Akt."></div>
-                    <div class="org-name">Hj. Siti Aminah, S.Akt.</div>
-                    <div class="org-role">Bendahara</div>
+            <div class="org-tree-wrapper">
+                <div class="org-tree">
+                    <!-- Level 1: Pembina -->
+                    <div class="org-tree-level level-1">
+                        <div class="org-card">
+                            <div class="org-avatar"><img src="../../assets/img/yayasan/pembina.png" alt="H. Abdi Santoso, M.Pd.I."></div>
+                            <div class="org-name">H. Abdi Santoso, M.Pd.I.</div>
+                            <div class="org-role">Pembina Yayasan</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Connector Line 1 -->
+                    <div class="org-tree-connector vertical"></div>
+
+                    <!-- Level 2: Ketua -->
+                    <div class="org-tree-level level-2">
+                        <div class="org-card">
+                            <div class="org-avatar"><img src="../../assets/img/yayasan/ketua.png" alt="Ust. H. Abdullah Faqih, Lc."></div>
+                            <div class="org-name">Ust. H. Abdullah Faqih, Lc.</div>
+                            <div class="org-role">Ketua Yayasan</div>
+                        </div>
+                    </div>
+
+                    <!-- Connector Line 2 with Branches -->
+                    <div class="org-tree-branch-container">
+                        <div class="org-tree-connector vertical branch-main"></div>
+                        <div class="org-tree-horizontal-line"></div>
+                        <div class="org-tree-vertical-branches">
+                            <div class="org-tree-connector vertical branch-left"></div>
+                            <div class="org-tree-connector vertical branch-right"></div>
+                        </div>
+                    </div>
+
+                    <!-- Level 3: Sekretaris & Bendahara -->
+                    <div class="org-tree-level level-3">
+                        <div class="org-card">
+                            <div class="org-avatar"><img src="../../assets/img/yayasan/sekretaris.png" alt="Ahmad Wijaya, S.E."></div>
+                            <div class="org-name">Ahmad Wijaya, S.E.</div>
+                            <div class="org-role">Sekretaris</div>
+                        </div>
+                        <div class="org-card">
+                            <div class="org-avatar"><img src="../../assets/img/yayasan/bendahara.png" alt="Hj. Siti Aminah, S.Akt."></div>
+                            <div class="org-name">Hj. Siti Aminah, S.Akt.</div>
+                            <div class="org-role">Bendahara</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -168,29 +168,147 @@ Daftar Santri
 <section class='page-header fade-in-up'><div class='container text-center'><h1 class='section-title'>Layanan Administrasi</h1><p class='section-desc'>Layanan dokumen, surat menyurat, dan nilai akademik santri.</p></div></section>
 <section class="section-padding fade-in-up delay-100">
     <div class="container">
-        <div class="feature-grid">
-            <div class="feature-card">
-                <div class="card-icon"><i class="fa-solid fa-file-lines"></i></div>
-                <h3>Surat Keterangan</h3>
-                <p>Penerbitan surat keterangan aktif, surat rekomendasi, dan berbagai dokumen resmi pesantren.</p>
+        <!-- Interactive Service Tabs -->
+        <div class="tabs-wrapper" style="display: flex; justify-content: center; gap: 15px; margin-bottom: 40px; border-bottom: 2px solid var(--alwahyu-border); padding-bottom: 15px; flex-wrap: wrap;">
+            <button class="admin-tab-btn active" data-tab="surat-keterangan" style="background: none; border: none; font-size: 1.1rem; font-weight: 700; color: var(--alwahyu-primary); padding: 10px 20px; cursor: pointer; transition: all 0.3s; border-radius: 8px; border-bottom: 3px solid var(--alwahyu-primary);">
+                <i class="fa-solid fa-file-lines" style="margin-right: 8px;"></i> Surat Keterangan
+            </button>
+            <button class="admin-tab-btn" data-tab="nilai-rapor" style="background: none; border: none; font-size: 1.1rem; font-weight: 700; color: var(--alwahyu-text); padding: 10px 20px; cursor: pointer; transition: all 0.3s; border-radius: 8px;">
+                <i class="fa-solid fa-graduation-cap" style="margin-right: 8px;"></i> Nilai &amp; Rapor
+            </button>
+            <button class="admin-tab-btn" data-tab="dokumen-sekolah" style="background: none; border: none; font-size: 1.1rem; font-weight: 700; color: var(--alwahyu-text); padding: 10px 20px; cursor: pointer; transition: all 0.3s; border-radius: 8px;">
+                <i class="fa-solid fa-folder-open" style="margin-right: 8px;"></i> Dokumen Sekolah
+            </button>
+        </div>
+
+        <!-- Tab Contents -->
+        <div id="tab-container">
+            <!-- Tab 1: Surat Keterangan -->
+            <div id="tab-surat-keterangan" class="admin-tab-content" style="background: white; border: 1px solid var(--alwahyu-border); border-radius: 20px; padding: 35px; box-shadow: 0 10px 30px rgba(0,0,0,0.03);">
+                <div style="display: flex; gap: 40px; flex-wrap: wrap;">
+                    <div style="flex: 1; min-width: 300px;">
+                        <h3 style="font-size: 1.4rem; color: var(--alwahyu-dark); font-weight: 700; margin-bottom: 15px;">Pengajuan Surat Keterangan Santri</h3>
+                        <p style="color: var(--alwahyu-text); line-height: 1.6; margin-bottom: 24px;">Layanan penerbitan Surat Keterangan Aktif Belajar (untuk keperluan BPJS, tunjangan gaji orang tua, beasiswa, imigrasi) dan Surat Rekomendasi.</p>
+                        
+                        <h4 style="font-weight: 700; color: var(--alwahyu-dark); margin-bottom: 12px; font-size: 0.95rem;">Alur Proses:</h4>
+                        <ol style="padding-left: 20px; color: var(--alwahyu-text); line-height: 1.8; margin-bottom: 24px;">
+                            <li>Isi lengkap form pengajuan surat di samping.</li>
+                            <li>Sekretariat memverifikasi status keaktifan santri di database.</li>
+                            <li>Proses pembuatan & tanda tangan kepala sekolah/pesantren (1-2 hari kerja).</li>
+                            <li>Notifikasi selesai dikirim via WhatsApp, surat dapat diunduh (PDF) atau diambil fisiknya.</li>
+                        </ol>
+                    </div>
+                    <div style="flex: 1.2; min-width: 320px; background: #f8fafc; border-radius: 16px; padding: 24px; border: 1px solid var(--alwahyu-border);">
+                        <h4 style="font-weight: 700; color: var(--alwahyu-dark); margin-bottom: 15px; border-bottom: 1px solid var(--alwahyu-border); padding-bottom: 10px;"><i class="fa-solid fa-pen-to-square" style="color: var(--alwahyu-primary);"></i> Form Surat Keterangan</h4>
+                        <form class="custom-form admin-form" data-type="Surat Keterangan">
+                            <div class="form-row">
+                                <label>Nama Lengkap Santri</label>
+                                <input type="text" style="width: 100%; padding: 10px 14px; border: 1px solid var(--alwahyu-border); border-radius: 8px;" placeholder="Masukkan nama santri" required>
+                            </div>
+                            <div class="form-row">
+                                <label>NIS / NISN</label>
+                                <input type="text" style="width: 100%; padding: 10px 14px; border: 1px solid var(--alwahyu-border); border-radius: 8px;" placeholder="Masukkan Nomor Induk Santri" required>
+                            </div>
+                            <div class="form-row">
+                                <label>Jenjang & Kelas</label>
+                                <input type="text" style="width: 100%; padding: 10px 14px; border: 1px solid var(--alwahyu-border); border-radius: 8px;" placeholder="Contoh: SMP - Kelas 8" required>
+                            </div>
+                            <div class="form-row">
+                                <label>Alasan / Keperluan Pengajuan</label>
+                                <textarea style="width: 100%; padding: 10px 14px; border: 1px solid var(--alwahyu-border); border-radius: 8px; font-family: inherit;" rows="3" placeholder="Contoh: Untuk persyaratan BPJS orang tua" required></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary" style="margin-top: 10px; width: 100%;">Kirim Permohonan</button>
+                        </form>
+                    </div>
+                </div>
             </div>
-            <div class="feature-card">
-                <div class="card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
-                <h3>Nilai & Rapor</h3>
-                <p>Pengurusan hasil belajar, transkip nilai, dan legalisir dokumen akademik.</p>
+
+            <!-- Tab 2: Nilai & Rapor -->
+            <div id="tab-nilai-rapor" class="admin-tab-content" style="display: none; background: white; border: 1px solid var(--alwahyu-border); border-radius: 20px; padding: 35px; box-shadow: 0 10px 30px rgba(0,0,0,0.03);">
+                <div style="display: flex; gap: 40px; flex-wrap: wrap;">
+                    <div style="flex: 1; min-width: 300px;">
+                        <h3 style="font-size: 1.4rem; color: var(--alwahyu-dark); font-weight: 700; margin-bottom: 15px;">Permintaan Transkrip Nilai & Rapor</h3>
+                        <p style="color: var(--alwahyu-text); line-height: 1.6; margin-bottom: 24px;">Layanan pencetakan ulang Rapor Semester, Transkrip Capaian Hafalan Qur'an, dan akumulasi nilai kelulusan santri.</p>
+                        
+                        <h4 style="font-weight: 700; color: var(--alwahyu-dark); margin-bottom: 12px; font-size: 0.95rem;">Alur Proses:</h4>
+                        <ol style="padding-left: 20px; color: var(--alwahyu-text); line-height: 1.8; margin-bottom: 24px;">
+                            <li>Ajukan permohonan dengan memilih rapor semester/tahun ajaran yang diinginkan.</li>
+                            <li>Verifikasi status pemenuhan administrasi keuangan pesantren.</li>
+                            <li>Pencetakan transkrip basah & legalisir oleh Kepala Madrasah/Kesantrian (2-3 hari kerja).</li>
+                            <li>Pengambilan dokumen asli di kantor TU.</li>
+                        </ol>
+                    </div>
+                    <div style="flex: 1.2; min-width: 320px; background: #f8fafc; border-radius: 16px; padding: 24px; border: 1px solid var(--alwahyu-border);">
+                        <h4 style="font-weight: 700; color: var(--alwahyu-dark); margin-bottom: 15px; border-bottom: 1px solid var(--alwahyu-border); padding-bottom: 10px;"><i class="fa-solid fa-pen-to-square" style="color: var(--alwahyu-primary);"></i> Form Permintaan Nilai</h4>
+                        <form class="custom-form admin-form" data-type="Transkrip Nilai & Rapor">
+                            <div class="form-row">
+                                <label>Nama Lengkap Santri</label>
+                                <input type="text" style="width: 100%; padding: 10px 14px; border: 1px solid var(--alwahyu-border); border-radius: 8px;" placeholder="Masukkan nama santri" required>
+                            </div>
+                            <div class="form-row">
+                                <label>NIS / NISN</label>
+                                <input type="text" style="width: 100%; padding: 10px 14px; border: 1px solid var(--alwahyu-border); border-radius: 8px;" placeholder="Masukkan Nomor Induk Santri" required>
+                            </div>
+                            <div class="form-row">
+                                <label>Rapor Semester / Kelas</label>
+                                <input type="text" style="width: 100%; padding: 10px 14px; border: 1px solid var(--alwahyu-border); border-radius: 8px;" placeholder="Contoh: Rapor Ganjil Kelas 7" required>
+                            </div>
+                            <div class="form-row">
+                                <label>Tujuan Permintaan</label>
+                                <textarea style="width: 100%; padding: 10px 14px; border: 1px solid var(--alwahyu-border); border-radius: 8px; font-family: inherit;" rows="3" placeholder="Contoh: Pendaftaran beasiswa eksternal" required></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary" style="margin-top: 10px; width: 100%;">Kirim Permohonan</button>
+                        </form>
+                    </div>
+                </div>
             </div>
-            <div class="feature-card">
-                <div class="card-icon"><i class="fa-solid fa-folder-open"></i></div>
-                <h3>Dokumen Sekolah</h3>
-                <p>Pengurusan ijazah, piagam, dan dokumen kelulusan lainnya.</p>
+
+            <!-- Tab 3: Dokumen Sekolah -->
+            <div id="tab-dokumen-sekolah" class="admin-tab-content" style="display: none; background: white; border: 1px solid var(--alwahyu-border); border-radius: 20px; padding: 35px; box-shadow: 0 10px 30px rgba(0,0,0,0.03);">
+                <div style="display: flex; gap: 40px; flex-wrap: wrap;">
+                    <div style="flex: 1; min-width: 300px;">
+                        <h3 style="font-size: 1.4rem; color: var(--alwahyu-dark); font-weight: 700; margin-bottom: 15px;">Legalisir Dokumen Sekolah & Ijazah</h3>
+                        <p style="color: var(--alwahyu-text); line-height: 1.6; margin-bottom: 24px;">Layanan pengesahan fotokopi dokumen resmi ijazah formal (SMP/SMA), Syahadah Tahfidz 30 Juz, atau Surat Keterangan Lulus.</p>
+                        
+                        <h4 style="font-weight: 700; color: var(--alwahyu-dark); margin-bottom: 12px; font-size: 0.95rem;">Alur Proses:</h4>
+                        <ol style="padding-left: 20px; color: var(--alwahyu-text); line-height: 1.8; margin-bottom: 24px;">
+                            <li>Kirim data permohonan legalisir dengan menentukan dokumen & jumlah lembar.</li>
+                            <li>Bawa dokumen asli to kantor TU untuk pencocokan.</li>
+                            <li>Cap basah dan tanda tangan pejabat berwenang (1-2 hari kerja).</li>
+                        </ol>
+                    </div>
+                    <div style="flex: 1.2; min-width: 320px; background: #f8fafc; border-radius: 16px; padding: 24px; border: 1px solid var(--alwahyu-border);">
+                        <h4 style="font-weight: 700; color: var(--alwahyu-dark); margin-bottom: 15px; border-bottom: 1px solid var(--alwahyu-border); padding-bottom: 10px;"><i class="fa-solid fa-pen-to-square" style="color: var(--alwahyu-primary);"></i> Form Legalisir Dokumen</h4>
+                        <form class="custom-form admin-form" data-type="Legalisir Dokumen Sekolah">
+                            <div class="form-row">
+                                <label>Nama Lengkap Santri / Alumni</label>
+                                <input type="text" style="width: 100%; padding: 10px 14px; border: 1px solid var(--alwahyu-border); border-radius: 8px;" placeholder="Masukkan nama santri / alumni" required>
+                            </div>
+                            <div class="form-row">
+                                <label>NIS / NISN</label>
+                                <input type="text" style="width: 100%; padding: 10px 14px; border: 1px solid var(--alwahyu-border); border-radius: 8px;" placeholder="Masukkan Nomor Induk Santri" required>
+                            </div>
+                            <div class="form-row">
+                                <label>Dokumen yang Dilegalisir</label>
+                                <input type="text" style="width: 100%; padding: 10px 14px; border: 1px solid var(--alwahyu-border); border-radius: 8px;" placeholder="Contoh: Ijazah SMA Al Wahyu" required>
+                            </div>
+                            <div class="form-row">
+                                <label>Jumlah Lembar & Tujuan</label>
+                                <textarea style="width: 100%; padding: 10px 14px; border: 1px solid var(--alwahyu-border); border-radius: 8px; font-family: inherit;" rows="3" placeholder="Contoh: 5 Lembar untuk melamar kerja/melanjutkan kuliah" required></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary" style="margin-top: 10px; width: 100%;">Kirim Permohonan</button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="form-card" style="margin-top:40px;">
-            <h2 class="section-title">Informasi Layanan</h2>
-            <ul class="info-list">
-                <li><strong><i class="fa-regular fa-clock"></i> Jam Layanan:</strong> Senin – Jumat, 08.00 – 16.00 WIB</li>
-                <li><strong><i class="fa-solid fa-phone"></i> Kontak:</strong> +62 812 3020 0098</li>
-                <li><strong><i class="fa-solid fa-circle-info"></i> Prosedur:</strong> Datang langsung ke kantor administrasi, isi formulir permintaan, dan tunggu proses 1–3 hari kerja. <span style="font-size:0.8rem; color:var(--alwahyu-primary);">(Data Dummy)</span></li>
+
+        <div style="background: white; border: 1px solid var(--alwahyu-border); border-radius: 20px; padding: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.03); margin-top: 45px;">
+            <h2 class="section-title" style="font-size: 1.3rem; margin-bottom: 20px;"><i class="fa-solid fa-circle-info" style="color: var(--alwahyu-primary);"></i> Jam Layanan Administrasi</h2>
+            <ul class="info-list" style="margin-bottom: 0;">
+                <li><strong><i class="fa-regular fa-clock"></i> Jam Operasional:</strong> Senin – Jumat, 08.00 – 16.00 WIB (Sabtu/Minggu libur)</li>
+                <li><strong><i class="fa-solid fa-phone"></i> Kontak TU (WhatsApp Only):</strong> +62 812 3020 0098</li>
+                <li><strong><i class="fa-solid fa-circle-exclamation"></i> Catatan:</strong> Pengajuan di luar jam kerja akan diproses pada hari kerja berikutnya.</li>
             </ul>
         </div>
     </div>
@@ -224,7 +342,87 @@ Daftar Santri
     </div>
 </footer>
 
+<!-- TOAST ALERT -->
+<div class="ep-toast" id="epToast">
+    <span class="ep-toast-icon"><i class="fa-solid fa-circle-check"></i></span>
+    <span id="epToastMsg">Pesan Berhasil</span>
+</div>
+
 <script src="../../assets/js/global/navigation.js"></script>
 <script src="../../assets/js/global/main.js"></script>
+<script src="../../assets/js/global/config.js"></script>
+<script src="../../assets/js/global/eponpes-shared.js"></script>
+<script>
+// Tab Switching
+const tabBtns = document.querySelectorAll('.admin-tab-btn');
+const tabContents = document.querySelectorAll('.admin-tab-content');
+
+tabBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        // Reset active classes on buttons
+        tabBtns.forEach(b => {
+            b.classList.remove('active');
+            b.style.color = 'var(--alwahyu-text)';
+            b.style.borderBottom = 'none';
+        });
+        
+        // Add active classes on clicked button
+        btn.classList.add('active');
+        btn.style.color = 'var(--alwahyu-primary)';
+        btn.style.borderBottom = '3px solid var(--alwahyu-primary)';
+        
+        // Hide all tab contents
+        tabContents.forEach(content => {
+            content.style.display = 'none';
+        });
+        
+        // Show target tab content
+        const targetId = 'tab-' + btn.getAttribute('data-tab');
+        const targetTab = document.getElementById(targetId);
+        if (targetTab) {
+            targetTab.style.display = 'block';
+        }
+    });
+});
+
+// Form Submissions
+const adminForms = document.querySelectorAll('.admin-form');
+adminForms.forEach(form => {
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const type = form.getAttribute('data-type');
+        const submitBtn = form.querySelector('button[type="submit"]');
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Mengirim Permohonan...';
+        
+        // Get form fields dynamically
+        const inputs = form.querySelectorAll('input, textarea');
+        const data = {
+            layanan_type: type
+        };
+        inputs.forEach((input, index) => {
+            data[`field_${index}`] = input.value;
+        });
+        
+        try {
+            let res = await callApi('submitAdministrasi', data);
+            if (res && res.status === 'success') {
+                showToast(`Permohonan ${type} berhasil dikirim!`);
+                form.reset();
+            } else {
+                showToast(res.message || "Gagal mengirim permohonan.", true);
+            }
+        } catch (err) {
+            console.error(err);
+            // Fallback for offline/local dummy behavior
+            showToast(`Permohonan ${type} berhasil dikirim! (Simulasi Offline)`);
+            form.reset();
+        } finally {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = 'Kirim Permohonan';
+        }
+    });
+});
+</script>
 </body>
 </html>

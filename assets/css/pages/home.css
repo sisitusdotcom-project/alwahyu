@@ -83,3 +83,223 @@
         flex-direction: column;
     }
 }
+
+/* Welcome Section enhancements */
+.welcome-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.welcome-section::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-image: url('../../assets/img/logo/logo-crop.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: min(400px, 80%);
+    opacity: 0.04; /* extremely subtle background watermark */
+    z-index: 0;
+    pointer-events: none;
+}
+
+.welcome-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+.welcome-logo {
+    height: 120px;
+    width: auto;
+    margin: 0 auto 24px auto;
+    display: block;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 12px rgba(15, 118, 110, 0.1));
+}
+
+/* Feature Cards with Photos Redesign */
+.feature-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+    border-bottom: 4px solid transparent;
+    padding: 0 !important; /* Override old padding */
+    text-align: center;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(15, 118, 110, 0.1);
+    border-bottom-color: var(--alwahyu-primary);
+}
+
+.feature-card-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    background: #f1f5f9;
+}
+
+.feature-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.feature-card:hover .feature-card-image img {
+    transform: scale(1.06);
+}
+
+.feature-card-content {
+    padding: 30px 24px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.feature-card-content h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--alwahyu-dark);
+    margin-bottom: 12px;
+}
+
+.feature-card-content p {
+    font-size: 0.95rem;
+    color: var(--alwahyu-text);
+    line-height: 1.5;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.feature-card-content .card-link {
+    margin-top: auto;
+}
+
+/* Floating Announcement/Promo Card */
+.promo-float-card {
+    position: fixed;
+    bottom: 30px;
+    right: -400px; /* Hidden offscreen by default */
+    width: 350px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(15, 23, 42, 0.15);
+    border: 1px solid rgba(15, 118, 110, 0.1);
+    z-index: 10000;
+    transition: right 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    overflow: hidden;
+    opacity: 0;
+}
+
+.promo-float-card.show {
+    right: 30px;
+    opacity: 1;
+}
+
+.promo-banner-img {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+}
+
+.promo-body {
+    padding: 20px;
+    position: relative;
+}
+
+.promo-close {
+    position: absolute;
+    top: -115px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+    font-size: 14px;
+    color: var(--alwahyu-dark);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: all 0.2s ease;
+    z-index: 10;
+}
+
+.promo-close:hover {
+    background: white;
+    color: var(--alwahyu-primary);
+    transform: scale(1.1);
+}
+
+.promo-tag {
+    background: #dcfce7;
+    color: var(--alwahyu-primary);
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 999px;
+    display: inline-block;
+    margin-bottom: 10px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.promo-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--alwahyu-dark);
+    margin-bottom: 8px;
+    line-height: 1.4;
+    text-align: left;
+}
+
+.promo-text {
+    font-size: 0.85rem;
+    color: var(--alwahyu-text);
+    line-height: 1.5;
+    margin-bottom: 16px;
+    text-align: left;
+}
+
+.promo-btn {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background: linear-gradient(135deg, var(--alwahyu-primary), var(--alwahyu-primary-2));
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.promo-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(15, 118, 110, 0.2);
+}
+
+@media (max-width: 480px) {
+    .promo-float-card {
+        width: calc(100% - 40px);
+        bottom: 20px;
+        right: -100%;
+    }
+    .promo-float-card.show {
+        right: 20px;
+    }
+}

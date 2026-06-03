@@ -530,3 +530,102 @@
     font-weight: 700;
     line-height: 1.4;
 }
+
+/* News & Article Grid Card Styles */
+.news-grid-custom {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.news-card-custom {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid var(--alwahyu-border);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    text-decoration: none;
+}
+
+.news-card-custom:hover {
+    transform: translateY(-8px);
+    border-color: var(--alwahyu-primary);
+    box-shadow: 0 20px 40px rgba(62, 125, 55, 0.08);
+}
+
+.news-card-img-wrapper {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    background: #f1f5f9;
+}
+
+.news-card-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.news-card-custom:hover .news-card-img-wrapper img {
+    transform: scale(1.05);
+}
+
+.news-card-content {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.news-card-meta {
+    font-size: 0.85rem;
+    color: var(--alwahyu-primary);
+    font-weight: 600;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.news-card-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--alwahyu-dark);
+    line-height: 1.4;
+    margin-bottom: 12px;
+    transition: color 0.2s ease;
+}
+
+.news-card-custom:hover .news-card-title {
+    color: var(--alwahyu-primary-2);
+}
+
+.news-card-excerpt {
+    font-size: 0.95rem;
+    color: var(--alwahyu-text);
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.news-card-link {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--alwahyu-primary);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: auto;
+    transition: gap 0.2s ease;
+}
+
+.news-card-custom:hover .news-card-link {
+    gap: 10px;
+    color: var(--alwahyu-primary-2);
+}

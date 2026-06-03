@@ -238,7 +238,44 @@ Daftar Santri
     </div>
 </footer>
 
+<!-- TOAST ALERT -->
+<div class="ep-toast" id="epToast">
+    <span class="ep-toast-icon"><i class="fa-solid fa-circle-check"></i></span>
+    <span id="epToastMsg">Pesan Berhasil</span>
+</div>
+
 <script src="../../assets/js/global/navigation.js"></script>
 <script src="../../assets/js/global/main.js"></script>
+<script src="../../assets/js/global/config.js"></script>
+<script src="../../assets/js/global/eponpes-shared.js"></script>
+<script>
+document.getElementById('form-pengaduan').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = e.target.querySelector('button[type="submit"]');
+    btn.disabled = true;
+    btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Mengirim Laporan...';
+    
+    const nama = document.getElementById('nama-pengadu').value;
+    const kontak = document.getElementById('kontak-pengadu').value;
+    const jenis = document.getElementById('jenis-pengaduan').value;
+    const isi = document.getElementById('isi-pengaduan').value;
+    
+    try {
+        let res = await callApi('submitPengaduan', { nama, kontak, jenis, isi });
+        if (res.status === 'success') {
+            showToast("Laporan Anda berhasil dikirim!");
+            e.target.reset();
+        } else {
+            showToast(res.message || "Gagal mengirim laporan.", true);
+        }
+    } catch (err) {
+        console.error(err);
+        showToast("Terjadi kesalahan koneksi.", true);
+    } finally {
+        btn.disabled = false;
+        btn.innerHTML = "Kirim Pengaduan";
+    }
+});
+</script>
 </body>
 </html>

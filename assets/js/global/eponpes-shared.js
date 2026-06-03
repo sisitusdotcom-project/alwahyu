@@ -111,7 +111,7 @@ function runLocalMockApi(action, data) {
             let sId = db.santri.length ? Math.max(...db.santri.map(s => s.id)) + 1 : 1;
             db.santri.push({
                 id: sId, user_id: uId, nis: data.nis, kelas: data.kelas, kamar: data.kamar,
-                nama_ayah: data.nama_ayah, nama_ibu: data.nama_ibu, wa_wali: data.wa_wali, status_aktif: "Aktif"
+                nama_ayah: data.nama_ayah, nama_ibu: data.nama_ibu, wa_wali: data.wa_wali, status_aktif: "Menunggu Ujian Seleksi"
             });
             
             let wId = db.wali.length ? Math.max(...db.wali.map(w => w.id)) + 1 : 1;
@@ -224,6 +224,37 @@ function runLocalMockApi(action, data) {
             });
             saveLocalDb(db);
             return { status: 'success', message: 'Pengumuman berhasil dipublikasikan' };
+            
+        case "checkStatus":
+            let q = (data.query || "").trim().toLowerCase();
+            let fs = db.santri.find(s => String(s.nis).toLowerCase() === q);
+            if (!fs) {
+                let fu = db.users.find(u => u.email.toLowerCase() === q);
+                if (fu) {
+                    fs = db.santri.find(s => String(s.user_id) === String(fu.id));
+                }
+            }
+            if (fs) {
+                let au = db.users.find(u => String(u.id) === String(fs.user_id));
+                return {
+                    status: 'success',
+                    data: {
+                        name: au ? au.name : "Santri",
+                        nis: fs.nis,
+                        kelas: fs.kelas,
+                        status_aktif: fs.status_aktif || "Menunggu Ujian Seleksi"
+                    }
+                };
+            }
+            return { status: 'error', message: 'Data tidak ditemukan' };
+            
+        case "submitPengaduan":
+            console.log("Mock Submit Pengaduan:", data);
+            return { status: 'success', message: 'Pengaduan berhasil disimpan' };
+            
+        case "submitAdministrasi":
+            console.log("Mock Submit Administrasi:", data);
+            return { status: 'success', message: 'Permohonan administrasi berhasil disimpan' };
             
         default:
             return { status: 'error', message: 'Action tidak dikenal' };

@@ -48,6 +48,9 @@ function doGet(e) {
     if (action === "submitIzin")           return handleSubmitIzin(p);
     if (action === "updateIzinStatus")     return handleUpdateIzinStatus(p);
     if (action === "addPengumuman")        return handleAddPengumuman(p);
+    if (action === "checkStatus")          return handleCheckStatus(p);
+    if (action === "submitPengaduan")      return handleSubmitPengaduan(p);
+    if (action === "submitAdministrasi")   return handleSubmitAdministrasi(p);
     
     return jsonResponse("error", "Unknown action: " + action, null);
     
@@ -133,7 +136,7 @@ function handleAddSantri(data) {
     nama_ayah: data.nama_ayah,
     nama_ibu: data.nama_ibu,
     wa_wali: data.wa_wali,
-    status_aktif: "Aktif"
+    status_aktif: "Menunggu Ujian Seleksi"
   });
   
   // 3. Tambah wali
@@ -419,6 +422,100 @@ function handleAddPengumuman(data) {
   });
   
   return jsonResponse("success", "Pengumuman berhasil dipublikasikan", { id: newId });
+}
+
+function handleCheckStatus(data) {
+  var query = (data.query || "").trim().toLowerCase();
+  if (!query) {
+    return jsonResponse("error", "Query parameter is empty", null);
+  }
+  
+  var santris = getSheetData("santri");
+  var users = getSheetData("users");
+  
+  var foundSantri = null;
+  for (var i = 0; i < santris.length; i++) {
+    var s = santris[i];
+    if (String(s.nis).toLowerCase() === query) {
+      foundSantri = s;
+      break;
+    }
+  }
+  
+  if (!foundSantri) {
+    var foundUser = users.find(function(u) {
+      return String(u.email).toLowerCase() === query;
+    });
+    if (foundUser) {
+      foundSantri = santris.find(function(s) {
+        return String(s.user_id) === String(foundUser.id);
+      });
+    }
+  }
+  
+  if (!foundSantri) {
+    return jsonResponse("error", "Data tidak ditemukan", null);
+  }
+  
+  var assocUser = users.find(function(u) {
+    return String(u.id) === String(foundSantri.user_id);
+  });
+  
+  return jsonResponse("success", "Data ditemukan", {
+    name: assocUser ? assocUser.name : "Santri",
+    nis: foundSantri.nis,
+    kelas: foundSantri.kelas,
+    status_aktif: foundSantri.status_aktif || "Menunggu Ujian Seleksi"
+  });
+}
+
+function handleSubmitPengaduan(data) {
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var sheet = ss.getSheetByName("pengaduan");
+  
+  if (!sheet) {
+    sheet = ss.insertSheet("pengaduan");
+    sheet.appendRow(["id", "nama", "kontak", "jenis", "isi", "tanggal"]);
+  }
+  
+  var newId = getNextId(sheet);
+  var dateStr = Utilities.formatDate(new Date(), "GMT+7", "yyyy-MM-dd HH:mm:ss");
+  
+  appendRowToSheet(sheet, {
+    id: newId,
+    nama: data.nama || "-",
+    kontak: data.kontak || "-",
+    jenis: data.jenis || "Pengaduan",
+    isi: data.isi || "-",
+    tanggal: dateStr
+  });
+  
+  return jsonResponse("success", "Pengaduan berhasil disimpan", { id: newId });
+}
+
+function handleSubmitAdministrasi(data) {
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var sheet = ss.getSheetByName("administrasi");
+  
+  if (!sheet) {
+    sheet = ss.insertSheet("administrasi");
+    sheet.appendRow(["id", "layanan_type", "field_0", "field_1", "field_2", "field_3", "tanggal"]);
+  }
+  
+  var newId = getNextId(sheet);
+  var dateStr = Utilities.formatDate(new Date(), "GMT+7", "yyyy-MM-dd HH:mm:ss");
+  
+  appendRowToSheet(sheet, {
+    id: newId,
+    layanan_type: data.layanan_type || "Administrasi",
+    field_0: data.field_0 || "-",
+    field_1: data.field_1 || "-",
+    field_2: data.field_2 || "-",
+    field_3: data.field_3 || "-",
+    tanggal: dateStr
+  });
+  
+  return jsonResponse("success", "Permohonan administrasi berhasil disimpan", { id: newId });
 }
 
 // Database Helpers
