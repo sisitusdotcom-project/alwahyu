@@ -378,4 +378,53 @@
     }
 }
 
+/* Administrasi Page Responsive Layouts */
+.admin-tab-content {
+    background: white;
+    border: 1px solid var(--alwahyu-border);
+    border-radius: 20px;
+    padding: 35px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+}
+
+.admin-grid {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.admin-info-col {
+    flex: 1;
+    min-width: 280px;
+}
+
+.admin-form-col {
+    flex: 1.2;
+    min-width: 280px;
+    background: #f8fafc;
+    border-radius: 16px;
+    padding: 24px;
+    border: 1px solid var(--alwahyu-border);
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .admin-tab-content {
+        padding: 20px 15px;
+        border-radius: 12px;
+    }
+    .admin-grid {
+        gap: 24px;
+        flex-direction: column;
+    }
+    .admin-info-col, .admin-form-col {
+        width: 100%;
+        min-width: 0;
+    }
+    .admin-form-col {
+        padding: 16px;
+    }
+}
+
+
 
