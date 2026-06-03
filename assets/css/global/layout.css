@@ -3,6 +3,7 @@ body {
     color: var(--alwahyu-text);
     background-color: var(--alwahyu-bg);
     line-height: 1.6;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .container {
