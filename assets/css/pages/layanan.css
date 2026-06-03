@@ -339,3 +339,43 @@
     }
 }
 
+/* Donasi Page Responsive Custom Layouts */
+.donasi-hero {
+    background: linear-gradient(135deg, var(--alwahyu-primary), var(--alwahyu-primary-2));
+    padding: 50px 40px;
+    border-radius: 24px;
+    color: white;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.donasi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    margin-bottom: 50px;
+}
+
+@media (max-width: 600px) {
+    .donasi-hero {
+        padding: 30px 20px;
+        border-radius: 16px;
+    }
+    .donasi-hero h2 {
+        font-size: 1.4rem !important;
+        margin-bottom: 10px !important;
+    }
+    .donasi-hero h3 {
+        font-size: 1.1rem !important;
+        margin-bottom: 10px !important;
+    }
+    .donasi-hero p {
+        font-size: 0.9rem !important;
+    }
+    .donasi-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+}
+
+
