@@ -28,4 +28,15 @@ document.addEventListener("DOMContentLoaded", () => {
             slides[currentSlide].classList.add('active');
         }, 5000);
     }
+
+    // Inject WhatsApp Floating Button globally
+    if (!document.querySelector('.wa-float')) {
+        const waFloat = document.createElement('a');
+        waFloat.href = 'https://wa.me/6281230200098';
+        waFloat.className = 'wa-float slide-in-up animate';
+        waFloat.target = '_blank';
+        waFloat.rel = 'noopener noreferrer';
+        waFloat.innerHTML = '<i class="fa-brands fa-whatsapp"></i>';
+        document.body.appendChild(waFloat);
+    }
 });
