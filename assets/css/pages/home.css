@@ -76,11 +76,25 @@
 }
 
 @media (max-width: 768px) {
+    .hero {
+        min-height: 450px;
+        padding-top: 60px;
+    }
     .hero-content h1 {
-        font-size: 2.2rem;
+        font-size: 1.8rem;
+        margin-bottom: 16px;
+    }
+    .hero-content p {
+        font-size: 1rem;
+        margin-bottom: 24px;
     }
     .hero-buttons {
         flex-direction: column;
+        gap: 12px;
+    }
+    .welcome-logo {
+        height: 80px;
+        margin-bottom: 16px;
     }
 }
 
