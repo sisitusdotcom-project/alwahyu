@@ -136,7 +136,7 @@
 }
 
 /* Feature Cards with Photos Redesign */
-.feature-card {
+.home-feature-card {
     background: white;
     border-radius: 20px;
     overflow: hidden;
@@ -149,13 +149,13 @@
     text-align: center;
 }
 
-.feature-card:hover {
+.home-feature-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 20px 40px rgba(15, 118, 110, 0.1);
     border-bottom-color: var(--alwahyu-primary);
 }
 
-.feature-card-image {
+.home-feature-card-image {
     width: 100%;
     height: 200px;
     overflow: hidden;
@@ -163,32 +163,32 @@
     background: #f1f5f9;
 }
 
-.feature-card-image img {
+.home-feature-card-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.5s ease;
 }
 
-.feature-card:hover .feature-card-image img {
+.home-feature-card:hover .home-feature-card-image img {
     transform: scale(1.06);
 }
 
-.feature-card-content {
+.home-feature-card-content {
     padding: 30px 24px;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
 }
 
-.feature-card-content h3 {
+.home-feature-card-content h3 {
     font-size: 1.3rem;
     font-weight: 700;
     color: var(--alwahyu-dark);
     margin-bottom: 12px;
 }
 
-.feature-card-content p {
+.home-feature-card-content p {
     font-size: 0.95rem;
     color: var(--alwahyu-text);
     line-height: 1.5;
@@ -196,7 +196,7 @@
     flex-grow: 1;
 }
 
-.feature-card-content .card-link {
+.home-feature-card-content .card-link {
     margin-top: auto;
 }
 
