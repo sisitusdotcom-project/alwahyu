@@ -3,14 +3,14 @@
 /* Rekening Donasi Card */
 .donation-card {
     background: white;
-    padding: 40px;
+    padding: 16px;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
 
 .bank-detail-box {
     background: linear-gradient(135deg, #f0fdf4, #dcfce7);
-    padding: 30px;
+    padding: 20px;
     border-radius: 16px;
     text-align: center;
     border: 2px dashed var(--alwahyu-primary);
@@ -68,7 +68,7 @@
 /* Forms & inputs inside Layanan pages (e.g. Pengaduan) */
 .form-card {
     background: white;
-    padding: 40px;
+    padding: 16px;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
@@ -136,7 +136,7 @@
 }
 
 @media (max-width: 600px) {
-    .donation-card, .form-card { padding: 24px; }
+    .donation-card, .form-card { padding: 16px; }
     .bank-detail-box { padding: 16px; }
 }
 
@@ -342,7 +342,7 @@
 /* Donasi Page Responsive Custom Layouts */
 .donasi-hero {
     background: linear-gradient(135deg, var(--alwahyu-primary), var(--alwahyu-primary-2));
-    padding: 50px 40px;
+    padding: 20px 16px;
     border-radius: 24px;
     color: white;
     text-align: center;
@@ -383,7 +383,7 @@
     background: white;
     border: 1px solid var(--alwahyu-border);
     border-radius: 20px;
-    padding: 35px;
+    padding: 16px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.03);
 }
 
@@ -403,7 +403,7 @@
     min-width: 280px;
     background: #f8fafc;
     border-radius: 16px;
-    padding: 24px;
+    padding: 16px;
     border: 1px solid var(--alwahyu-border);
     box-sizing: border-box;
 }
