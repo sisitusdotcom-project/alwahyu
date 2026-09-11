@@ -323,3 +323,68 @@
 .js-error-icon { font-size: 2.2rem; color: #ef4444; margin-bottom: 12px; }
 .js-error-title { font-weight: 700; color: #ef4444; margin-bottom: 6px; margin-top: 0; }
 .js-error-desc { color: var(--alwahyu-text); font-size: 0.9rem; margin: 0; }
+
+/* Administrasi Tab Components */
+.tabs-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    border-bottom: 2px solid var(--alwahyu-border);
+    padding-bottom: 15px;
+    flex-wrap: wrap;
+}
+.admin-tab-btn {
+    background: none;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--alwahyu-text);
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-radius: 8px;
+    border-bottom: 3px solid transparent;
+}
+.admin-tab-btn.active, .admin-tab-btn:hover {
+    color: var(--alwahyu-primary);
+    border-bottom-color: var(--alwahyu-primary);
+}
+.admin-tab-title {
+    font-size: 1.4rem;
+    color: var(--alwahyu-dark);
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+.admin-tab-desc {
+    color: var(--alwahyu-text);
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+.admin-tab-subtitle {
+    font-weight: 700;
+    color: var(--alwahyu-dark);
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+}
+.admin-tab-subtitle-bordered {
+    font-weight: 700;
+    color: var(--alwahyu-dark);
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--alwahyu-border);
+    padding-bottom: 10px;
+}
+.admin-tab-list {
+    padding-left: 20px;
+    color: var(--alwahyu-text);
+    line-height: 1.8;
+    margin-bottom: 24px;
+}
+.jam-layanan-box {
+    background: white;
+    border: 1px solid var(--alwahyu-border);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    margin-top: 45px;
+}
