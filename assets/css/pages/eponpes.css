@@ -248,7 +248,7 @@
 /* Main Content Area */
 .ep-main-content {
     background: white;
-    padding: 40px;
+    padding: 25px;
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -604,3 +604,200 @@
 .js-link-bukti { color:var(--alwahyu-primary); font-weight:700; }
 .js-empty-icon { font-size: 3rem; color: #cbd5e1; margin-bottom: 15px; display: block; text-align: center; }
 .js-empty-text { font-weight: 600; color: #64748b; text-align: center; }
+
+
+/* ========================================== */
+/* RESPONSIVE MOBILE DASHBOARD                */
+/* ========================================== */
+@media (max-width: 768px) {
+    .ep-dashboard {
+        grid-template-columns: 1fr;
+        min-height: auto;
+        margin: 5px 0 25px 0;
+        border-radius: 12px;
+        box-shadow: 0 5px 20px rgba(15,23,42,0.06);
+    }
+    
+    .ep-sidebar {
+        padding: 15px 12px 10px;
+        gap: 12px;
+        border-right: none;
+        border-bottom: 1px solid var(--alwahyu-border);
+        position: relative;
+    }
+    
+    /* Horizontal Profile Box */
+    .ep-profile-box {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-template-areas: 
+            "avatar name"
+            "avatar role";
+        gap: 2px 12px;
+        text-align: left;
+        align-items: center;
+        padding-bottom: 12px;
+        border-bottom: 1px solid var(--alwahyu-border);
+    }
+    
+    .ep-avatar {
+        grid-area: avatar;
+        width: 40px;
+        height: 40px;
+        margin: 0;
+        font-size: 1rem;
+        border-radius: 10px;
+    }
+    
+    .ep-profile-box h4 {
+        grid-area: name;
+        margin: 0;
+        align-self: end;
+        font-size: 0.9rem;
+    }
+    
+    .ep-profile-box span {
+        grid-area: role;
+        justify-self: start;
+        align-self: start;
+        font-size: 0.7rem;
+        padding: 2px 8px;
+    }
+
+    /* Position Logout Button Absolute */
+    .ep-logout-btn {
+        position: absolute;
+        top: 20px;
+        right: 12px;
+        width: auto;
+        padding: 6px 10px;
+        font-size: 0.75rem;
+        background: #fef2f2;
+        border: 1px solid #fecaca;
+        border-radius: 8px;
+    }
+    
+    /* Wrap Menu instead of Scroll to prevent "cut off" feeling */
+    .ep-menu {
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-bottom: 5px;
+        gap: 6px;
+        justify-content: flex-start;
+    }
+    
+    .ep-menu-item {
+        width: auto;
+    }
+    
+    .ep-menu-btn {
+        width: auto;
+        padding: 6px 12px;
+        font-size: 0.8rem;
+        background: white;
+        border: 1px solid var(--alwahyu-border);
+        box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        border-radius: 8px;
+        gap: 6px;
+    }
+    
+    .ep-menu-btn.active {
+        background: var(--alwahyu-primary);
+        color: white;
+        border-color: var(--alwahyu-primary);
+        box-shadow: 0 4px 8px rgba(62, 125, 55, 0.15);
+    }
+    
+    .ep-menu-btn.active i {
+        color: white;
+    }
+    
+    .ep-menu-btn i {
+        display: inline-block;
+        margin-right: 0;
+        width: auto;
+        font-size: 0.9rem;
+    }
+    
+    /* Main Content Compact Padding */
+    .ep-main-content {
+        padding: 12px;
+        gap: 15px;
+    }
+    
+    .ep-content-header {
+        padding-bottom: 10px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    
+    .ep-content-header h2 {
+        font-size: 1.15rem;
+    }
+    
+    /* Quick Stats Grid - Forced 2 columns for mobile */
+    .ep-stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    
+    .ep-stat-card {
+        padding: 10px;
+        gap: 8px;
+        border-radius: 10px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .ep-stat-icon {
+        width: 32px;
+        height: 32px;
+        font-size: 1rem;
+        border-radius: 8px;
+    }
+    
+    .ep-stat-value {
+        font-size: 1rem;
+    }
+    
+    .ep-stat-label {
+        font-size: 0.7rem;
+    }
+    
+    /* Card Adjustments */
+    .ep-card {
+        padding: 12px;
+        border-radius: 10px;
+        margin-bottom: 12px;
+    }
+    
+    .ep-card h3 {
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+        gap: 6px;
+    }
+    
+    .ep-grid-2 {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    /* Table Adjustments */
+    .ep-table th, .ep-table td {
+        padding: 8px;
+        font-size: 0.8rem;
+    }
+    
+    /* Forms inside Dashboard */
+    .ep-form-row {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin-bottom: 12px;
+    }
+    
+    .ep-btn-sm {
+        padding: 6px 12px;
+        font-size: 0.75rem;
+    }
+}
