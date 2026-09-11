@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../assets/css/global/components.css">
     <link rel="stylesheet" href="../assets/css/global/animations.css">
     <link rel="stylesheet" href="../assets/css/pages/eponpes.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
 <body>
 
@@ -123,15 +123,15 @@
                     </div>
                     
                     <ul class="ep-menu" id="epMenu">
-                        <li class="ep-menu-item"><button class="ep-menu-btn active" data-tab="dashboard"><i class="fa-solid fa-gauge"></i> Dashboard</button></li>
-                        <li class="ep-menu-item"><button class="ep-menu-btn" data-tab="setoran"><i class="fa-solid fa-book-quran"></i> Input Setoran</button></li>
-                        <li class="ep-menu-item"><button class="ep-menu-btn" data-tab="nilai"><i class="fa-solid fa-graduation-cap"></i> Input Nilai</button></li>
-                        <li class="ep-menu-item"><button class="ep-menu-btn" data-tab="absensi"><i class="fa-solid fa-calendar-check"></i> Absensi Kelas</button></li>
-                        <li class="ep-menu-item"><button class="ep-menu-btn" data-tab="perizinan"><i class="fa-solid fa-stamp"></i> Validasi Izin</button></li>
+                        <li class="ep-menu-item"><button class="ep-menu-btn active" data-tab="dashboard"><i class="ph-fill ph-gauge"></i> Dashboard</button></li>
+                        <li class="ep-menu-item"><button class="ep-menu-btn" data-tab="setoran"><i class="ph-fill ph-book-open-text"></i> Input Setoran</button></li>
+                        <li class="ep-menu-item"><button class="ep-menu-btn" data-tab="nilai"><i class="ph-fill ph-graduation-cap"></i> Input Nilai</button></li>
+                        <li class="ep-menu-item"><button class="ep-menu-btn" data-tab="absensi"><i class="ph-fill ph-calendar-check"></i> Absensi Kelas</button></li>
+                        <li class="ep-menu-item"><button class="ep-menu-btn" data-tab="perizinan"><i class="ph-fill ph-stamp"></i> Validasi Izin</button></li>
                     </ul>
                     
                     <button class="ep-menu-btn ep-logout-btn" id="logoutBtn">
-                        <i class="fa-solid fa-right-from-bracket"></i> Keluar
+                        <i class="ph-fill ph-sign-out"></i> Keluar
                     </button>
                 </div>
                 
@@ -147,21 +147,21 @@
                         <div id="panel-pengurus-dashboard" class="ep-tab-panel active">
                             <div class="ep-stats-grid">
                                 <div class="ep-stat-card">
-                                    <div class="ep-stat-icon"><i class="fa-solid fa-user-graduate"></i></div>
+                                    <div class="ep-stat-icon"><i class="ph-fill ph-graduation-cap"></i></div>
                                     <div class="ep-stat-info">
                                         <span class="ep-stat-label">Santri Bimbingan</span>
                                         <span class="ep-stat-value" id="stat-pengurus-santri">0 Santri</span>
                                     </div>
                                 </div>
                                 <div class="ep-stat-card">
-                                    <div class="ep-stat-icon success"><i class="fa-solid fa-book-bookmark"></i></div>
+                                    <div class="ep-stat-icon success"><i class="ph-fill ph-book-bookmark"></i></div>
                                     <div class="ep-stat-info">
                                         <span class="ep-stat-label">Total Catatan Setoran</span>
                                         <span class="ep-stat-value" id="stat-pengurus-setoran">0 Record</span>
                                     </div>
                                 </div>
                                 <div class="ep-stat-card">
-                                    <div class="ep-stat-icon warning"><i class="fa-solid fa-clock-rotate-left"></i></div>
+                                    <div class="ep-stat-icon warning"><i class="ph-fill ph-clock-counter-clockwise"></i></div>
                                     <div class="ep-stat-info">
                                         <span class="ep-stat-label">Izin Menunggu</span>
                                         <span class="ep-stat-value" id="stat-pengurus-izin-pending">0 Izin</span>
@@ -170,7 +170,7 @@
                             </div>
 
                             <div class="ep-card">
-                                <h3><i class="fa-solid fa-users"></i> Daftar Santri Terbimbing</h3>
+                                <h3><i class="ph-fill ph-users"></i> Daftar Santri Terbimbing</h3>
                                 <div class="ep-table-wrapper">
                                     <table class="ep-table">
                                         <thead>
@@ -193,7 +193,7 @@
                         <!-- PANEL: SETORAN -->
                         <div id="panel-pengurus-setoran" class="ep-tab-panel">
                             <div class="ep-card">
-                                <h3><i class="fa-solid fa-pen-nib"></i> Validasi / Input Setoran Hafalan</h3>
+                                <h3><i class="ph-fill ph-pen-nib"></i> Validasi / Input Setoran Hafalan</h3>
                                 <form id="form-pengurus-setoran" class="login-form" style="margin-top:0;">
                                     <div class="ep-form-row">
                                         <div class="form-group">
@@ -227,12 +227,12 @@
                                         <label for="ps-catatan">Catatan Evaluasi Ustadz</label>
                                         <input type="text" id="ps-catatan" placeholder="Catatan makhraj, tajwid, kelancaran..." required>
                                     </div>
-                                    <button type="submit" class="btn-primary" style="margin-top:0; width:auto;"><i class="fa-solid fa-floppy-disk"></i> Simpan Setoran</button>
+                                    <button type="submit" class="btn-primary" style="margin-top:0; width:auto;"><i class="ph-fill ph-floppy-disk"></i> Simpan Setoran</button>
                                 </form>
                             </div>
                             
                             <div class="ep-card">
-                                <h3><i class="fa-solid fa-list-check"></i> Riwayat Setoran Terakhir</h3>
+                                <h3><i class="ph-fill ph-list-checks"></i> Riwayat Setoran Terakhir</h3>
                                 <div class="ep-table-wrapper">
                                     <table class="ep-table">
                                         <thead>
@@ -256,7 +256,7 @@
                         <!-- PANEL: NILAI -->
                         <div id="panel-pengurus-nilai" class="ep-tab-panel">
                             <div class="ep-card">
-                                <h3><i class="fa-solid fa-edit"></i> Input Nilai Akademik Santri</h3>
+                                <h3><i class="ph-fill ph-pencil-simple"></i> Input Nilai Akademik Santri</h3>
                                 <form id="form-pengurus-nilai" class="login-form" style="margin-top:0;">
                                     <div class="ep-form-row">
                                         <div class="form-group">
@@ -288,7 +288,7 @@
                                             </select>
                                         </div>
                                     </div>
-                                    <button type="submit" class="btn-primary" style="margin-top:0; width:auto;"><i class="fa-solid fa-floppy-disk"></i> Simpan Nilai</button>
+                                    <button type="submit" class="btn-primary" style="margin-top:0; width:auto;"><i class="ph-fill ph-floppy-disk"></i> Simpan Nilai</button>
                                 </form>
                             </div>
                         </div>
@@ -296,7 +296,7 @@
                         <!-- PANEL: ABSENSI -->
                         <div id="panel-pengurus-absensi" class="ep-tab-panel">
                             <div class="ep-card">
-                                <h3><i class="fa-solid fa-check-square"></i> Input Absensi Kelas Santri</h3>
+                                <h3><i class="ph-fill ph-check-square"></i> Input Absensi Kelas Santri</h3>
                                 <form id="form-pengurus-absensi" class="login-form" style="margin-top:0;">
                                     <div class="ep-form-row" style="margin-bottom:20px;">
                                         <div class="form-group">
@@ -326,7 +326,7 @@
                                             </tbody>
                                         </table>
                                     </div>
-                                    <button type="submit" class="btn-primary" style="margin-top:0; width:auto;"><i class="fa-solid fa-floppy-disk"></i> Simpan Absensi Masal</button>
+                                    <button type="submit" class="btn-primary" style="margin-top:0; width:auto;"><i class="ph-fill ph-floppy-disk"></i> Simpan Absensi Masal</button>
                                 </form>
                             </div>
                         </div>
@@ -334,7 +334,7 @@
                         <!-- PANEL: PERIZINAN -->
                         <div id="panel-pengurus-perizinan" class="ep-tab-panel">
                             <div class="ep-card">
-                                <h3><i class="fa-solid fa-stamp"></i> Validasi / Tindak Lanjut Izin Santri</h3>
+                                <h3><i class="ph-fill ph-stamp"></i> Validasi / Tindak Lanjut Izin Santri</h3>
                                 <div class="ep-table-wrapper">
                                     <table class="ep-table">
                                         <thead>
@@ -363,7 +363,7 @@
 
 <!-- TOAST ALERT -->
 <div class="ep-toast" id="epToast">
-    <span class="ep-toast-icon"><i class="fa-solid fa-circle-check"></i></span>
+    <span class="ep-toast-icon"><i class="ph-fill ph-check-circle"></i></span>
     <span id="epToastMsg">Pesan Berhasil</span>
 </div>
 
@@ -381,15 +381,15 @@
         </div>
         <div class="footer-col">
             <h3>Kontak Kami</h3>
-            <p><i class="fa-solid fa-phone"></i> +62 812 3020 0098</p>
-            <p><i class="fa-regular fa-clock"></i> Senin - Jumat, 08.00 - 16.00 WIB</p>
+            <p><i class="ph-fill ph-phone"></i> +62 812 3020 0098</p>
+            <p><i class="ph ph-clock"></i> Senin - Jumat, 08.00 - 16.00 WIB</p>
         </div>
         <div class="footer-col">
             <h3>Sosial Media</h3>
             <div class="social-links">
-                <a href="https://www.instagram.com/ponpestahfidzalwahyu?igsh=MWFzdzlpNDU1OXN2cg==" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a>
-                <a href="https://www.facebook.com/share/1DFZfmiqeV/" target="_blank"><i class="fa-brands fa-facebook-f"></i> Facebook</a>
-                <a href="https://youtube.com/@alwahyuchannel?si=UnHLhtk589R4jCXM" target="_blank"><i class="fa-brands fa-youtube"></i> YouTube</a>
+                <a href="https://www.instagram.com/ponpestahfidzalwahyu?igsh=MWFzdzlpNDU1OXN2cg==" target="_blank"><i class="ph ph-instagram-logo"></i> Instagram</a>
+                <a href="https://www.facebook.com/share/1DFZfmiqeV/" target="_blank"><i class="ph ph-facebook-logo"></i> Facebook</a>
+                <a href="https://youtube.com/@alwahyuchannel?si=UnHLhtk589R4jCXM" target="_blank"><i class="ph ph-youtube-logo"></i> YouTube</a>
             </div>
         </div>
     </div>
@@ -594,8 +594,8 @@ async function renderTabContent(tabId) {
                         <td>${formatDateString(i.tanggal_kembali)}</td>
                         <td><span class="badge badge-warning">Pending</span></td>
                         <td>
-                            <button class="ep-btn-sm ep-btn-success btn-izin-approve" data-id="${i.id}"><i class="fa-solid fa-check"></i> Setujui</button>
-                            <button class="ep-btn-sm ep-btn-danger btn-izin-reject" data-id="${i.id}"><i class="fa-solid fa-xmark"></i> Tolak</button>
+                            <button class="ep-btn-sm ep-btn-success btn-izin-approve" data-id="${i.id}"><i class="ph-fill ph-check"></i> Setujui</button>
+                            <button class="ep-btn-sm ep-btn-danger btn-izin-reject" data-id="${i.id}"><i class="ph-fill ph-x"></i> Tolak</button>
                         </td>
                     </tr>
                 `;

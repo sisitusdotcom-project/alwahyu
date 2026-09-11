@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../assets/css/global/components.css">
     <link rel="stylesheet" href="../assets/css/global/animations.css">
     <link rel="stylesheet" href="../assets/css/pages/eponpes.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
 <body>
 
@@ -123,16 +123,16 @@
                     </div>
                     
                     <ul class="ep-menu" id="epMenu">
-                        <li class="ep-menu-item"><button class="ep-menu-btn active" data-tab="dashboard"><i class="fa-solid fa-gauge"></i> Dashboard</button></li>
-                        <li class="ep-menu-item"><button class="ep-menu-btn" data-tab="setoran"><i class="fa-solid fa-microphone"></i> Setor Hafalan</button></li>
-                        <li class="ep-menu-item"><button class="ep-menu-btn" data-tab="nilai"><i class="fa-solid fa-graduation-cap"></i> Rapor Akademik</button></li>
-                        <li class="ep-menu-item"><button class="ep-menu-btn" data-tab="keuangan"><i class="fa-solid fa-file-invoice-dollar"></i> Tagihan SPP</button></li>
-                        <li class="ep-menu-item"><button class="ep-menu-btn" data-tab="perizinan"><i class="fa-solid fa-calendar-plus"></i> Izin Pulang/Keluar</button></li>
-                        <li class="ep-menu-item"><button class="ep-menu-btn" data-tab="pengumuman"><i class="fa-solid fa-bullhorn"></i> Papan Pengumuman</button></li>
+                        <li class="ep-menu-item"><button class="ep-menu-btn active" data-tab="dashboard"><i class="ph-fill ph-gauge"></i> Dashboard</button></li>
+                        <li class="ep-menu-item"><button class="ep-menu-btn" data-tab="setoran"><i class="ph-fill ph-microphone"></i> Setor Hafalan</button></li>
+                        <li class="ep-menu-item"><button class="ep-menu-btn" data-tab="nilai"><i class="ph-fill ph-graduation-cap"></i> Rapor Akademik</button></li>
+                        <li class="ep-menu-item"><button class="ep-menu-btn" data-tab="keuangan"><i class="ph-fill ph-receipt"></i> Tagihan SPP</button></li>
+                        <li class="ep-menu-item"><button class="ep-menu-btn" data-tab="perizinan"><i class="ph-fill ph-calendar-plus"></i> Izin Pulang/Keluar</button></li>
+                        <li class="ep-menu-item"><button class="ep-menu-btn" data-tab="pengumuman"><i class="ph-fill ph-megaphone"></i> Papan Pengumuman</button></li>
                     </ul>
                     
                     <button class="ep-menu-btn ep-logout-btn" id="logoutBtn">
-                        <i class="fa-solid fa-right-from-bracket"></i> Keluar
+                        <i class="ph-fill ph-sign-out"></i> Keluar
                     </button>
                 </div>
                 
@@ -148,28 +148,28 @@
                         <div id="panel-santri-dashboard" class="ep-tab-panel active">
                             <div class="ep-stats-grid">
                                 <div class="ep-stat-card">
-                                    <div class="ep-stat-icon"><i class="fa-solid fa-book-quran"></i></div>
+                                    <div class="ep-stat-icon"><i class="ph-fill ph-book-open-text"></i></div>
                                     <div class="ep-stat-info">
                                         <span class="ep-stat-label">Hafalan Quran</span>
                                         <span class="ep-stat-value" id="stat-santri-juz">0 Juz</span>
                                     </div>
                                 </div>
                                 <div class="ep-stat-card">
-                                    <div class="ep-stat-icon warning"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+                                    <div class="ep-stat-icon warning"><i class="ph-fill ph-receipt"></i></div>
                                     <div class="ep-stat-info">
                                         <span class="ep-stat-label">Tunggakan SPP</span>
                                         <span class="ep-stat-value" id="stat-santri-spp">Rp 0</span>
                                     </div>
                                 </div>
                                 <div class="ep-stat-card">
-                                    <div class="ep-stat-icon success"><i class="fa-solid fa-calendar-check"></i></div>
+                                    <div class="ep-stat-icon success"><i class="ph-fill ph-calendar-check"></i></div>
                                     <div class="ep-stat-info">
                                         <span class="ep-stat-label">Kehadiran (Hadir)</span>
                                         <span class="ep-stat-value" id="stat-santri-absen">0 Hari</span>
                                     </div>
                                 </div>
                                 <div class="ep-stat-card">
-                                    <div class="ep-stat-icon danger"><i class="fa-solid fa-circle-exclamation"></i></div>
+                                    <div class="ep-stat-icon danger"><i class="ph-fill ph-warning-circle"></i></div>
                                     <div class="ep-stat-info">
                                         <span class="ep-stat-label">Izin Aktif</span>
                                         <span class="ep-stat-value" id="stat-santri-izin">-</span>
@@ -178,7 +178,7 @@
                             </div>
                             
                             <div class="ep-card">
-                                <h3><i class="fa-solid fa-chart-line"></i> Progres Target Hafalan 30 Juz</h3>
+                                <h3><i class="ph-fill ph-chart-line-up"></i> Progres Target Hafalan 30 Juz</h3>
                                 <div class="ep-progress-container">
                                     <div class="ep-progress-bar-bg">
                                         <div class="ep-progress-bar" id="santri-progress-bar" style="width: 0%;"></div>
@@ -192,7 +192,7 @@
 
                             <div class="ep-grid-2">
                                 <div class="ep-card">
-                                    <h3><i class="fa-solid fa-clock"></i> Jadwal Harian</h3>
+                                    <h3><i class="ph-fill ph-clock"></i> Jadwal Harian</h3>
                                     <div class="ep-table-wrapper">
                                         <table class="ep-table">
                                             <thead>
@@ -212,7 +212,7 @@
                                     </div>
                                 </div>
                                 <div class="ep-card">
-                                    <h3><i class="fa-solid fa-bullhorn"></i> Pengumuman Terbaru</h3>
+                                    <h3><i class="ph-fill ph-megaphone"></i> Pengumuman Terbaru</h3>
                                     <div id="santri-dashboard-pengumuman-list" style="display:flex; flex-direction:column; gap:12px;">
                                         <!-- Dynamic -->
                                     </div>
@@ -223,7 +223,7 @@
                         <!-- PANEL: SETORAN -->
                         <div id="panel-santri-setoran" class="ep-tab-panel">
                             <div class="ep-card">
-                                <h3><i class="fa-solid fa-paper-plane"></i> Setor Hafalan Mandiri / Online</h3>
+                                <h3><i class="ph-fill ph-paper-plane-tilt"></i> Setor Hafalan Mandiri / Online</h3>
                                 <form id="form-santri-setor" class="login-form" style="margin-top:0;">
                                     <div class="ep-form-row">
                                         <div class="form-group">
@@ -239,12 +239,12 @@
                                             <input type="number" id="setor-ayat-akhir" placeholder="15" required>
                                         </div>
                                     </div>
-                                    <button type="submit" class="btn-primary" style="margin-top:0; width:auto;"><i class="fa-solid fa-paper-plane"></i> Ajukan Setoran</button>
+                                    <button type="submit" class="btn-primary" style="margin-top:0; width:auto;"><i class="ph-fill ph-paper-plane-tilt"></i> Ajukan Setoran</button>
                                 </form>
                             </div>
                             
                             <div class="ep-card">
-                                <h3><i class="fa-solid fa-history"></i> Riwayat Hafalan & Penilaian</h3>
+                                <h3><i class="ph-fill ph-clock-counter-clockwise"></i> Riwayat Hafalan & Penilaian</h3>
                                 <div class="ep-table-wrapper">
                                     <table class="ep-table">
                                         <thead>
@@ -267,7 +267,7 @@
                         <!-- PANEL: NILAI -->
                         <div id="panel-santri-nilai" class="ep-tab-panel">
                             <div class="ep-card">
-                                <h3><i class="fa-solid fa-graduation-cap"></i> Rapor Akademik Santri</h3>
+                                <h3><i class="ph-fill ph-graduation-cap"></i> Rapor Akademik Santri</h3>
                                 <div class="ep-table-wrapper">
                                     <table class="ep-table">
                                         <thead>
@@ -289,7 +289,7 @@
                         <!-- PANEL: KEUANGAN -->
                         <div id="panel-santri-keuangan" class="ep-tab-panel">
                             <div class="ep-card">
-                                <h3><i class="fa-solid fa-receipt"></i> Riwayat SPP & Tagihan</h3>
+                                <h3><i class="ph-fill ph-receipt"></i> Riwayat SPP & Tagihan</h3>
                                 <div class="ep-table-wrapper">
                                     <table class="ep-table">
                                         <thead>
@@ -312,7 +312,7 @@
                         <!-- PANEL: PERIZINAN -->
                         <div id="panel-santri-perizinan" class="ep-tab-panel">
                             <div class="ep-card">
-                                <h3><i class="fa-solid fa-calendar-plus"></i> Form Pengajuan Izin Keluar / Pulang</h3>
+                                <h3><i class="ph-fill ph-calendar-plus"></i> Form Pengajuan Izin Keluar / Pulang</h3>
                                 <form id="form-santri-izin" class="login-form" style="margin-top:0;">
                                     <div class="ep-form-row">
                                         <div class="form-group">
@@ -332,12 +332,12 @@
                                         <label for="izin-keterangan">Keterangan / Alasan</label>
                                         <textarea id="izin-keterangan" placeholder="Berikan rincian alasan pengajuan izin..." required></textarea>
                                     </div>
-                                    <button type="submit" class="btn-primary" style="margin-top:0; width:auto;"><i class="fa-solid fa-paper-plane"></i> Kirim Permohonan</button>
+                                    <button type="submit" class="btn-primary" style="margin-top:0; width:auto;"><i class="ph-fill ph-paper-plane-tilt"></i> Kirim Permohonan</button>
                                 </form>
                             </div>
                             
                             <div class="ep-card">
-                                <h3><i class="fa-solid fa-history"></i> Riwayat Perizinan</h3>
+                                <h3><i class="ph-fill ph-clock-counter-clockwise"></i> Riwayat Perizinan</h3>
                                 <div class="ep-table-wrapper">
                                     <table class="ep-table">
                                         <thead>
@@ -374,7 +374,7 @@
 <div class="ep-modal-overlay" id="paymentModal">
     <div class="ep-modal">
         <div class="ep-modal-header">
-            <h3><i class="fa-solid fa-cloud-arrow-up"></i> Upload Bukti Pembayaran</h3>
+            <h3><i class="ph-fill ph-cloud-arrow-up"></i> Upload Bukti Pembayaran</h3>
             <button class="ep-modal-close" id="closePaymentModal">&times;</button>
         </div>
         <form id="form-upload-bukti">
@@ -391,14 +391,14 @@
                     <option value="struk_atm_bsi.png">struk_atm_bsi.png</option>
                 </select>
             </div>
-            <button type="submit" class="btn-primary" style="margin-top:0; width:100%;"><i class="fa-solid fa-paper-plane"></i> Kirim Bukti Transfer</button>
+            <button type="submit" class="btn-primary" style="margin-top:0; width:100%;"><i class="ph-fill ph-paper-plane-tilt"></i> Kirim Bukti Transfer</button>
         </form>
     </div>
 </div>
 
 <!-- TOAST ALERT -->
 <div class="ep-toast" id="epToast">
-    <span class="ep-toast-icon"><i class="fa-solid fa-circle-check"></i></span>
+    <span class="ep-toast-icon"><i class="ph-fill ph-check-circle"></i></span>
     <span id="epToastMsg">Pesan Berhasil</span>
 </div>
 
@@ -416,15 +416,15 @@
         </div>
         <div class="footer-col">
             <h3>Kontak Kami</h3>
-            <p><i class="fa-solid fa-phone"></i> +62 812 3020 0098</p>
-            <p><i class="fa-regular fa-clock"></i> Senin - Jumat, 08.00 - 16.00 WIB</p>
+            <p><i class="ph-fill ph-phone"></i> +62 812 3020 0098</p>
+            <p><i class="ph ph-clock"></i> Senin - Jumat, 08.00 - 16.00 WIB</p>
         </div>
         <div class="footer-col">
             <h3>Sosial Media</h3>
             <div class="social-links">
-                <a href="https://www.instagram.com/ponpestahfidzalwahyu?igsh=MWFzdzlpNDU1OXN2cg==" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a>
-                <a href="https://www.facebook.com/share/1DFZfmiqeV/" target="_blank"><i class="fa-brands fa-facebook-f"></i> Facebook</a>
-                <a href="https://youtube.com/@alwahyuchannel?si=UnHLhtk589R4jCXM" target="_blank"><i class="fa-brands fa-youtube"></i> YouTube</a>
+                <a href="https://www.instagram.com/ponpestahfidzalwahyu?igsh=MWFzdzlpNDU1OXN2cg==" target="_blank"><i class="ph ph-instagram-logo"></i> Instagram</a>
+                <a href="https://www.facebook.com/share/1DFZfmiqeV/" target="_blank"><i class="ph ph-facebook-logo"></i> Facebook</a>
+                <a href="https://youtube.com/@alwahyuchannel?si=UnHLhtk589R4jCXM" target="_blank"><i class="ph ph-youtube-logo"></i> YouTube</a>
             </div>
         </div>
     </div>
@@ -596,7 +596,7 @@ async function renderTabContent(tabId) {
                     actionButton = '<span style="color:#64748b; font-size:0.85rem;">Menunggu</span>';
                 } else {
                     statusBadge = '<span class="badge badge-danger">Belum Bayar</span>';
-                    actionButton = `<button class="ep-btn-sm ep-btn-success btn-bayar" data-id="${p.id}" data-nominal="${p.nominal}"><i class="fa-solid fa-upload"></i> Bayar</button>`;
+                    actionButton = `<button class="ep-btn-sm ep-btn-success btn-bayar" data-id="${p.id}" data-nominal="${p.nominal}"><i class="ph-fill ph-upload-simple"></i> Bayar</button>`;
                 }
                 tbody.innerHTML += `
                     <tr>
@@ -648,8 +648,8 @@ async function renderTabContent(tabId) {
         db.pengumuman.slice().reverse().forEach(ann => {
             wall.innerHTML += `
                 <div class="ep-card">
-                    <h3 style="color:var(--alwahyu-primary); margin-bottom:10px;"><i class="fa-solid fa-bullhorn"></i> ${ann.judul}</h3>
-                    <p style="color:#64748b; font-size:0.85rem; margin-bottom:15px;"><i class="fa-regular fa-calendar"></i> Diterbitkan: ${formatDateString(ann.tanggal)} | Pembuat: ${ann.pembuat}</p>
+                    <h3 style="color:var(--alwahyu-primary); margin-bottom:10px;"><i class="ph-fill ph-megaphone"></i> ${ann.judul}</h3>
+                    <p style="color:#64748b; font-size:0.85rem; margin-bottom:15px;"><i class="ph ph-calendar"></i> Diterbitkan: ${formatDateString(ann.tanggal)} | Pembuat: ${ann.pembuat}</p>
                     <p style="color:var(--alwahyu-text); line-height:1.6; white-space: pre-line;">${ann.isi}</p>
                 </div>
             `;

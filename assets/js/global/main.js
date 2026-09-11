@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
         waFloat.className = 'wa-float slide-in-up animate';
         waFloat.target = '_blank';
         waFloat.rel = 'noopener noreferrer';
-        waFloat.innerHTML = '<i class="fa-brands fa-whatsapp"></i>';
+        waFloat.innerHTML = '<i class="ph ph-whatsapp-logo"></i>';
         document.body.appendChild(waFloat);
     }
 });

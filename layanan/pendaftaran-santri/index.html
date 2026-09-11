@@ -15,7 +15,7 @@
 <link rel="stylesheet" href="../../assets/css/global/components.css">
 <link rel="stylesheet" href="../../assets/css/global/animations.css">
 <link rel="stylesheet" href="../../assets/css/pages/layanan.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
 <body>
 
@@ -172,13 +172,13 @@ Daftar Santri
         <!-- Cek Status Pendaftaran Section -->
         <div style="background: white; border: 1px solid var(--alwahyu-border); border-radius: 20px; padding: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.03); margin-bottom: 50px;" class="slide-in-up">
             <h2 class="section-title" style="font-size: 1.5rem; margin-bottom: 12px; display: flex; align-items: center; gap: 10px;">
-                <i class="fa-solid fa-magnifying-glass-chart" style="color: var(--alwahyu-primary);"></i> Cek Status Pendaftaran
+                <i class="ph-fill ph-magnifying-glass" style="color: var(--alwahyu-primary);"></i> Cek Status Pendaftaran
             </h2>
             <p style="color: var(--alwahyu-text); margin-bottom: 20px; font-size: 0.95rem;">Masukkan email pendaftaran atau nomor NISN calon santri untuk memantau perkembangan proses verifikasi dan seleksi.</p>
             
             <form id="form-cek-status" style="display: flex; gap: 12px; max-width: 600px; margin-bottom: 20px; flex-wrap: wrap;">
                 <input type="text" id="input-cek-status" placeholder="Contoh: email@wali.com atau NISN" style="flex: 1; min-width: 250px; padding: 12px 16px; border: 1px solid var(--alwahyu-border); border-radius: 8px; font-size: 0.95rem;" required>
-                <button type="submit" class="btn-primary" style="margin: 0; width: auto; padding: 12px 24px; white-space: nowrap;"><i class="fa-solid fa-magnifying-glass"></i> Cek Status</button>
+                <button type="submit" class="btn-primary" style="margin: 0; width: auto; padding: 12px 24px; white-space: nowrap;"><i class="ph-fill ph-magnifying-glass"></i> Cek Status</button>
             </form>
 
             <!-- Results Container -->
@@ -230,7 +230,7 @@ Daftar Santri
             <!-- Left: Info Card -->
             <div class="form-card" style="height: 100%;">
                 <h2 class="section-title" style="font-size: 1.5rem; margin-bottom: 20px; border-bottom: 2px solid var(--alwahyu-border); padding-bottom: 12px;">
-                    <i class="fa-solid fa-circle-info" style="color: var(--alwahyu-primary); margin-right: 8px;"></i> Informasi Pendaftaran
+                    <i class="ph-fill ph-info" style="color: var(--alwahyu-primary); margin-right: 8px;"></i> Informasi Pendaftaran
                 </h2>
                 <ul class="info-list">
                     <li>
@@ -282,13 +282,13 @@ Daftar Santri
             <!-- Right: Form Card -->
             <div class="form-card">
                 <h2 class="section-title" style="font-size: 1.5rem; margin-bottom: 20px; border-bottom: 2px solid var(--alwahyu-border); padding-bottom: 12px;">
-                    <i class="fa-solid fa-file-signature" style="color: var(--alwahyu-primary); margin-right: 8px;"></i> Formulir Pendaftaran
+                    <i class="ph-fill ph-signature" style="color: var(--alwahyu-primary); margin-right: 8px;"></i> Formulir Pendaftaran
                 </h2>
                 
                 <form id="form-daftar-santri" class="custom-form">
                     <!-- Section: Data Calon Santri -->
                     <div class="form-section-title">
-                        <i class="fa-solid fa-user-graduate"></i> Data Calon Santri
+                        <i class="ph-fill ph-graduation-cap"></i> Data Calon Santri
                     </div>
                     
                     <div class="form-row">
@@ -322,7 +322,7 @@ Daftar Santri
 
                     <!-- Section: Data Orang Tua / Wali -->
                     <div class="form-section-title">
-                        <i class="fa-solid fa-users"></i> Data Orang Tua / Wali
+                        <i class="ph-fill ph-users"></i> Data Orang Tua / Wali
                     </div>
                     
                     <div class="form-grid-2">
@@ -343,7 +343,7 @@ Daftar Santri
 
                     <!-- Section: Akun Login E-Ponpes -->
                     <div class="form-section-title">
-                        <i class="fa-solid fa-key"></i> Kredensial Akses E-Ponpes
+                        <i class="ph-fill ph-key"></i> Kredensial Akses E-Ponpes
                     </div>
                     
                     <div class="form-row">
@@ -357,7 +357,7 @@ Daftar Santri
                     </div>
                     
                     <button type="submit" class="btn-primary btn-submit" id="btnSubmitDaftar">
-                        <i class="fa-solid fa-user-plus"></i> Kirim Pendaftaran
+                        <i class="ph-fill ph-user-plus"></i> Kirim Pendaftaran
                     </button>
                 </form>
             </div>
@@ -382,15 +382,15 @@ Daftar Santri
         </div>
         <div class="footer-col">
             <h3>Kontak Kami</h3>
-            <p><i class="fa-solid fa-phone"></i> +62 812 3020 0098</p>
-            <p><i class="fa-regular fa-clock"></i> Senin - Jumat, 08.00 - 16.00 WIB</p>
+            <p><i class="ph-fill ph-phone"></i> +62 812 3020 0098</p>
+            <p><i class="ph ph-clock"></i> Senin - Jumat, 08.00 - 16.00 WIB</p>
         </div>
         <div class="footer-col">
             <h3>Sosial Media</h3>
             <div class="social-links">
-                <a href="https://www.instagram.com/ponpestahfidzalwahyu?igsh=MWFzdzlpNDU1OXN2cg==" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a>
-                <a href="https://www.facebook.com/share/1DFZfmiqeV/" target="_blank"><i class="fa-brands fa-facebook-f"></i> Facebook</a>
-                <a href="https://youtube.com/@alwahyuchannel?si=UnHLhtk589R4jCXM" target="_blank"><i class="fa-brands fa-youtube"></i> YouTube</a>
+                <a href="https://www.instagram.com/ponpestahfidzalwahyu?igsh=MWFzdzlpNDU1OXN2cg==" target="_blank"><i class="ph ph-instagram-logo"></i> Instagram</a>
+                <a href="https://www.facebook.com/share/1DFZfmiqeV/" target="_blank"><i class="ph ph-facebook-logo"></i> Facebook</a>
+                <a href="https://youtube.com/@alwahyuchannel?si=UnHLhtk589R4jCXM" target="_blank"><i class="ph ph-youtube-logo"></i> YouTube</a>
             </div>
         </div>
     </div>
@@ -401,7 +401,7 @@ Daftar Santri
 
 <!-- TOAST ALERT -->
 <div class="ep-toast" id="epToast">
-    <span class="ep-toast-icon"><i class="fa-solid fa-circle-check"></i></span>
+    <span class="ep-toast-icon"><i class="ph-fill ph-check-circle"></i></span>
     <span id="epToastMsg">Pesan Berhasil</span>
 </div>
 
@@ -414,7 +414,7 @@ document.getElementById('form-daftar-santri').addEventListener('submit', async (
     e.preventDefault();
     const btn = document.getElementById('btnSubmitDaftar');
     btn.disabled = true;
-    btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Mengirim Data...';
+    btn.innerHTML = '<i class="ph-fill ph-spinner ph-animation-spin"></i> Mengirim Data...';
     
     const name = document.getElementById('nama-santri').value;
     const nis = document.getElementById('nis-santri').value;
@@ -449,7 +449,7 @@ document.getElementById('form-daftar-santri').addEventListener('submit', async (
             formCard.innerHTML = `
                 <div style="text-align: center; padding: 20px 0;">
                     <div style="width: 80px; height: 80px; background: rgba(62, 125, 55, 0.1); color: var(--alwahyu-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; margin: 0 auto 24px;">
-                        <i class="fa-solid fa-circle-check"></i>
+                        <i class="ph-fill ph-check-circle"></i>
                     </div>
                     <h2 class="section-title" style="margin-bottom: 12px; font-size: 1.6rem; text-align: center;">Pendaftaran Berhasil!</h2>
                     <p style="color: var(--alwahyu-text); line-height: 1.6; margin-bottom: 24px;">Data calon santri <strong>${name}</strong> telah tersimpan di sistem kami.</p>
@@ -469,13 +469,13 @@ document.getElementById('form-daftar-santri').addEventListener('submit', async (
         } else {
             showToast(res.message || "Gagal melakukan pendaftaran.", true);
             btn.disabled = false;
-            btn.innerHTML = '<i class="fa-solid fa-user-plus"></i> Kirim Pendaftaran';
+            btn.innerHTML = '<i class="ph-fill ph-user-plus"></i> Kirim Pendaftaran';
         }
     } catch (err) {
         console.error(err);
         showToast("Terjadi kesalahan koneksi.", true);
         btn.disabled = false;
-        btn.innerHTML = '<i class="fa-solid fa-user-plus"></i> Kirim Pendaftaran';
+        btn.innerHTML = '<i class="ph-fill ph-user-plus"></i> Kirim Pendaftaran';
     }
 });
 
@@ -484,7 +484,7 @@ document.getElementById('form-cek-status').addEventListener('submit', async (e) 
     const query = document.getElementById('input-cek-status').value.trim();
     const resultContainer = document.getElementById('status-result-container');
     resultContainer.style.display = 'block';
-    resultContainer.innerHTML = '<div style="text-align:center; padding: 20px;"><i class="fa-solid fa-spinner fa-spin" style="font-size: 2rem; color: var(--alwahyu-primary);"></i><p style="margin-top:10px; color:var(--alwahyu-text);">Mencari data...</p></div>';
+    resultContainer.innerHTML = '<div style="text-align:center; padding: 20px;"><i class="ph-fill ph-spinner ph-animation-spin" style="font-size: 2rem; color: var(--alwahyu-primary);"></i><p style="margin-top:10px; color:var(--alwahyu-text);">Mencari data...</p></div>';
     
     try {
         let res = await callApi('checkStatus', { query });
@@ -558,7 +558,7 @@ document.getElementById('form-cek-status').addEventListener('submit', async (e) 
         } else {
             resultContainer.innerHTML = `
                 <div style="text-align: center; padding: 30px; border: 1px dashed #ef4444; background: rgba(239,68,68,0.02); border-radius: 12px;">
-                    <i class="fa-solid fa-triangle-exclamation" style="font-size: 2.2rem; color: #ef4444; margin-bottom: 12px;"></i>
+                    <i class="ph-fill ph-warning" style="font-size: 2.2rem; color: #ef4444; margin-bottom: 12px;"></i>
                     <h4 style="font-weight: 700; color: #ef4444; margin-bottom: 6px; margin-top: 0;">Data Tidak Ditemukan</h4>
                     <p style="color: var(--alwahyu-text); font-size: 0.9rem; margin: 0;">Pendaftaran dengan email atau NISN "${query}" tidak ditemukan. Pastikan email/NISN yang dimasukkan sudah benar.</p>
                 </div>
@@ -568,7 +568,7 @@ document.getElementById('form-cek-status').addEventListener('submit', async (e) 
         console.error(err);
         resultContainer.innerHTML = `
             <div style="text-align: center; padding: 30px; border: 1px dashed #ef4444; background: rgba(239,68,68,0.02); border-radius: 12px;">
-                <i class="fa-solid fa-triangle-exclamation" style="font-size: 2.2rem; color: #ef4444; margin-bottom: 12px;"></i>
+                <i class="ph-fill ph-warning" style="font-size: 2.2rem; color: #ef4444; margin-bottom: 12px;"></i>
                 <h4 style="font-weight: 700; color: #ef4444; margin-bottom: 6px; margin-top: 0;">Kesalahan Koneksi</h4>
                 <p style="color: var(--alwahyu-text); font-size: 0.9rem; margin: 0;">Gagal menghubungi server untuk mengecek status. Silakan coba beberapa saat lagi.</p>
             </div>

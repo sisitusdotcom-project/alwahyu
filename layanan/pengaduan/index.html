@@ -15,7 +15,7 @@
 <link rel="stylesheet" href="../../assets/css/global/components.css">
 <link rel="stylesheet" href="../../assets/css/global/animations.css">
 <link rel="stylesheet" href="../../assets/css/pages/layanan.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
 <body>
 
@@ -170,13 +170,13 @@ Daftar Santri
     <div class="container" style="max-width:900px;">
         <div class="pengaduan-grid">
             <div class="feature-card">
-                <div class="card-icon"><i class="fa-brands fa-whatsapp" style="color:#25d366;"></i></div>
+                <div class="card-icon"><i class="ph ph-whatsapp-logo" style="color:#25d366;"></i></div>
                 <h3>WhatsApp</h3>
                 <p>Hubungi kami langsung via WhatsApp untuk pengaduan yang bersifat mendesak.</p>
                 <a href="https://wa.me/6281230200098" target="_blank" class="btn-primary wa-btn" style="margin-top:10px; display:inline-block;">Chat Sekarang</a>
             </div>
             <div class="feature-card">
-                <div class="card-icon"><i class="fa-solid fa-envelope" style="color:var(--alwahyu-primary);"></i></div>
+                <div class="card-icon"><i class="ph-fill ph-envelope" style="color:var(--alwahyu-primary);"></i></div>
                 <h3>Formulir Online</h3>
                 <p>Sampaikan pengaduan atau saran Anda melalui formulir di bawah ini.</p>
             </div>
@@ -226,15 +226,15 @@ Daftar Santri
         </div>
         <div class="footer-col">
             <h3>Kontak Kami</h3>
-            <p><i class="fa-solid fa-phone"></i> +62 812 3020 0098</p>
-            <p><i class="fa-regular fa-clock"></i> Senin - Jumat, 08.00 - 16.00 WIB</p>
+            <p><i class="ph-fill ph-phone"></i> +62 812 3020 0098</p>
+            <p><i class="ph ph-clock"></i> Senin - Jumat, 08.00 - 16.00 WIB</p>
         </div>
         <div class="footer-col">
             <h3>Sosial Media</h3>
             <div class="social-links">
-                <a href="https://www.instagram.com/ponpestahfidzalwahyu?igsh=MWFzdzlpNDU1OXN2cg==" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a>
-                <a href="https://www.facebook.com/share/1DFZfmiqeV/" target="_blank"><i class="fa-brands fa-facebook-f"></i> Facebook</a>
-                <a href="https://youtube.com/@alwahyuchannel?si=UnHLhtk589R4jCXM" target="_blank"><i class="fa-brands fa-youtube"></i> YouTube</a>
+                <a href="https://www.instagram.com/ponpestahfidzalwahyu?igsh=MWFzdzlpNDU1OXN2cg==" target="_blank"><i class="ph ph-instagram-logo"></i> Instagram</a>
+                <a href="https://www.facebook.com/share/1DFZfmiqeV/" target="_blank"><i class="ph ph-facebook-logo"></i> Facebook</a>
+                <a href="https://youtube.com/@alwahyuchannel?si=UnHLhtk589R4jCXM" target="_blank"><i class="ph ph-youtube-logo"></i> YouTube</a>
             </div>
         </div>
     </div>
@@ -245,7 +245,7 @@ Daftar Santri
 
 <!-- TOAST ALERT -->
 <div class="ep-toast" id="epToast">
-    <span class="ep-toast-icon"><i class="fa-solid fa-circle-check"></i></span>
+    <span class="ep-toast-icon"><i class="ph-fill ph-check-circle"></i></span>
     <span id="epToastMsg">Pesan Berhasil</span>
 </div>
 
@@ -258,7 +258,7 @@ document.getElementById('form-pengaduan').addEventListener('submit', async (e) =
     e.preventDefault();
     const btn = e.target.querySelector('button[type="submit"]');
     btn.disabled = true;
-    btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Mengirim Laporan...';
+    btn.innerHTML = '<i class="ph-fill ph-spinner ph-animation-spin"></i> Mengirim Laporan...';
     
     const nama = document.getElementById('nama-pengadu').value;
     const kontak = document.getElementById('kontak-pengadu').value;

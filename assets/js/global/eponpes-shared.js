@@ -316,11 +316,11 @@ function showToast(message, isError = false) {
     if (isError) {
         toast.classList.add('ep-toast-error');
         const icon = toast.querySelector('.ep-toast-icon i');
-        if (icon) icon.className = 'fa-solid fa-circle-xmark';
+        if (icon) icon.className = 'ph-fill ph-x-circle';
     } else {
         toast.classList.add('ep-toast-success');
         const icon = toast.querySelector('.ep-toast-icon i');
-        if (icon) icon.className = 'fa-solid fa-circle-check';
+        if (icon) icon.className = 'ph-fill ph-check-circle';
     }
     
     setTimeout(() => {
