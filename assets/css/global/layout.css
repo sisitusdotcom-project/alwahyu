@@ -45,8 +45,8 @@ body {
 
 .btn-primary, .btn-outline {
     display: inline-block;
-    padding: 12px 24px;
-    border-radius: 999px;
+    padding: 8px 16px;
+    border-radius: 8px;
     text-decoration: none;
     font-weight: 600;
     transition: all 0.3s ease;
