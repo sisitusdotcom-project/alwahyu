@@ -112,7 +112,7 @@ function handleAddSantri(data) {
   // 1. Tambah user baru
   var usersSheet = ss.getSheetByName("users");
   var userId = getNextId(usersSheet);
-  var userEmail = data.email || (data.nis + "@alwahyu.com");
+  var userEmail = data.email || (data.nis + "@pptqalwahyu.id");
   var userPassword = data.password || "santri123";
   
   appendRowToSheet(usersSheet, {
