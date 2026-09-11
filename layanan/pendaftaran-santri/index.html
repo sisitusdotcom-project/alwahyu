@@ -505,7 +505,7 @@ document.getElementById('form-cek-status').addEventListener('submit', async (e) 
             const pct = ((activeStep - 1) / 4) * 100;
             
             resultContainer.innerHTML = `
-                <div style="background: #f8fafc; border: 1px solid var(--alwahyu-border); border-radius: 12px; padding: 24px; margin-bottom: 20px;">
+                <div style="background: #f8fafc; border: 1px solid var(--alwahyu-border); border-radius: 12px; padding: 16px; margin-bottom: 20px;">
                     <div style="display:flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--alwahyu-border); padding-bottom: 12px; margin-bottom: 16px; flex-wrap: wrap; gap: 10px;">
                         <div>
                             <h3 style="font-size: 1.1rem; color: var(--alwahyu-dark); font-weight:700; margin:0;">${santri.name}</h3>
@@ -548,7 +548,7 @@ document.getElementById('form-cek-status').addEventListener('submit', async (e) 
             `;
         } else {
             resultContainer.innerHTML = `
-                <div style="text-align: center; padding: 30px; border: 1px dashed #ef4444; background: rgba(239,68,68,0.02); border-radius: 12px;">
+                <div style="text-align: center; padding: 20px; border: 1px dashed #ef4444; background: rgba(239,68,68,0.02); border-radius: 12px;">
                     <i class="ph-fill ph-warning" style="font-size: 2.2rem; color: #ef4444; margin-bottom: 12px;"></i>
                     <h4 style="font-weight: 700; color: #ef4444; margin-bottom: 6px; margin-top: 0;">Data Tidak Ditemukan</h4>
                     <p style="color: var(--alwahyu-text); font-size: 0.9rem; margin: 0;">Pendaftaran dengan email atau NISN "${query}" tidak ditemukan. Pastikan email/NISN yang dimasukkan sudah benar.</p>
@@ -558,7 +558,7 @@ document.getElementById('form-cek-status').addEventListener('submit', async (e) 
     } catch (err) {
         console.error(err);
         resultContainer.innerHTML = `
-            <div style="text-align: center; padding: 30px; border: 1px dashed #ef4444; background: rgba(239,68,68,0.02); border-radius: 12px;">
+            <div style="text-align: center; padding: 20px; border: 1px dashed #ef4444; background: rgba(239,68,68,0.02); border-radius: 12px;">
                 <i class="ph-fill ph-warning" style="font-size: 2.2rem; color: #ef4444; margin-bottom: 12px;"></i>
                 <h4 style="font-weight: 700; color: #ef4444; margin-bottom: 6px; margin-top: 0;">Kesalahan Koneksi</h4>
                 <p style="color: var(--alwahyu-text); font-size: 0.9rem; margin: 0;">Gagal menghubungi server untuk mengecek status. Silakan coba beberapa saat lagi.</p>
