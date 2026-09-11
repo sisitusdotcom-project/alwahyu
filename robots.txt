@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /e-ponpes/
+Disallow: /mysisi/
+Disallow: /GAS.gs
+Disallow: /alwahyu.tsv
+
+Sitemap: https://pptqalwahyu.id/sitemap.xml
