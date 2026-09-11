@@ -12,6 +12,8 @@
  * - absensi     : id, santri_id, tanggal, status
  * - perizinan   : id, santri_id, jenis, keterangan, status, tanggal_pengajuan, tanggal_kembali
  * - pengumuman  : id, judul, isi, tanggal, pembuat
+ * - pengaduan   : id, nama, kontak, jenis, isi, tanggal
+ * - administrasi: id, layanan_type, field_0, field_1, field_2, field_3, tanggal
  */
 
 // Handle semua requests via GET (query params) - menghindari CORS preflight
@@ -86,9 +88,6 @@ function handleLogin(data) {
     var s = santris.find(function(item) { return String(item.user_id) === String(user.id); });
     if (s) {
       extraDetails.santriInfo = s;
-      var walis = getSheetData("wali");
-      var w = walis.find(function(item) { return String(item.santri_id) === String(s.id); });
-      extraDetails.waliInfo = w;
     }
   } else if (user.role === "pengurus") {
     var penguruses = getSheetData("pengurus");
@@ -137,16 +136,6 @@ function handleAddSantri(data) {
     nama_ibu: data.nama_ibu,
     wa_wali: data.wa_wali,
     status_aktif: "Menunggu Ujian Seleksi"
-  });
-  
-  // 3. Tambah wali
-  var waliSheet = ss.getSheetByName("wali");
-  var waliId = getNextId(waliSheet);
-  appendRowToSheet(waliSheet, {
-    id: waliId,
-    santri_id: santriId,
-    nama: data.nama_ayah || "Wali Santri",
-    no_hp: data.wa_wali
   });
   
   return jsonResponse("success", "Santri berhasil ditambahkan", { id: santriId, user_id: userId });

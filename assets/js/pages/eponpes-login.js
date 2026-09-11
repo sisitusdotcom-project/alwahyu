@@ -23,28 +23,8 @@ document.querySelectorAll('.role-tab-btn').forEach(btn => {
         document.querySelectorAll('.role-tab-btn').forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
         currentRole = btn.dataset.role;
-        
-        // Auto fill helper for user testing
-        const emailInput = document.getElementById('ep-username');
-        const passInput = document.getElementById('ep-password');
-        if (currentRole === 'admin') {
-            emailInput.value = 'admin@alwahyu.com';
-            passInput.value = 'admin123';
-        } else if (currentRole === 'pengurus') {
-            emailInput.value = 'ustadz@alwahyu.com';
-            passInput.value = 'ustadz123';
-        } else {
-            emailInput.value = 'fatih@alwahyu.com';
-            passInput.value = 'fatih123';
-        }
     });
 });
-
-// Auto-fill only in local mode (without GAS URL configured)
-if (!API_URL || API_URL === '' || API_URL === '#') {
-    document.getElementById('ep-username').value = 'fatih@alwahyu.com';
-    document.getElementById('ep-password').value = 'fatih123';
-}
 
 // LOGIN SUBMIT CONTROLLER
 document.getElementById('loginForm').addEventListener('submit', async (e) => {

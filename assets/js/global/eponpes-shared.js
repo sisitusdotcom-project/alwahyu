@@ -10,11 +10,7 @@ const SEED_DATA = {
     {id: 1, user_id: 3, nis: "202601001", kelas: "Class 7A", kamar: "Kamar Abu Bakar", nama_ayah: "Bapak H. Syarif", nama_ibu: "Ibu Aminah", wa_wali: "081230200098", status_aktif: "Aktif"},
     {id: 2, user_id: 4, nis: "202601002", kelas: "Class 8B", kamar: "Kamar Umar bin Khattab", nama_ayah: "Bapak Budi", nama_ibu: "Ibu Siti", wa_wali: "081234567890", status_aktif: "Aktif"}
   ],
-  wali: [
-    {id: 1, santri_id: 1, nama: "Bapak H. Syarif", no_hp: "081230200098"},
-    {id: 2, santri_id: 2, nama: "Bapak Budi", no_hp: "081234567890"}
-  ],
-  pengurus: [
+pengurus: [
     {id: 1, user_id: 2, nip: "NIP1001", nama: "Ustadz Abdullah Faqih, Lc.", jabatan: "Kepala Madrasah Diniyah", mapel: "Fiqih, Aqidah"}
   ],
   pembayaran: [
@@ -93,8 +89,7 @@ function runLocalMockApi(action, data) {
                 let s = db.santri.find(item => String(item.user_id) === String(user.id));
                 if (s) {
                     details.santriInfo = s;
-                    let w = db.wali.find(item => String(item.santri_id) === String(s.id));
-                    details.waliInfo = w;
+
                 }
             } else if (user.role === 'pengurus') {
                 let p = db.pengurus.find(item => String(item.user_id) === String(user.id));
@@ -114,8 +109,7 @@ function runLocalMockApi(action, data) {
                 nama_ayah: data.nama_ayah, nama_ibu: data.nama_ibu, wa_wali: data.wa_wali, status_aktif: "Menunggu Ujian Seleksi"
             });
             
-            let wId = db.wali.length ? Math.max(...db.wali.map(w => w.id)) + 1 : 1;
-            db.wali.push({ id: wId, santri_id: sId, nama: data.nama_ayah || "Wali Santri", no_hp: data.wa_wali });
+
             
             saveLocalDb(db);
             return { status: 'success', message: 'Santri berhasil ditambahkan' };
