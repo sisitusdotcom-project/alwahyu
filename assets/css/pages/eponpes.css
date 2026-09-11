@@ -586,3 +586,21 @@
     color: var(--alwahyu-primary);
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
+
+/* JS Injected Styles */
+.js-ann-card { background:#f8fafc; padding:14px; border-radius:10px; border-left:4px solid var(--alwahyu-primary); }
+.js-ann-title { color:var(--alwahyu-dark); font-size:0.9rem; font-weight:700; }
+.js-ann-desc { font-size:0.8rem; color:#64748b; margin:6px 0; }
+.js-ann-date { font-size:0.75rem; color:var(--alwahyu-primary); font-weight:700; }
+.js-badge-padded { font-size:0.85rem; padding:4px 10px; }
+.js-text-muted { color:#64748b; font-size:0.85rem; }
+.js-modal-title { color:var(--alwahyu-primary); margin-bottom:10px; font-weight:700; }
+.js-modal-meta { color:#64748b; font-size:0.85rem; margin-bottom:15px; }
+.js-modal-content { color:var(--alwahyu-text); line-height:1.6; white-space: pre-line; }
+.js-radio-hadir { margin-right:12px; font-weight:600; }
+.js-radio-izin { margin-right:12px; font-weight:600; color:#ca8a04; }
+.js-radio-sakit { margin-right:12px; font-weight:600; color:#dc2626; }
+.js-radio-alpha { font-weight:600; color:#64748b; }
+.js-link-bukti { color:var(--alwahyu-primary); font-weight:700; }
+.js-empty-icon { font-size: 3rem; color: #cbd5e1; margin-bottom: 15px; display: block; text-align: center; }
+.js-empty-text { font-weight: 600; color: #64748b; text-align: center; }

@@ -234,43 +234,6 @@ Daftar Santri
 
 <script src="../../assets/js/global/navigation.js"></script>
 <script src="../../assets/js/global/main.js"></script>
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-    const today = new Date();
-    today.setHours(0, 0, 0, 0);
-    
-    const rows = document.querySelectorAll(".agenda-row");
-    let visibleCount = 0;
-    
-    rows.forEach(row => {
-        const dateStr = row.getAttribute("data-date");
-        if (dateStr) {
-            const eventDate = new Date(dateStr);
-            eventDate.setHours(0, 0, 0, 0);
-            
-            if (eventDate < today) {
-                row.style.display = 'none';
-            } else {
-                visibleCount++;
-            }
-        }
-    });
-    
-    if (visibleCount === 0) {
-        const body = document.querySelector(".agenda-body");
-        const headerRow = document.querySelector(".agenda-row-header");
-        if (headerRow) headerRow.style.display = 'none';
-        
-        const emptyState = document.createElement("div");
-        emptyState.className = "agenda-empty-state";
-        emptyState.innerHTML = `
-            <i class="ph ph-calendar-x" style="font-size: 3rem; color: #cbd5e1; margin-bottom: 15px; display: block; text-align: center;"></i>
-            <p style="font-weight: 600; color: #64748b; text-align: center;">Belum ada agenda terdekat dalam waktu dekat.</p>
-        `;
-        emptyState.style.padding = "60px 20px";
-        body.appendChild(emptyState);
-    }
-});
-</script>
+<script src="../../assets/js/pages/agenda.js"></script>
 </body>
 </html>
