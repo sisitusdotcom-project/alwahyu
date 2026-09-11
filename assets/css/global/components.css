@@ -475,7 +475,76 @@
 }
 
 .social-links a:hover {
-    color: var(--alwahyu-primary-2);
+    color: white;
+}
+
+/* Extracted Reusable Classes */
+.form-input {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid var(--alwahyu-border);
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 0.95rem;
+}
+
+.card-img-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.card-img-cover-wrapper {
+    height: 180px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.feature-list {
+    text-align: left;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.card-no-padding {
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Logo & Footer Logo Classes */
+.logo-img {
+    height: 44px;
+    width: auto;
+}
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+.footer-logo-img {
+    height: 50px;
+    width: auto;
+    background: white;
+    border-radius: 50%;
+    padding: 2px;
+}
+.footer-logo-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.footer-logo-title {
+    color: var(--alwahyu-highlight);
+    font-size: 16px;
+    letter-spacing: 0.16em;
+    line-height: 1.1;
+}
+.footer-logo-subtitle {
+    color: #cbd5e1;
+    font-size: 13px;
 }
 
 .footer-bottom {

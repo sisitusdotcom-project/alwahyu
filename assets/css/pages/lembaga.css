@@ -328,3 +328,29 @@
     transform: scale(1.08) !important;
 }
 
+/* Extracted Lembaga Classes */
+.lembaga-intro-text {
+    max-width: 900px;
+    margin: 0 auto 60px auto;
+    text-align: center;
+    line-height: 1.8;
+    font-size: 1.1rem;
+    color: var(--alwahyu-text);
+}
+
+.tahfidz-target-box {
+    background: linear-gradient(135deg, var(--alwahyu-primary), var(--alwahyu-primary-2));
+    padding: 30px 20px;
+    border-radius: 24px;
+    color: white;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.card-img-cover-lg {
+    height: 220px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+

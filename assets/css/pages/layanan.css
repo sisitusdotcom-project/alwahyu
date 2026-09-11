@@ -135,6 +135,57 @@
     padding-bottom: 0;
 }
 
+/* Donasi Badges & Cards */
+.donation-card-item {
+    background: white;
+    border: 1px solid var(--alwahyu-border);
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.badge-category {
+    padding: 4px 12px;
+    border-radius: 99px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+.badge-green { background: rgba(62,125,55,0.1); color: var(--alwahyu-primary); }
+.badge-blue { background: rgba(37,150,190,0.1); color: #2596be; }
+.badge-yellow { background: rgba(253,240,0,0.15); color: #c9aa00; }
+
+.info-block {
+    background: #f8fafc;
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-bottom: 20px;
+    font-size: 0.85rem;
+}
+.info-block-green { border-left: 3px solid var(--alwahyu-primary); }
+.info-block-blue { border-left: 3px solid #2596be; }
+.info-block-yellow { border-left: 3px solid #c9aa00; }
+
+/* Status Check Forms */
+.status-form-container {
+    background: white;
+    border: 1px solid var(--alwahyu-border);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+}
+.status-form-icon-text {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
 @media (max-width: 600px) {
     .donation-card, .form-card { padding: 16px; }
     .bank-detail-box { padding: 16px; }

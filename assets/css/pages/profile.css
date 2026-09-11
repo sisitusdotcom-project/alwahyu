@@ -29,3 +29,12 @@
     margin-bottom: 10px;
     color: var(--alwahyu-text);
 }
+
+/* Extracted Profile Classes */
+.lulusan-tags-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 24px;
+}
