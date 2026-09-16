@@ -143,30 +143,21 @@
 
 /* Feature Cards with Photos Redesign */
 .home-feature-card {
-    background: white;
-    border-radius: 20px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
-    border-bottom: 4px solid transparent;
-    padding: 0 !important;
-    /* Override old padding */
-    text-align: center;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .home-feature-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(15, 118, 110, 0.1);
-    border-bottom-color: var(--alwahyu-primary);
 }
 
 .home-feature-card-image {
     width: 100%;
     height: 140px;
     overflow: hidden;
-    position: relative;
+    border-radius: 12px;
     background: #f1f5f9;
 }
 
@@ -182,7 +173,7 @@
 }
 
 .home-feature-card-content {
-    padding: 30px 24px;
+    padding: 20px 0;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
@@ -409,13 +400,19 @@
 
 @media (min-width: 768px) {
     .home-feature-card-image {
-        height: 200px;
-    }
+    width: 100%;
+    height: 140px;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #f1f5f9;
+}
     .testimonial-grid {
         gap: 30px;
         margin-top: 40px;
     }
 }
+
+
 
 
 
