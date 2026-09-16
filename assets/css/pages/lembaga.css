@@ -159,7 +159,7 @@
     background: white;
     border-radius: 20px;
     padding: 20px 16px;
-    text-align: center;
+    text-align: left;
     box-shadow: 0 10px 30px rgba(0,0,0,0.03);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 1px solid var(--alwahyu-border);
@@ -332,7 +332,7 @@
 .lembaga-intro-text {
     max-width: 900px;
     margin: 0 auto 60px auto;
-    text-align: center;
+    text-align: left;
     line-height: 1.8;
     font-size: var(--fs-h3);
     color: var(--alwahyu-text);
@@ -343,7 +343,7 @@
     padding: 30px 20px;
     border-radius: 24px;
     color: white;
-    text-align: center;
+    text-align: left;
     margin-bottom: 50px;
 }
 
@@ -399,3 +399,4 @@
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
+
