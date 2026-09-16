@@ -308,7 +308,8 @@
 
 @media (max-width: 768px) {
     .news-detail-title {
-        font-size: 1.8rem;
+        font-size: 1.35rem;
+        line-height: 1.3;
     }
     .news-detail-meta-wrapper {
         gap: 10px;
@@ -327,7 +328,7 @@
 .news-cta-box h3 {
     margin-top: 0;
     margin-bottom: 12px;
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     color: var(--alwahyu-dark);
 }
 
@@ -341,5 +342,7 @@
     color: var(--alwahyu-primary);
     margin-right: 8px;
 }
+
+
 
 
