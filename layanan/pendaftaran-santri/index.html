@@ -196,18 +196,18 @@ Daftar Santri
         
         <!-- Cek Status Pendaftaran Section -->
         <div class="status-form-container slide-in-up">
-            <h2 class="section-title" style="font-size: 1.5rem; margin-bottom: 12px; display: flex; align-items: center; gap: 10px;">
-                <i class="ph-fill ph-magnifying-glass" style="color: var(--alwahyu-primary);"></i> Cek Status Pendaftaran
+            <h2 class="section-title status-check-header">
+                <i class="ph-fill ph-magnifying-glass text-primary"></i> Cek Status Pendaftaran
             </h2>
-            <p style="color: var(--alwahyu-text); margin-bottom: 20px; font-size: 0.95rem;">Masukkan email pendaftaran atau nomor NISN calon santri untuk memantau perkembangan proses verifikasi dan seleksi.</p>
+            <p class="status-check-desc">Masukkan email pendaftaran atau nomor NISN calon santri untuk memantau perkembangan proses verifikasi dan seleksi.</p>
             
-            <form id="form-cek-status" style="display: flex; gap: 12px; max-width: 600px; margin-bottom: 16px; flex-wrap: wrap;">
-                <input type="text" id="input-cek-status" placeholder="Contoh: email@wali.com atau NISN" style="flex: 1; min-width: 250px; padding: 8px 12px; border: 1px solid var(--alwahyu-border); border-radius: 8px; font-size: 0.95rem;" required>
-                <button type="submit" class="btn-primary" style="margin: 0; width: auto; padding: 8px 16px; white-space: nowrap;"><i class="ph-fill ph-magnifying-glass"></i> Cek Status</button>
+            <form id="form-cek-status" class="status-check-form">
+                <input type="text" id="input-cek-status" placeholder="Contoh: email@wali.com atau NISN" class="status-check-input" required>
+                <button type="submit" class="btn-primary status-check-btn"><i class="ph-fill ph-magnifying-glass"></i> Cek Status</button>
             </form>
 
             <!-- Results Container -->
-            <div id="status-result-container" style="display: none; border-top: 1px solid var(--alwahyu-border); padding-top: 16px; margin-top: 16px;">
+            <div id="status-result-container" style="display: none;">
                 <!-- Result status will be dynamically rendered here -->
             </div>
         </div>
@@ -253,14 +253,14 @@ Daftar Santri
         <div class="layanan-split-grid">
             
             <!-- Left: Info Card -->
-            <div class="form-card" style="height: 100%;">
-                <h2 class="section-title" style="font-size: 1.5rem; margin-bottom: 20px; border-bottom: 2px solid var(--alwahyu-border); padding-bottom: 12px;">
-                    <i class="ph-fill ph-info" style="color: var(--alwahyu-primary); margin-right: 8px;"></i> Informasi Pendaftaran
+            <div class="form-card" class="h-100">
+                <h2 class="section-title form-section-header">
+                    <i class="ph-fill ph-info" class="text-primary mr-8"></i> Informasi Pendaftaran
                 </h2>
                 <ul class="info-list">
                     <li>
                         <strong>Jadwal Pendaftaran:</strong><br>
-                        <span style="font-size: 0.95rem; color: var(--alwahyu-text); line-height: 1.6; display: block; margin-top: 4px;">
+                        <span class="form-info-text">
                             - <strong>Gelombang 1:</strong> 1 Januari - 15 Maret 2026<br>
                             - <strong>Gelombang 2:</strong> 16 Maret - 31 Mei 2026<br>
                             - <strong>Tes Masuk:</strong> Gel. 1 (22 Maret 2026) | Gel. 2 (7 Juni 2026)<br>
@@ -269,7 +269,7 @@ Daftar Santri
                     </li>
                     <li>
                         <strong>Syarat & Dokumen:</strong><br>
-                        <span style="font-size: 0.95rem; color: var(--alwahyu-text); line-height: 1.6; display: block; margin-top: 4px;">
+                        <span class="form-info-text">
                             - Lulus SD/MI (SMP) atau SMP/MTs (SMA)<br>
                             - Lancar membaca Al-Qur'an (tajwid dasar)<br>
                             - Wajib tinggal di asrama (mukim)<br>
@@ -278,7 +278,7 @@ Daftar Santri
                     </li>
                     <li>
                         <strong>Rincian Biaya Masuk:</strong><br>
-                        <span style="font-size: 0.95rem; color: var(--alwahyu-text); line-height: 1.6; display: block; margin-top: 4px;">
+                        <span class="form-info-text">
                             - Uang Pendaftaran: Rp 200.000<br>
                             - Uang Pangkal/Pembangunan: Rp 3.000.000<br>
                             - Uang Seragam (5 Setel): Rp 1.000.000<br>
@@ -289,7 +289,7 @@ Daftar Santri
                     </li>
                     <li>
                         <strong>Kuota Penerimaan:</strong><br>
-                        <span style="font-size: 0.95rem; color: var(--alwahyu-text); line-height: 1.6; display: block; margin-top: 4px;">
+                        <span class="form-info-text">
                             - <strong>SMP Al Wahyu:</strong> 60 Santri (30 Putra, 30 Putri)<br>
                             - <strong>SMA Al Wahyu:</strong> 40 Santri (20 Putra, 20 Putri)<br>
                             - <strong>Total Kuota:</strong> 100 Santri Baru
@@ -297,7 +297,7 @@ Daftar Santri
                     </li>
                     <li>
                         <strong>Sistem Pemukiman:</strong><br>
-                        <span style="font-size: 0.95rem; color: var(--alwahyu-text); line-height: 1.6; display: block; margin-top: 4px;">
+                        <span class="form-info-text">
                             Wajib Mukim (Seluruh santri wajib menetap di Asrama Pesantren untuk menjaga kedisiplinan dan keberlanjutan program tahfidz).
                         </span>
                     </li>
@@ -306,8 +306,8 @@ Daftar Santri
 
             <!-- Right: Form Card -->
             <div class="form-card">
-                <h2 class="section-title" style="font-size: 1.5rem; margin-bottom: 20px; border-bottom: 2px solid var(--alwahyu-border); padding-bottom: 12px;">
-                    <i class="ph-fill ph-signature" style="color: var(--alwahyu-primary); margin-right: 8px;"></i> Formulir Pendaftaran
+                <h2 class="section-title form-section-header">
+                    <i class="ph-fill ph-signature" class="text-primary mr-8"></i> Formulir Pendaftaran
                 </h2>
                 
                 <form id="form-daftar-santri" class="custom-form">
@@ -437,6 +437,7 @@ Daftar Santri
 <script src="../../assets/js/pages/pendaftaran-santri.js"></script>
 </body>
 </html>
+
 
 
 

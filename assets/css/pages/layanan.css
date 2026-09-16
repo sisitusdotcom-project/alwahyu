@@ -18,7 +18,7 @@
 }
 
 .bank-name {
-    font-size: 1rem;
+    font-size: var(--fs-body);
     color: #64748b;
     margin-bottom: 8px;
 }
@@ -46,7 +46,7 @@
 .donation-thanks {
     text-align: center;
     margin-top: 10px;
-    font-size: 1.2rem;
+    font-size: var(--fs-h3);
     color: var(--alwahyu-primary);
     font-weight: 700;
 }
@@ -101,7 +101,7 @@
     padding: 12px 16px;
     border: 1px solid var(--alwahyu-border);
     border-radius: 10px;
-    font-size: 1rem;
+    font-size: var(--fs-body);
     font-family: inherit;
     outline: none;
     background: white;
@@ -126,7 +126,7 @@
     margin-bottom: 15px;
     border-bottom: 1px solid var(--alwahyu-border);
     padding-bottom: 15px;
-    font-size: 1.05rem;
+    font-size: var(--fs-body);
 }
 
 .info-list li:last-child {
@@ -150,7 +150,7 @@
 .badge-category {
     padding: 4px 12px;
     border-radius: 99px;
-    font-size: 0.8rem;
+    font-size: var(--fs-small);
     font-weight: 700;
     display: inline-block;
     margin-bottom: 15px;
@@ -164,7 +164,7 @@
     border-radius: 8px;
     padding: 12px 16px;
     margin-bottom: 20px;
-    font-size: 0.85rem;
+    font-size: var(--fs-small);
 }
 .info-block-green { border-left: 3px solid var(--alwahyu-primary); }
 .info-block-blue { border-left: 3px solid #2596be; }
@@ -179,7 +179,7 @@
     box-shadow: 0 10px 30px rgba(0,0,0,0.03);
 }
 .status-form-icon-text {
-    font-size: 1.5rem;
+    font-size: var(--fs-h2);
     margin-bottom: 12px;
     display: flex;
     align-items: center;
@@ -237,7 +237,7 @@
     justify-content: center;
     color: var(--alwahyu-primary);
     font-weight: 700;
-    font-size: 1.1rem;
+    font-size: var(--fs-h3);
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
     z-index: 1;
 }
@@ -257,7 +257,7 @@
 }
 
 .timeline-content h3 {
-    font-size: 1.15rem;
+    font-size: var(--fs-h3);
     color: var(--alwahyu-dark);
     margin-bottom: 8px;
     font-weight: 700;
@@ -265,7 +265,7 @@
 
 .timeline-content p {
     color: var(--alwahyu-text);
-    font-size: 0.95rem;
+    font-size: var(--fs-body);
     line-height: 1.5;
 }
 
@@ -277,7 +277,7 @@
 }
 
 .form-section-title {
-    font-size: 1.2rem;
+    font-size: var(--fs-h3);
     color: var(--alwahyu-dark);
     font-weight: 700;
     margin-top: 20px;
@@ -295,34 +295,34 @@
 
 /* JS Injected Components */
 .js-success-container { text-align: center; padding: 20px 0; }
-.js-success-icon-wrapper { width: 80px; height: 80px; background: rgba(62, 125, 55, 0.1); color: var(--alwahyu-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; margin: 0 auto 24px; }
-.js-success-title { margin-bottom: 12px; font-size: 1.6rem; text-align: center; }
+.js-success-icon-wrapper { width: 80px; height: 80px; background: rgba(62, 125, 55, 0.1); color: var(--alwahyu-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: var(--fs-h1); margin: 0 auto 24px; }
+.js-success-title { margin-bottom: 12px; font-size: var(--fs-h2); text-align: center; }
 .js-success-desc { color: var(--alwahyu-text); line-height: 1.6; margin-bottom: 24px; }
 .js-account-info-box { background: #f8fafc; border: 1px solid var(--alwahyu-border); border-radius: 12px; padding: 20px; text-align: left; margin-bottom: 30px; }
-.js-account-info-title { font-weight: 700; color: var(--alwahyu-dark); margin-bottom: 10px; font-size: 0.95rem; }
-.js-account-info-text { margin-bottom: 6px; font-size: 0.9rem; color: var(--alwahyu-text); }
+.js-account-info-title { font-weight: 700; color: var(--alwahyu-dark); margin-bottom: 10px; font-size: var(--fs-body); }
+.js-account-info-text { margin-bottom: 6px; font-size: var(--fs-body); color: var(--alwahyu-text); }
 .js-account-info-text.mb-12 { margin-bottom: 12px; }
-.js-account-info-note { font-size: 0.8rem; color: #64748b; line-height: 1.4; border-top: 1px solid var(--alwahyu-border); padding-top: 10px; }
+.js-account-info-note { font-size: var(--fs-small); color: #64748b; line-height: 1.4; border-top: 1px solid var(--alwahyu-border); padding-top: 10px; }
 .js-btn-primary-padded { display: inline-block; padding: 12px 30px; }
 .js-loading-container { text-align:center; padding: 20px; }
 .js-loading-icon { font-size: 2rem; color: var(--alwahyu-primary); }
 .js-loading-text { margin-top:10px; color:var(--alwahyu-text); }
 .js-status-card { background: #f8fafc; border: 1px solid var(--alwahyu-border); border-radius: 12px; padding: 16px; margin-bottom: 20px; }
 .js-status-header { display:flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--alwahyu-border); padding-bottom: 12px; margin-bottom: 16px; flex-wrap: wrap; gap: 10px; }
-.js-status-name { font-size: 1.1rem; color: var(--alwahyu-dark); font-weight:700; margin:0; }
-.js-status-nisn { font-size: 0.85rem; color: var(--alwahyu-text); }
-.js-status-badge { background: rgba(62,125,55,0.1); color: var(--alwahyu-primary); padding: 4px 12px; border-radius: 99px; font-size: 0.8rem; font-weight:700; }
+.js-status-name { font-size: var(--fs-h3); color: var(--alwahyu-dark); font-weight:700; margin:0; }
+.js-status-nisn { font-size: var(--fs-small); color: var(--alwahyu-text); }
+.js-status-badge { background: rgba(62,125,55,0.1); color: var(--alwahyu-primary); padding: 4px 12px; border-radius: 99px; font-size: var(--fs-small); font-weight:700; }
 .js-timeline-wrapper { display: flex; justify-content: space-between; position: relative; margin: 40px 0 20px 0; padding: 0 10px; overflow-x: auto; gap: 20px; }
 .js-timeline-line-bg { position: absolute; top: 15px; left: 0; right: 0; height: 4px; background: #e2e8f0; z-index: 1; }
 .js-timeline-line-active { position: absolute; top: 15px; left: 0; height: 4px; background: var(--alwahyu-primary); z-index: 1; transition: width 0.5s ease; }
 .js-status-step { text-align: center; z-index: 2; flex: 1; min-width: 70px; }
-.js-step-dot { width: 32px; height: 32px; border-radius: 50%; margin: 0 auto 8px; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 0.85rem; transition: all 0.3s ease; }
-.js-step-label { font-size: 0.8rem; font-weight: 600; white-space: nowrap; }
-.js-status-msg { margin-top: 24px; padding: 15px; border-radius: 8px; background: rgba(62,125,55,0.05); color: var(--alwahyu-primary); font-size: 0.95rem; font-weight: 500; border-left: 4px solid var(--alwahyu-primary); text-align: center; }
+.js-step-dot { width: 32px; height: 32px; border-radius: 50%; margin: 0 auto 8px; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: var(--fs-small); transition: all 0.3s ease; }
+.js-step-label { font-size: var(--fs-small); font-weight: 600; white-space: nowrap; }
+.js-status-msg { margin-top: 24px; padding: 15px; border-radius: 8px; background: rgba(62,125,55,0.05); color: var(--alwahyu-primary); font-size: var(--fs-body); font-weight: 500; border-left: 4px solid var(--alwahyu-primary); text-align: center; }
 .js-error-container { text-align: center; padding: 20px; border: 1px dashed #ef4444; background: rgba(239,68,68,0.02); border-radius: 12px; }
-.js-error-icon { font-size: 2.2rem; color: #ef4444; margin-bottom: 12px; }
+.js-error-icon { font-size: var(--fs-h1); color: #ef4444; margin-bottom: 12px; }
 .js-error-title { font-weight: 700; color: #ef4444; margin-bottom: 6px; margin-top: 0; }
-.js-error-desc { color: var(--alwahyu-text); font-size: 0.9rem; margin: 0; }
+.js-error-desc { color: var(--alwahyu-text); font-size: var(--fs-body); margin: 0; }
 
 /* Administrasi Tab Components */
 .tabs-wrapper {
@@ -337,7 +337,7 @@
 .admin-tab-btn {
     background: none;
     border: none;
-    font-size: 1.1rem;
+    font-size: var(--fs-h3);
     font-weight: 700;
     color: var(--alwahyu-text);
     padding: 10px 20px;
@@ -351,7 +351,7 @@
     border-bottom-color: var(--alwahyu-primary);
 }
 .admin-tab-title {
-    font-size: 1.4rem;
+    font-size: var(--fs-h2);
     color: var(--alwahyu-dark);
     font-weight: 700;
     margin-bottom: 15px;
@@ -365,7 +365,7 @@
     font-weight: 700;
     color: var(--alwahyu-dark);
     margin-bottom: 12px;
-    font-size: 0.95rem;
+    font-size: var(--fs-body);
 }
 .admin-tab-subtitle-bordered {
     font-weight: 700;
@@ -389,3 +389,135 @@
     margin-top: 45px;
 }
 
+
+/* Pendaftaran Santri Specific Extracted Styles */
+.status-check-header {
+    font-size: var(--fs-h2);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.status-check-desc {
+    color: var(--alwahyu-text);
+    margin-bottom: 20px;
+    font-size: var(--fs-body);
+}
+.status-check-form {
+    display: flex;
+    gap: 12px;
+    max-width: 600px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+}
+.status-check-input {
+    flex: 1;
+    min-width: 250px;
+    padding: 8px 12px;
+    border: 1px solid var(--alwahyu-border);
+    border-radius: 8px;
+    font-size: var(--fs-body);
+}
+.status-check-btn {
+    margin: 0;
+    width: auto;
+    padding: 8px 16px;
+    white-space: nowrap;
+}
+#status-result-container {
+    border-top: 1px solid var(--alwahyu-border);
+    padding-top: 16px;
+    margin-top: 16px;
+}
+.form-section-header {
+    font-size: var(--fs-h2);
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--alwahyu-border);
+    padding-bottom: 12px;
+}
+.form-info-text {
+    font-size: var(--fs-body);
+    color: var(--alwahyu-text);
+    line-height: 1.6;
+    display: block;
+    margin-top: 4px;
+}
+
+/* Donasi Specific Extracted Styles */
+.donasi-hero-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: var(--alwahyu-highlight);
+}
+.donasi-hero-title {
+    font-size: var(--fs-h1);
+    margin-bottom: 15px;
+}
+.donasi-hero-subtitle {
+    font-size: var(--fs-h2);
+    margin-bottom: 15px;
+    opacity: 0.9;
+}
+.donasi-hero-text {
+    font-size: var(--fs-h3);
+    font-style: italic;
+    opacity: 0.85;
+}
+.donasi-card-title {
+    font-size: var(--fs-h3);
+    font-weight: 700;
+    color: var(--alwahyu-dark);
+    margin-bottom: 8px;
+}
+.donasi-card-desc {
+    font-size: var(--fs-body);
+    color: var(--alwahyu-text);
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+.donasi-progress-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--fs-small);
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+.donasi-progress-bar-bg {
+    width: 100%;
+    height: 8px;
+    background: #e2e8f0;
+    border-radius: 99px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.donasi-progress-bar-fill {
+    height: 100%;
+    background: var(--alwahyu-primary);
+    border-radius: 99px;
+}
+.donasi-account-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    background: rgba(62, 125, 55, 0.05);
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(62, 125, 55, 0.1);
+}
+.donasi-account-text {
+    font-size: var(--fs-body);
+    font-weight: 700;
+    color: var(--alwahyu-dark);
+    margin: 0 0 4px 0;
+}
+.donasi-bank-text {
+    font-size: var(--fs-small);
+    color: var(--alwahyu-text);
+    margin: 0;
+}
+.qris-img {
+    max-width: 250px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}

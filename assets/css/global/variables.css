@@ -1,4 +1,4 @@
-:root{
+﻿:root{
     --alwahyu-primary:#3e7d37;
     --alwahyu-primary-2:#088e48;
     --alwahyu-accent:#2596be;
@@ -7,4 +7,12 @@
     --alwahyu-text:#334155;
     --alwahyu-border:#e5e7eb;
     --alwahyu-bg:#ffffff;
+
+    /* Fluid Typography Scale (Mobile-first, compact) */
+    --fs-h1: clamp(1.4rem, 4vw, 2.2rem);
+    --fs-h2: clamp(1.25rem, 3vw, 1.8rem);
+    --fs-h3: clamp(1.1rem, 2vw, 1.4rem);
+    --fs-h4: clamp(1rem, 1.5vw, 1.2rem);
+    --fs-body: clamp(0.9rem, 1vw, 1rem);
+    --fs-small: clamp(0.75rem, 1vw, 0.85rem);
 }

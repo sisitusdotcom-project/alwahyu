@@ -19,7 +19,7 @@
 }
 
 .agenda-header h2 {
-    font-size: 1.3rem;
+    font-size: var(--fs-h2);
     font-weight: 700;
     margin: 0;
 }
@@ -63,13 +63,13 @@
 .agenda-date {
     color: var(--alwahyu-primary);
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: var(--fs-small);
 }
 
 .agenda-tag {
     padding: 4px 12px;
     border-radius: 999px;
-    font-size: 0.8rem;
+    font-size: var(--fs-small);
     font-weight: 600;
     width: fit-content;
     text-align: center;
@@ -120,7 +120,7 @@
 .news-detail-container {
     max-width: 900px;
     margin: 40px auto;
-    padding: 0 20px;
+    padding: 0 24px;
 }
 
 .news-detail-back {
@@ -130,7 +130,7 @@
     text-decoration: none;
     color: var(--alwahyu-text);
     font-weight: 600;
-    font-size: 0.95rem;
+    font-size: var(--fs-body);
     margin-bottom: 24px;
     transition: all 0.2s ease;
 }
@@ -145,7 +145,7 @@
 }
 
 .news-detail-breadcrumbs {
-    font-size: 0.85rem;
+    font-size: var(--fs-small);
     color: #64748b;
     margin-bottom: 12px;
 }
@@ -160,7 +160,7 @@
 }
 
 .news-detail-title {
-    font-size: 2.2rem;
+    font-size: var(--fs-h1);
     font-weight: 800;
     color: var(--alwahyu-dark);
     line-height: 1.3;
@@ -171,7 +171,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    font-size: 0.9rem;
+    font-size: var(--fs-small);
     color: #64748b;
     border-bottom: 1px solid var(--alwahyu-border);
     padding-bottom: 20px;
@@ -210,7 +210,7 @@
 }
 
 .news-detail-body {
-    font-size: 1.1rem;
+    font-size: var(--fs-h3);
     line-height: 1.8;
     color: var(--alwahyu-text);
 }
@@ -220,7 +220,7 @@
 }
 
 .news-detail-body h2 {
-    font-size: 1.5rem;
+    font-size: var(--fs-h2);
     font-weight: 700;
     color: var(--alwahyu-dark);
     margin-top: 40px;
@@ -255,7 +255,7 @@
     padding: 16px;
     border-radius: 0 16px 16px 0;
     font-style: italic;
-    font-size: 1.15rem;
+    font-size: var(--fs-h3);
     color: var(--alwahyu-dark);
     margin: 30px 0;
     line-height: 1.6;
@@ -308,7 +308,7 @@
 
 @media (max-width: 768px) {
     .news-detail-title {
-        font-size: 1.35rem;
+        font-size: var(--fs-h2);
         line-height: 1.3;
     }
     .news-detail-meta-wrapper {
@@ -328,13 +328,13 @@
 .news-cta-box h3 {
     margin-top: 0;
     margin-bottom: 12px;
-    font-size: 1.1rem;
+    font-size: var(--fs-h3);
     color: var(--alwahyu-dark);
 }
 
 .news-cta-box p {
     margin-bottom: 0;
-    font-size: 0.95rem;
+    font-size: var(--fs-body);
     color: var(--alwahyu-text);
 }
 
@@ -342,6 +342,8 @@
     color: var(--alwahyu-primary);
     margin-right: 8px;
 }
+
+
 
 
 

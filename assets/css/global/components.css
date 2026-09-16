@@ -35,7 +35,7 @@
     align-items: center;
     justify-content: center;
     font-weight: 800;
-    font-size: 14px;
+    font-size: var(--fs-small);
 }
 
 .logo-text {
@@ -46,7 +46,7 @@
 .logo-text strong {
     color: var(--alwahyu-dark);
     display: inline-block;
-    font-size: 14px;
+    font-size: var(--fs-small);
     letter-spacing: 0.16em;
     word-spacing: 0;
     line-height: 1.1;
@@ -89,7 +89,7 @@
     align-items: center;
     justify-content: center;
     font-weight: 800;
-    font-size: 14px;
+    font-size: var(--fs-small);
 }
 
 .logo-text {
@@ -100,7 +100,7 @@
 .logo-text strong {
     color: var(--alwahyu-dark);
     display: inline-block;
-    font-size: 14px;
+    font-size: var(--fs-small);
     letter-spacing: 0.16em;
     word-spacing: 0;
     line-height: 1.1;
@@ -108,7 +108,7 @@
 
 .logo-text span {
     color: #64748b;
-    font-size: 12px;
+    font-size: var(--fs-small);
 }
 
 .nav-menu {
@@ -135,7 +135,7 @@
     text-decoration: none;
     color: var(--alwahyu-dark);
     font-weight: 600;
-    font-size: 14px;
+    font-size: var(--fs-small);
 }
 
 .dropdown-menu {
@@ -171,7 +171,7 @@
 }
 
 .btn-daftar {
-    font-size: 13px;
+    font-size: var(--fs-small);
     padding: 8px 16px;
     border-radius: 8px;
     text-decoration: none;
@@ -339,7 +339,7 @@
     background: none;
     border: none;
     color: var(--alwahyu-dark);
-    font-size: 14px;
+    font-size: var(--fs-small);
     font-weight: 600;
     cursor: pointer;
     transition: color .2s;
@@ -352,7 +352,7 @@
 
 .dropdown-icon {
     margin-left: auto;
-    font-size: 10px;
+    font-size: var(--fs-small);
     width: 24px;
     height: 24px;
     display: grid;
@@ -425,7 +425,7 @@
 
     .nav-menu,
     .btn-daftar {
-    font-size: 13px;
+    font-size: var(--fs-small);
         display: none;
     }
 
@@ -450,13 +450,13 @@
 
 .footer-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 140px), 1fr));
     gap: 40px;
     margin-bottom: 40px;
 }
 
 .footer-col h3 {
-    font-size: 1.05rem;
+    font-size: var(--fs-h3);
     color: var(--alwahyu-highlight);
     margin-bottom: 20px;
     font-weight: 700;
@@ -465,7 +465,7 @@
 .footer-col p {
     color: #94a3b8;
     margin-bottom: 12px;
-    font-size: 0.85rem;
+    font-size: var(--fs-small);
 }
 
 .social-links {
@@ -491,7 +491,7 @@
     border: 1px solid var(--alwahyu-border);
     border-radius: 8px;
     font-family: inherit;
-    font-size: 0.85rem;
+    font-size: var(--fs-small);
 }
 
 .card-img-cover {
@@ -548,14 +548,14 @@
 
 .footer-logo-title {
     color: var(--alwahyu-highlight);
-    font-size: 16px;
+    font-size: var(--fs-body);
     letter-spacing: 0.16em;
     line-height: 1.1;
 }
 
 .footer-logo-subtitle {
     color: #cbd5e1;
-    font-size: 13px;
+    font-size: var(--fs-small);
 }
 
 .footer-bottom {
@@ -563,13 +563,13 @@
     padding-top: 20px;
     text-align: center;
     color: #64748b;
-    font-size: 0.9rem;
+    font-size: var(--fs-small);
 }
 
 /* Shared Components: Feature Grid & Cards */
 .feature-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 140px), 1fr));
     gap: 16px;
     margin-top: 40px;
 }
@@ -612,7 +612,7 @@
 }
 
 .feature-card h3 {
-    font-size: 1.1rem;
+    font-size: var(--fs-h3);
     color: var(--alwahyu-dark);
     margin-bottom: 15px;
 }
@@ -620,7 +620,7 @@
 .feature-card p {
     color: var(--alwahyu-text);
     margin-bottom: 20px;
-    font-size: 1rem;
+    font-size: var(--fs-body);
 }
 
 .card-link {
@@ -688,7 +688,7 @@
 }
 
 .news-card-meta {
-    font-size: 0.85rem;
+    font-size: var(--fs-small);
     color: var(--alwahyu-primary);
     font-weight: 600;
     margin-bottom: 12px;
@@ -698,7 +698,7 @@
 }
 
 .news-card-title {
-    font-size: 1.05rem;
+    font-size: var(--fs-h3);
     font-weight: 700;
     color: var(--alwahyu-dark);
     line-height: 1.4;
@@ -711,7 +711,7 @@
 }
 
 .news-card-excerpt {
-    font-size: 0.85rem;
+    font-size: var(--fs-small);
     color: var(--alwahyu-text);
     line-height: 1.6;
     margin-bottom: 20px;
@@ -720,7 +720,7 @@
 
 .news-card-link {
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: var(--fs-small);
     color: var(--alwahyu-primary);
     display: flex;
     align-items: center;
@@ -787,7 +787,7 @@
 }
 
 .ep-toast-icon {
-    font-size: 1rem;
+    font-size: var(--fs-body);
 }
 
 /* Form Submit Loading Spinner */
@@ -795,7 +795,7 @@
     position: relative;
     width: 100%;
     padding: 16px;
-    font-size: 1rem;
+    font-size: var(--fs-body);
     font-weight: 700;
     cursor: pointer;
     border: none;
@@ -828,7 +828,7 @@
 
     .layanan-split-grid,
     .pengaduan-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr;`n        gap: 16px;
     }
 
     .form-grid-2 {
@@ -848,7 +848,7 @@
         left: 0;
         width: 36px;
         height: 36px;
-        font-size: 0.85rem;
+        font-size: var(--fs-small);
     }
 
     .timeline-content {
@@ -898,17 +898,17 @@
     }
 
     .donasi-hero h2 {
-        font-size: 1.4rem !important;
+        font-size: var(--fs-h2) !important;
         margin-bottom: 10px !important;
     }
 
     .donasi-hero h3 {
-        font-size: 1.1rem !important;
+        font-size: var(--fs-h3) !important;
         margin-bottom: 10px !important;
     }
 
     .donasi-hero p {
-        font-size: 0.9rem !important;
+        font-size: var(--fs-body) !important;
     }
 
     .donasi-grid {
@@ -968,6 +968,9 @@
         padding: 16px;
     }
 }
+
+
+
 
 
 

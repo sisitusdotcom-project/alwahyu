@@ -9,7 +9,7 @@
 
 .feature-card ul li {
     margin-bottom: 10px;
-    font-size: 0.95rem;
+    font-size: var(--fs-body);
     color: var(--alwahyu-text);
     display: flex;
     align-items: flex-start;
@@ -50,7 +50,7 @@
 }
 
 .visimisi-card h3 {
-    font-size: 1.6rem;
+    font-size: var(--fs-h2);
     color: var(--alwahyu-dark);
     margin-bottom: 20px;
     display: flex;
@@ -89,7 +89,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.75rem;
+    font-size: var(--fs-small);
     font-weight: bold;
 }
 
@@ -138,7 +138,7 @@
 }
 
 .dummy-badge {
-    font-size: 0.75rem;
+    font-size: var(--fs-small);
     background-color: rgba(62, 125, 55, 0.08);
     color: var(--alwahyu-primary);
     padding: 2px 8px;
@@ -180,7 +180,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.8rem;
+    font-size: var(--fs-h1);
     font-weight: 800;
     margin: 0 auto 20px;
     box-shadow: 0 8px 20px rgba(62, 125, 55, 0.15);
@@ -196,14 +196,14 @@
 }
 
 .org-name {
-    font-size: 1.1rem;
+    font-size: var(--fs-h3);
     font-weight: 700;
     color: var(--alwahyu-dark);
     margin-bottom: 8px;
 }
 
 .org-role {
-    font-size: 0.8rem;
+    font-size: var(--fs-small);
     font-weight: 700;
     color: var(--alwahyu-primary);
     background: rgba(62, 125, 55, 0.08);
@@ -252,7 +252,7 @@
 }
 
 .circular-icon-container i {
-    font-size: 1.8rem;
+    font-size: var(--fs-h1);
     color: var(--alwahyu-primary);
     transition: all 0.3s ease;
 }
@@ -334,7 +334,7 @@
     margin: 0 auto 60px auto;
     text-align: center;
     line-height: 1.8;
-    font-size: 1.1rem;
+    font-size: var(--fs-h3);
     color: var(--alwahyu-text);
 }
 
@@ -355,3 +355,47 @@
 }
 
 
+
+/* Yayasan Specific Extracted Styles */
+.yayasan-vision-text {
+    font-weight: 500;
+    font-size: var(--fs-h3);
+    color: var(--alwahyu-dark);
+    line-height: 1.6;
+}
+.legal-section-header {
+    font-size: var(--fs-h2);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+.legal-section-desc {
+    color: var(--alwahyu-text);
+    margin-bottom: 24px;
+    line-height: 1.6;
+}
+.lembaga-hero-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: var(--alwahyu-highlight);
+}
+.lembaga-hero-title {
+    font-size: var(--fs-h1);
+    margin-bottom: 15px;
+}
+.lembaga-hero-desc {
+    opacity: 0.9;
+    font-size: var(--fs-h3);
+}
+.icon-box-img {
+    width: 52px;
+    height: 52px;
+    object-fit: contain;
+}
+.white-glass-card {
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
