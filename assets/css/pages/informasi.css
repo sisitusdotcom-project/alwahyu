@@ -1,4 +1,4 @@
-/* Halaman Informasi & Kegiatan CSS */
+﻿/* Halaman Informasi & Kegiatan CSS */
 
 /* Table Agenda */
 .agenda-card {
@@ -341,4 +341,5 @@
     color: var(--alwahyu-primary);
     margin-right: 8px;
 }
+
 
