@@ -1,239 +1,209 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="id">
+
 <head>
-    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/img/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/img/favicon/favicon-16x16.png">
-    <link rel="manifest" href="../../assets/img/favicon/site.webmanifest">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Membangun Generasi Robbani - PPTQ AL WAHYU</title>
-    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../../assets/css/global/variables.css">
-    <link rel="stylesheet" href="../../assets/css/global/reset.css">
-    <link rel="stylesheet" href="../../assets/css/global/layout.css">
-    <link rel="stylesheet" href="../../assets/css/global/components.css">
-    <link rel="stylesheet" href="../../assets/css/global/animations.css">
-    <link rel="stylesheet" href="../../assets/css/pages/informasi.css">
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="../../assets/img/favicon/site.webmanifest">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Membangun Generasi Robbani - PPTQ AL WAHYU</title>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/global/variables.css">
+  <link rel="stylesheet" href="../../assets/css/global/reset.css">
+  <link rel="stylesheet" href="../../assets/css/global/layout.css">
+  <link rel="stylesheet" href="../../assets/css/global/components.css">
+  <link rel="stylesheet" href="../../assets/css/global/animations.css">
+  <link rel="stylesheet" href="../../assets/css/pages/informasi.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
+
 <body>
-
-<header class="header">
+  <header class="header">
     <nav class="navbar">
-        <a href="https://maps.app.goo.gl/uLiReoaKe8HRWjCx5?g_st=ac" target="_blank" class="logo">
-            <img src="../../assets/img/logo/tinny-logo.png" alt="Logo PPTQ AL WAHYU" class="logo-img">
-            <div class="logo-text">
-                <strong>PPTQ AL WAHYU</strong>
-                <span>Ponpes Tahfidz Al-Qur’an</span>
-            </div>
-        </a>
-        <ul class="nav-menu">
-            <li><a href="../../index.html"><i class="ph ph-house"></i> Beranda</a></li>
-            <li><a href="../../profile/index.html"><i class="ph ph-identification-badge"></i> Profil</a></li>
-            <li class="dropdown">
-                <a href="#"><i class="ph ph-buildings"></i> Lembaga</a>
-                <div class="dropdown-menu">
-                    <a href="../../lembaga/formal/index.html"><i class="ph ph-backpack"></i> Pendidikan Formal</a>
-                    <a href="../../lembaga/madin/index.html"><i class="ph ph-mosque"></i> Madrasah Diniyah</a>
-                    <a href="../../lembaga/tahfidz/index.html"><i class="ph ph-book-open-text"></i> Tahfidz</a>
-                    <a href="../../lembaga/yayasan/index.html"><i class="ph ph-bank"></i> Yayasan</a>
-                </div>
-            </li>
-            <li class="dropdown">
-                <a href="#"><i class="ph ph-info"></i> Informasi</a>
-                <div class="dropdown-menu">
-                    <a href="../../informasi/berita/index.html"><i class="ph ph-newspaper"></i> Berita</a>
-                    <a href="../../informasi/agenda/index.html"><i class="ph ph-calendar"></i> Agenda</a>
-                    <a href="../../informasi/artikel/index.html"><i class="ph ph-file-text"></i> Artikel</a>
-                </div>
-            </li>
-            <li class="dropdown">
-                <a href="#"><i class="ph ph-handshake"></i> Layanan</a>
-                <div class="dropdown-menu">
-                    <a href="../../layanan/pendaftaran-santri/index.html"><i class="ph ph-user-plus"></i> Pendaftaran Santri</a>
-                    <a href="../../layanan/administrasi/index.html"><i class="ph ph-folder-open"></i> Administrasi</a>
-                    <a href="../../layanan/pengaduan/index.html"><i class="ph ph-warning-circle"></i> Pengaduan</a>
-                    <a href="../../layanan/donasi/index.html"><i class="ph ph-gift"></i> Donasi</a>
-                </div>
-            </li>
-            <li><a href="../../e-ponpes/index.html"><i class="ph ph-laptop"></i> E-Ponpes</a></li>
-        </ul>
-        <a href="../../layanan/pendaftaran-santri/index.html" class="btn-daftar">Daftar Santri</a>
-        <button class="menu-btn" id="menuBtn">
-            <span class="dot d1"></span>
-            <span class="dot d2"></span>
-            <span class="dot d3"></span>
-            <span class="dot d4"></span>
-        </button>
-    </nav>
-</header>
-
-<!-- MOBILE PANEL -->
-<div class="mobile-panel" id="mobilePanel">
-    <a href="../../index.html" class="mobile-link"><i class="ph ph-house"></i> Beranda</a>
-    <a href="../../profile/index.html" class="mobile-link"><i class="ph ph-identification-badge"></i> Profil</a>
-    <div class="mobile-item">
-        <button class="mobile-dropdown-btn"><i class="ph ph-buildings"></i> Lembaga
-    <span class="dropdown-icon">▼</span></button>
-        <div class="mobile-submenu">
+      <a href="https://maps.app.goo.gl/uLiReoaKe8HRWjCx5?g_st=ac" target="_blank" class="logo">
+        <img src="../../assets/img/logo/tinny-logo.png" alt="Logo PPTQ AL WAHYU" class="logo-img">
+        <div class="logo-text">
+          <strong>PPTQ AL WAHYU</strong>
+          <span>Ponpes Tahfidz Al-Qur’an</span>
+        </div>
+      </a>
+      <ul class="nav-menu">
+        <li><a href="../../index.html"><i class="ph ph-house"></i> Beranda</a></li>
+        <li><a href="../../profile/index.html"><i class="ph ph-identification-badge"></i> Profil</a></li>
+        <li class="dropdown">
+          <a href="#"><i class="ph ph-buildings"></i> Lembaga</a>
+          <div class="dropdown-menu">
             <a href="../../lembaga/formal/index.html"><i class="ph ph-backpack"></i> Pendidikan Formal</a>
             <a href="../../lembaga/madin/index.html"><i class="ph ph-mosque"></i> Madrasah Diniyah</a>
             <a href="../../lembaga/tahfidz/index.html"><i class="ph ph-book-open-text"></i> Tahfidz</a>
             <a href="../../lembaga/yayasan/index.html"><i class="ph ph-bank"></i> Yayasan</a>
-        </div>
-    </div>
-    <div class="mobile-item">
-        <button class="mobile-dropdown-btn"><i class="ph ph-info"></i> Informasi
-    <span class="dropdown-icon">▼</span></button>
-        <div class="mobile-submenu">
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="#"><i class="ph ph-info"></i> Informasi</a>
+          <div class="dropdown-menu">
             <a href="../../informasi/berita/index.html"><i class="ph ph-newspaper"></i> Berita</a>
             <a href="../../informasi/agenda/index.html"><i class="ph ph-calendar"></i> Agenda</a>
             <a href="../../informasi/artikel/index.html"><i class="ph ph-file-text"></i> Artikel</a>
-        </div>
-    </div>
-    <div class="mobile-item">
-        <button class="mobile-dropdown-btn"><i class="ph ph-handshake"></i> Layanan
-    <span class="dropdown-icon">▼</span></button>
-        <div class="mobile-submenu">
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="#"><i class="ph ph-handshake"></i> Layanan</a>
+          <div class="dropdown-menu">
             <a href="../../layanan/pendaftaran-santri/index.html"><i class="ph ph-user-plus"></i> Pendaftaran Santri</a>
             <a href="../../layanan/administrasi/index.html"><i class="ph ph-folder-open"></i> Administrasi</a>
             <a href="../../layanan/pengaduan/index.html"><i class="ph ph-warning-circle"></i> Pengaduan</a>
             <a href="../../layanan/donasi/index.html"><i class="ph ph-gift"></i> Donasi</a>
-        </div>
+          </div>
+        </li>
+        <li><a href="../../e-ponpes/index.html"><i class="ph ph-laptop"></i> E-Ponpes</a></li>
+      </ul>
+      <a href="../../layanan/pendaftaran-santri/index.html" class="btn-daftar">Daftar Santri</a>
+      <button class="menu-btn" id="menuBtn">
+        <span class="dot d1"></span>
+        <span class="dot d2"></span>
+        <span class="dot d3"></span>
+        <span class="dot d4"></span>
+      </button>
+    </nav>
+  </header>
+  <div class="mobile-panel" id="mobilePanel">
+    <a href="../../index.html" class="mobile-link"><i class="ph ph-house"></i> Beranda</a>
+    <a href="../../profile/index.html" class="mobile-link"><i class="ph ph-identification-badge"></i> Profil</a>
+    <div class="mobile-item">
+      <button class="mobile-dropdown-btn"><i class="ph ph-buildings"></i> Lembaga <span class="dropdown-icon">▼</span></button>
+      <div class="mobile-submenu">
+        <a href="../../lembaga/formal/index.html"><i class="ph ph-backpack"></i> Pendidikan Formal</a>
+        <a href="../../lembaga/madin/index.html"><i class="ph ph-mosque"></i> Madrasah Diniyah</a>
+        <a href="../../lembaga/tahfidz/index.html"><i class="ph ph-book-open-text"></i> Tahfidz</a>
+        <a href="../../lembaga/yayasan/index.html"><i class="ph ph-bank"></i> Yayasan</a>
+      </div>
+    </div>
+    <div class="mobile-item">
+      <button class="mobile-dropdown-btn"><i class="ph ph-info"></i> Informasi <span class="dropdown-icon">▼</span></button>
+      <div class="mobile-submenu">
+        <a href="../../informasi/berita/index.html"><i class="ph ph-newspaper"></i> Berita</a>
+        <a href="../../informasi/agenda/index.html"><i class="ph ph-calendar"></i> Agenda</a>
+        <a href="../../informasi/artikel/index.html"><i class="ph ph-file-text"></i> Artikel</a>
+      </div>
+    </div>
+    <div class="mobile-item">
+      <button class="mobile-dropdown-btn"><i class="ph ph-handshake"></i> Layanan <span class="dropdown-icon">▼</span></button>
+      <div class="mobile-submenu">
+        <a href="../../layanan/pendaftaran-santri/index.html"><i class="ph ph-user-plus"></i> Pendaftaran Santri</a>
+        <a href="../../layanan/administrasi/index.html"><i class="ph ph-folder-open"></i> Administrasi</a>
+        <a href="../../layanan/pengaduan/index.html"><i class="ph ph-warning-circle"></i> Pengaduan</a>
+        <a href="../../layanan/donasi/index.html"><i class="ph ph-gift"></i> Donasi</a>
+      </div>
     </div>
     <a href="../../e-ponpes/index.html" class="mobile-link"><i class="ph ph-laptop"></i> E-Ponpes</a>
     <a href="../../layanan/pendaftaran-santri/index.html" class="mobile-daftar">Daftar Santri</a>
-</div>
-
-<main class="page-content mt-100">
+  </div>
+  <main class="page-content mt-100">
     <div class="news-detail-container fade-in-up">
-        <a href="./index.html" class="news-detail-back">
-            <i class="ph ph-arrow-left"></i> Kembali ke Artikel
-        </a>
-        
-        <header class="news-detail-header">
-            <div class="news-detail-breadcrumbs">
-                <a href="../../index.html"><i class="ph ph-house"></i> Beranda</a> &bull; <a href="./index.html"><i class="ph ph-file-text"></i> Artikel</a> &bull; <span>Generasi Robbani</span>
-            </div>
-            <h1 class="news-detail-title">Membangun Generasi Robbani</h1>
-            <div class="news-detail-meta-wrapper">
-                <div class="news-detail-meta-item">
-                    <i class="ph-fill ph-tag"></i>
-                    <span>Artikel & Opini</span>
-                </div>
-                <div class="news-detail-meta-item">
-                    <i class="ph ph-user"></i>
-                    <span>Ust. Hamzah Baya M.Pd (Pengasuh Ponpes Tahfidz Putri Al Wahyu)</span>
-                </div>
-            </div>
-        </header>
-
-        <div class="news-detail-featured-image">
-            <img src="../../assets/img/artikel/membangun-generasi.webp" alt="Membangun Generasi Robbani">
+      <a href="./index.html" class="news-detail-back">
+        <i class="ph ph-arrow-left"></i> Kembali ke Artikel </a>
+      <header class="news-detail-header">
+        <div class="news-detail-breadcrumbs">
+          <a href="../../index.html"><i class="ph ph-house"></i> Beranda</a> &bull; <a href="./index.html"><i class="ph ph-file-text"></i> Artikel</a> &bull; <span>Generasi Robbani</span>
         </div>
-
-        <div class="news-detail-content-layout">
-            <article class="news-detail-body"><p>Kejayaan Islam memang sangatlah sulit diwujudkan di tengah-tengah alam penuh kezhaliman saat ini. Kenyataan ini masih nan jauh di sana. Oleh karenanya, jalan dakwah ini masih sangatlah panjang. Namun, dengan bekal iman dan semangat iqomatuddin yang kuat serta memulai untuk memperbaiki diri sendiri, keluarga dan masyarakat serta mencoba untuk memulai berkarya meski dari hal-hal yang terkecil, tidak mustahil kemuliaan Islam akan diraih.</p>
-
-<p>Allah Ta'ala berfirman:</p>
-
-<blockquote class="arabic-text">
-وَلْيَخْشَ الَّذِينَ لَوْ تَرَكُوا مِنْ خَلْفِهِمْ ذُرِّيَّةً ضِعَافًا خَافُوا عَلَيْهِمْ فَلْيَتَّقُوا اللَّهَ وَلْيَقُولُوا قَوْلًا سَدِيدًا
-</blockquote>
-
-<p>“Dan hendaklah orang-orang takut kepada Allah, bila seandainya mereka meninggalkan anak-anaknya, yang dalam keadaan lemah, yang mereka khawatirkan terhadap (kesejahteraan) mereka. Oleh sebab itu, hendaklah mereka bertakwa kepada Allah dan mengucapkan perkataan yang benar”. (Q.S An-Nisa’: 9)</p>
-
-<p>Rasulullah bersabda:</p>
-
-<blockquote class="arabic-text">
-لَا تَكُونُوا إِمَّعَةً ، تَقُولُونَ : إِنْ أَحْسَنَ النَّاسُ أَحْسَنَّا ، وَإِنْ ظَلَمُوا ظَلَمْنَا ، وَلَكِنْ وَطِّنُوا أَنْفُسَكُمْ ، إِنْ أَحْسَنَ النَّاسُ أَنْ تُحْسِنُوا ، وَإِنْ أَسَاءُوا فَلَا تَظْلِمُوا
-</blockquote>
-
-<p>“Janganlah salah satu di antara kamu sekalian berimma’ah, yang jika orang lain baik maka engkau baik, dan jika mereka jelek maka engkau ikut jelek pula. Akan tetapi hendaklah engkau tetap konsisten terhadap (keputusan dirimu. Jika orang-orang baik, maka engkau juga baik; dan jika mereka jelek, hendaklah engkau menjauhinya keburukan mereka.” (HR Tirmidzi)</p>
-
-<p>Di sinilah dicari pemuda Kahfi yang berjuang demi kebenaran hakiki. Mereka adalah generasi rabbani yang siap menjadi pemimpin umat. Diantara pribadi dan kriteriah mereka adalah:</p>
-
-<div class="mb-20">
-    <h3 class="font-bold mb-10">Pertama, Shihhatul Ittijah (Orientasi yang Benar)</h3>
-    <p>“Barang siapa mengharap pertemuan dengan Tuhannya maka hendaklah dia mengerjakan kebajikan dan janganlah dia mempersekutukan dengan sesuatu pun dalam beribadah kepada Tuhannya.” (Qs. al-Kahfi: 110)</p>
-</div>
-
-<div class="mb-20">
-    <h3 class="font-bold mb-10">Kedua, Shihhatur Risalah (Tugas yang Benar)</h3>
-    <p>“Tidaklah Aku ciptakan jin dan manusia, melainkan hanya untuk beribadah kepada Ku”. (Qs. adz-Dzariyat: 56)</p>
-    <p>“Sesungguhnya Aku akan jadikan (manusia) sebagai khalifah.” (Qs. al-Baqarah: 30)</p>
-</div>
-
-<div class="mb-20">
-    <h3 class="font-bold mb-10">Ketiga, Shihhatut Takhtith (Strategi yang Jitu)</h3>
-    <p>“Dan Dialah Allah yang telah menurunkan di kalangan kaum ummiy (buta huruf) seorang Rasul dari kalangan mereka (manusia). Dia membacakan ayat-ayat Allah, membersihkan mereka (dari dosa) dan mengajarkan al-Quran dan Sunnah.” (Qs. al-Jumu’ah: 2)</p>
-</div>
-
-<div class="mb-20">
-    <h3 class="font-bold mb-10">Keempat, Shihhatul Baramij (Desain amal yang Terarah)</h3>
-    <p>Dalam pembinaan nilai-nilai keislaman tersebut dibutuhkan program atau target-target yang jelas dan terarah. Program yang sangat penting untuk penjagaan diri seorang pemuda dalam aspek ruhiyah, jasadiyah dan fikriyah.</p>
-</div>
-
-<div class="mb-20">
-    <h3 class="font-bold mb-10">Kelima, Quwwatul Intaj (Produktivitas yang Tinggi) meliputi:</h3>
-    <ol>
-        <li>Berkepribadian Islam (Syakhsiyah Islamiyah)</li>
-        <li>Memiliki rasa tanggungjawab dan kepemimpinan, memperjuangkan tegaknya syariah Islam hingga menyinari seluruh alam, menjadi teladan dan mengajak umat manusia untuk mengambil jalan Islam.</li>
-    </ol>
-</div>
-
-<p>Semoga terlahir generasi yang terdiri dari para pemuda yang tangguh memiliki ruhul jihad yang siap berkorban untuk meninggikan agamanya dan hanya mengabdikan dirinya kepada Allah sang maha pencipta, mereka hanya memiliki dua pilihan dalam hidupnya yaitu <em>Isy kariman au mut syahidan</em> (hidup mulia atau mati syahid). Wallahua'lam</p>
-
-<p style="color: #64748b; font-size: 0.9em;"><em>Sumber: Buku “Generasi Pemuda dan Perubahan” Fathi Yakan</em></p></article>
+        <h1 class="news-detail-title">Membangun Generasi Robbani</h1>
+        <div class="news-detail-meta-wrapper">
+          <div class="news-detail-meta-item">
+            <i class="ph-fill ph-tag"></i>
+            <span>Artikel & Opini</span>
+          </div>
+          <div class="news-detail-meta-item">
+            <i class="ph ph-user"></i>
+            <span>Ust. Hamzah Baya M.Pd (Pengasuh Ponpes Tahfidz Putri Al Wahyu)</span>
+          </div>
         </div>
-
-        <div class="news-detail-share">
-            <div class="news-detail-share-title">Bagikan Artikel:</div>
-            <div class="news-detail-share-buttons">
-                <a href="#" class="share-btn wa"><i class="ph ph-whatsapp-logo"></i></a>
-                <a href="#" class="share-btn fb"><i class="ph ph-facebook-logo"></i></a>
-                <a href="#" class="share-btn tw"><i class="ph ph-twitter-logo"></i></a>
-            </div>
+      </header>
+      <div class="news-detail-featured-image">
+        <img src="../../assets/img/artikel/membangun-generasi.webp" alt="Membangun Generasi Robbani">
+      </div>
+      <div class="news-detail-content-layout">
+        <article class="news-detail-body">
+          <p>Kejayaan Islam memang sangatlah sulit diwujudkan di tengah-tengah alam penuh kezhaliman saat ini. Kenyataan ini masih nan jauh di sana. Oleh karenanya, jalan dakwah ini masih sangatlah panjang. Namun, dengan bekal iman dan semangat iqomatuddin yang kuat serta memulai untuk memperbaiki diri sendiri, keluarga dan masyarakat serta mencoba untuk memulai berkarya meski dari hal-hal yang terkecil, tidak mustahil kemuliaan Islam akan diraih.</p>
+          <p>Allah Ta'ala berfirman:</p>
+          <blockquote class="arabic-text"> وَلْيَخْشَ الَّذِينَ لَوْ تَرَكُوا مِنْ خَلْفِهِمْ ذُرِّيَّةً ضِعَافًا خَافُوا عَلَيْهِمْ فَلْيَتَّقُوا اللَّهَ وَلْيَقُولُوا قَوْلًا سَدِيدًا </blockquote>
+          <p>“Dan hendaklah orang-orang takut kepada Allah, bila seandainya mereka meninggalkan anak-anaknya, yang dalam keadaan lemah, yang mereka khawatirkan terhadap (kesejahteraan) mereka. Oleh sebab itu, hendaklah mereka bertakwa kepada Allah dan mengucapkan perkataan yang benar”. (Q.S An-Nisa’: 9)</p>
+          <p>Rasulullah bersabda:</p>
+          <blockquote class="arabic-text"> لَا تَكُونُوا إِمَّعَةً ، تَقُولُونَ : إِنْ أَحْسَنَ النَّاسُ أَحْسَنَّا ، وَإِنْ ظَلَمُوا ظَلَمْنَا ، وَلَكِنْ وَطِّنُوا أَنْفُسَكُمْ ، إِنْ أَحْسَنَ النَّاسُ أَنْ تُحْسِنُوا ، وَإِنْ أَسَاءُوا فَلَا تَظْلِمُوا </blockquote>
+          <p>“Janganlah salah satu di antara kamu sekalian berimma’ah, yang jika orang lain baik maka engkau baik, dan jika mereka jelek maka engkau ikut jelek pula. Akan tetapi hendaklah engkau tetap konsisten terhadap (keputusan dirimu. Jika orang-orang baik, maka engkau juga baik; dan jika mereka jelek, hendaklah engkau menjauhinya keburukan mereka.” (HR Tirmidzi)</p>
+          <p>Di sinilah dicari pemuda Kahfi yang berjuang demi kebenaran hakiki. Mereka adalah generasi rabbani yang siap menjadi pemimpin umat. Diantara pribadi dan kriteriah mereka adalah:</p>
+          <div class="mb-20">
+            <h3 class="font-bold mb-10">Pertama, Shihhatul Ittijah (Orientasi yang Benar)</h3>
+            <p>“Barang siapa mengharap pertemuan dengan Tuhannya maka hendaklah dia mengerjakan kebajikan dan janganlah dia mempersekutukan dengan sesuatu pun dalam beribadah kepada Tuhannya.” (Qs. al-Kahfi: 110)</p>
+          </div>
+          <div class="mb-20">
+            <h3 class="font-bold mb-10">Kedua, Shihhatur Risalah (Tugas yang Benar)</h3>
+            <p>“Tidaklah Aku ciptakan jin dan manusia, melainkan hanya untuk beribadah kepada Ku”. (Qs. adz-Dzariyat: 56)</p>
+            <p>“Sesungguhnya Aku akan jadikan (manusia) sebagai khalifah.” (Qs. al-Baqarah: 30)</p>
+          </div>
+          <div class="mb-20">
+            <h3 class="font-bold mb-10">Ketiga, Shihhatut Takhtith (Strategi yang Jitu)</h3>
+            <p>“Dan Dialah Allah yang telah menurunkan di kalangan kaum ummiy (buta huruf) seorang Rasul dari kalangan mereka (manusia). Dia membacakan ayat-ayat Allah, membersihkan mereka (dari dosa) dan mengajarkan al-Quran dan Sunnah.” (Qs. al-Jumu’ah: 2)</p>
+          </div>
+          <div class="mb-20">
+            <h3 class="font-bold mb-10">Keempat, Shihhatul Baramij (Desain amal yang Terarah)</h3>
+            <p>Dalam pembinaan nilai-nilai keislaman tersebut dibutuhkan program atau target-target yang jelas dan terarah. Program yang sangat penting untuk penjagaan diri seorang pemuda dalam aspek ruhiyah, jasadiyah dan fikriyah.</p>
+          </div>
+          <div class="mb-20">
+            <h3 class="font-bold mb-10">Kelima, Quwwatul Intaj (Produktivitas yang Tinggi) meliputi:</h3>
+            <ol>
+              <li>Berkepribadian Islam (Syakhsiyah Islamiyah)</li>
+              <li>Memiliki rasa tanggungjawab dan kepemimpinan, memperjuangkan tegaknya syariah Islam hingga menyinari seluruh alam, menjadi teladan dan mengajak umat manusia untuk mengambil jalan Islam.</li>
+            </ol>
+          </div>
+          <p>Semoga terlahir generasi yang terdiri dari para pemuda yang tangguh memiliki ruhul jihad yang siap berkorban untuk meninggikan agamanya dan hanya mengabdikan dirinya kepada Allah sang maha pencipta, mereka hanya memiliki dua pilihan dalam hidupnya yaitu <em>Isy kariman au mut syahidan</em> (hidup mulia atau mati syahid). Wallahua'lam</p>
+          <p style="color: #64748b; font-size: 0.9em;"><em>Sumber: Buku “Generasi Pemuda dan Perubahan” Fathi Yakan</em></p>
+        </article>
+      </div>
+      <div class="news-detail-share">
+        <div class="news-detail-share-title">Bagikan Artikel:</div>
+        <div class="news-detail-share-buttons">
+          <a href="#" class="share-btn wa"><i class="ph ph-whatsapp-logo"></i></a>
+          <a href="#" class="share-btn fb"><i class="ph ph-facebook-logo"></i></a>
+          <a href="#" class="share-btn tw"><i class="ph ph-twitter-logo"></i></a>
         </div>
+      </div>
     </div>
-</main>
-
-<footer class="footer">
+  </main>
+  <footer class="footer">
     <div class="container footer-grid">
-        <div class="footer-col">
-            <div class="footer-logo">
-                <img src="../../assets/img/logo/tinny-logo.png" alt="Logo PPTQ AL WAHYU" class="footer-logo-img">
-                <div class="footer-logo-text">
-                    <strong class="footer-logo-title">PPTQ AL WAHYU</strong>
-                    <span class="footer-logo-subtitle">Ponpes Tahfidz Al-Qur’an</span>
-                </div>
-            </div>
-            <p>Mencetak Generasi Qur'ani yang Berakhlakul Karimah</p>
+      <div class="footer-col">
+        <div class="footer-logo">
+          <img src="../../assets/img/logo/tinny-logo.png" alt="Logo PPTQ AL WAHYU" class="footer-logo-img">
+          <div class="footer-logo-text">
+            <strong class="footer-logo-title">PPTQ AL WAHYU</strong>
+            <span class="footer-logo-subtitle">Ponpes Tahfidz Al-Qur’an</span>
+          </div>
         </div>
-        <div class="footer-col">
-            <h3>Kontak Kami</h3>
-            <p><i class="ph-fill ph-phone"></i> +62 812 3020 0098</p>
-            <p><i class="ph ph-clock"></i> Senin - Jumat, 08.00 - 16.00 WIB</p>
+        <p>Mencetak Generasi Qur'ani yang Berakhlakul Karimah</p>
+      </div>
+      <div class="footer-col">
+        <h3>Kontak Kami</h3>
+        <p><i class="ph-fill ph-phone"></i> +62 812 3020 0098</p>
+        <p><i class="ph ph-clock"></i> Senin - Jumat, 08.00 - 16.00 WIB</p>
+      </div>
+      <div class="footer-col">
+        <h3>Sosial Media</h3>
+        <div class="social-links">
+          <a href="https://www.instagram.com/ponpestahfidzalwahyu?igsh=MWFzdzlpNDU1OXN2cg==" target="_blank"><i class="ph ph-instagram-logo"></i> Instagram</a>
+          <a href="https://www.facebook.com/share/1DFZfmiqeV/" target="_blank"><i class="ph ph-facebook-logo"></i> Facebook</a>
+          <a href="https://youtube.com/@alwahyuchannel?si=UnHLhtk589R4jCXM" target="_blank"><i class="ph ph-youtube-logo"></i> YouTube</a>
         </div>
-        <div class="footer-col">
-            <h3>Sosial Media</h3>
-            <div class="social-links">
-                <a href="https://www.instagram.com/ponpestahfidzalwahyu?igsh=MWFzdzlpNDU1OXN2cg==" target="_blank"><i class="ph ph-instagram-logo"></i> Instagram</a>
-                <a href="https://www.facebook.com/share/1DFZfmiqeV/" target="_blank"><i class="ph ph-facebook-logo"></i> Facebook</a>
-                <a href="https://youtube.com/@alwahyuchannel?si=UnHLhtk589R4jCXM" target="_blank"><i class="ph ph-youtube-logo"></i> YouTube</a>
-            </div>
-        </div>
+      </div>
     </div>
     <div class="footer-bottom">
-        <p>&copy; 2026 PPTQ AL WAHYU. Semua Hak Dilindungi.</p>
+      <p>&copy; 2026 PPTQ AL WAHYU. Semua Hak Dilindungi.</p>
     </div>
-</footer>
-
-<script src="../../assets/js/global/navigation.js"></script>
-<script src="../../assets/js/global/main.js"></script>
+  </footer>
+  <script src="../../assets/js/global/navigation.js"></script>
+  <script src="../../assets/js/global/main.js"></script>
 </body>
+
 </html>
-
-
-
