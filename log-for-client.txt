@@ -1,0 +1,33 @@
+01:27 PM 17/09/2026
+
+
+Ringkasan Pembaruan Identitas Pesantren
+Seluruh perubahan terkait identitas, profil, rekening bank, dan semboyan PPTQ AL WAHYU telah berhasil diterapkan dan disinkronkan (push) ke repository GitHub Anda.
+
+Pekerjaan yang Telah Diselesaikan
+Pembaruan Tagline Global
+
+Mengubah teks lawas "Pusat Pendidikan Islam dan Tahfidz Al-Qur'an..." menjadi teks resmi "Mencetak Generasi Qur'ani yang Berakhlakul Karimah" di seluruh halaman .html (termasuk footer di 70+ halaman).
+Homepage (index.html)
+
+JSON-LD: Menyesuaikan data terstruktur SEO untuk menggunakan nama resmi YAYASAN AL WAHYU CAHAYA ISLAM (PONPES TAHFIDZ AL WAHYU SIDOARJO) dan berlokasi di SIDOARJO.
+Semboyan Utama: Memperbarui teks judul besar (Hero) menjadi kalimat: "Bersama Al-Qur'an, Membangun Generasi Berilmu, Berakhlak, dan Bermanfaat untuk Umat".
+Halaman Profil (profile/index.html)
+
+Mengintegrasikan data lengkap Visi & Misi yang baru.
+Menyusun ulang Program Unggulan agar konsisten: TAHFIDZ, LEADERSHIP, TEKNOLOGI, CHARACTER BUILDING.
+Menambahkan info Mudir, Ustadz Hamzah Baya S.Pd.I, M.Pd.
+Halaman Yayasan (lembaga/yayasan/index.html)
+
+Menyisipkan legalitas SK Kemenkumham No AHU-0005744.AH.01.04.Tahun 2023.
+Halaman Donasi (layanan/donasi/index.html)
+
+Menambahkan informasi rekening BCA (a.n Hamzah Baya).
+Menampilkan gambar QRIS dari fail assets/img/other/qris-alwahyu.jpeg.
+Menyesuaikan format nomor kontak konfirmasi donasi: 0812-3020-0098.
+Status Repositori
+Semua perubahan telah di-commit dengan pesan "Update identitas pesantren, visi misi, rekening, dan semboyan" dan telah berhasil di-push ke https://github.com/sisitusdotcom-project/alwahyu.git.
+
+TIP
+
+Jika Anda menggunakan layanan hosting statis (seperti GitHub Pages, Vercel, atau Netlify), seluruh halaman akan otomatis dirender dalam beberapa menit dan pembaruan akan langsung tayang ke publik.
