@@ -635,42 +635,6 @@
 }
 
 /* Shared Components: News List & Items */
-.news-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
-    gap: 16px;
-}
-
-.news-item {
-    background: white;
-    padding: 16px;
-    border-radius: 12px;
-    text-decoration: none;
-    border: 1px solid var(--alwahyu-border);
-    transition: all 0.3s ease;
-    display: block;
-}
-
-.news-item:hover {
-    border-color: var(--alwahyu-primary);
-    box-shadow: 0 5px 20px rgba(62, 125, 55, 0.1);
-    transform: translateY(-5px);
-}
-
-.news-date {
-    font-size: 0.9rem;
-    color: var(--alwahyu-primary);
-    margin-bottom: 8px;
-    font-weight: 600;
-}
-
-.news-title {
-    font-size: 1rem;
-    color: var(--alwahyu-dark);
-    font-weight: 700;
-    line-height: 1.4;
-}
-
 /* News & Article Grid Card Styles */
 .news-grid-custom {
     display: grid;
@@ -824,14 +788,6 @@
 
 .ep-toast-icon {
     font-size: 1rem;
-}
-
-.ep-toast-success {
-    background: #15803d;
-}
-
-.ep-toast-error {
-    background: #b91c1c;
 }
 
 /* Form Submit Loading Spinner */
@@ -1012,6 +968,7 @@
         padding: 16px;
     }
 }
+
 
 
 
