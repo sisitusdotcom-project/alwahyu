@@ -283,9 +283,74 @@
 .org-tree-level {
   display: flex;
   justify-content: center;
-  gap: 80px;
+  align-items: center;
   position: relative;
   z-index: 2;
+}
+
+/* --- Madin Subject List --- */
+.madin-subject-item {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--alwahyu-border);
+  padding-bottom: 24px;
+}
+.madin-subject-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+.madin-subject-img {
+  flex-shrink: 0;
+  width: 90px;
+}
+.madin-subject-img img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.madin-subject-content {
+  flex: 1;
+}
+.madin-subject-content h3 {
+  font-size: var(--fs-h3);
+  color: var(--alwahyu-dark);
+  margin-bottom: 8px;
+}
+.subject-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+.subject-list li {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 8px;
+  color: var(--alwahyu-text);
+  line-height: 1.5;
+}
+.subject-list li::before {
+  content: "\2713"; /* Checkmark */
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--alwahyu-primary);
+  font-weight: 700;
+}
+@media (min-width: 768px) {
+  .madin-subject-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+  .madin-subject-item {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
 }
 
 .org-tree-level .org-card {
