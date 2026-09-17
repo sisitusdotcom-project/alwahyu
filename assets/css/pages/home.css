@@ -170,7 +170,7 @@
 }
 
 .home-feature-card-content {
-  padding: 20px 0;
+  padding: 16px 0 10px;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -187,7 +187,7 @@
   font-size: var(--fs-body);
   color: var(--alwahyu-text);
   line-height: 1.5;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
   flex-grow: 1;
 }
 
