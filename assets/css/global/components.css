@@ -61,6 +61,7 @@
 .logo-text span {
   color: #64748b;
   font-size: var(--fs-small);
+  font-style: italic;
 }
 
 .nav-menu {
@@ -555,6 +556,7 @@
 .footer-logo-subtitle {
   color: #cbd5e1;
   font-size: var(--fs-small);
+  font-style: italic;
 }
 
 .footer-bottom {
