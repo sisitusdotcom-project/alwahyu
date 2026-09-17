@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // --- Intersection Observer for Animations ---
   const observerOptions = {
     root: null,
     rootMargin: '0px 0px -30px 0px',
@@ -14,15 +15,70 @@ document.addEventListener("DOMContentLoaded", () => {
   }, observerOptions);
   const animatedElements = document.querySelectorAll('.fade-in-up, .slide-in-left, .slide-in-right');
   animatedElements.forEach(el => observer.observe(el));
-  const slides = document.querySelectorAll('.hero-slideshow .slide');
-  if (slides.length > 0) {
-    let currentSlide = 0;
-    setInterval(() => {
-      slides[currentSlide].classList.remove('active');
-      currentSlide = (currentSlide + 1) % slides.length;
-      slides[currentSlide].classList.add('active');
-    }, 5000);
+
+  // --- Reusable Hero Slideshow Injection ---
+  const heroImages = ['hero-1.webp', 'hero-2.webp', 'hero-3.webp', 'hero-4.webp', 'hero-5.webp', 'hero-6.webp'];
+
+  // Calculate base path to assets/img/banner/ relative to current page
+  function getBasePath() {
+    // Detect path prefix from existing CSS link tags (most reliable)
+    const cssLink = document.querySelector('link[href*="assets/css/"]');
+    if (cssLink) {
+      const href = cssLink.getAttribute('href');
+      const idx = href.indexOf('assets/');
+      return href.substring(0, idx) + 'assets/img/banner/';
+    }
+    // Fallback: use pathname depth
+    const path = window.location.pathname;
+    const depth = path.split('/').filter(Boolean).length - 1;
+    if (depth <= 0) return 'assets/img/banner/';
+    return '../'.repeat(depth) + 'assets/img/banner/';
   }
+
+  function injectSlideshow(container) {
+    // Don't inject if slideshow already exists
+    if (container.querySelector('.hero-slideshow')) return;
+
+    const basePath = getBasePath();
+
+    // Create slideshow wrapper
+    const slideshow = document.createElement('div');
+    slideshow.className = 'hero-slideshow';
+    heroImages.forEach((img, i) => {
+      const slide = document.createElement('div');
+      slide.className = 'slide' + (i === 0 ? ' active' : '');
+      slide.style.backgroundImage = "url('" + basePath + img + "')";
+      slideshow.appendChild(slide);
+    });
+
+    // Create overlay
+    const overlay = document.createElement('div');
+    overlay.className = 'hero-overlay';
+
+    // Insert at the beginning of the container
+    container.insertBefore(overlay, container.firstChild);
+    container.insertBefore(slideshow, container.firstChild);
+  }
+
+  // Inject into .hero (homepage) and .page-header (subpages)
+  const heroTargets = document.querySelectorAll('.hero, .page-header');
+  heroTargets.forEach(target => injectSlideshow(target));
+
+  // Start slideshow rotation
+  const allSlideshows = document.querySelectorAll('.hero-slideshow');
+  allSlideshows.forEach(slideshow => {
+    const slides = slideshow.querySelectorAll('.slide');
+    if (slides.length > 1) {
+      let currentSlide = 0;
+      setInterval(() => {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add('active');
+      }, 5000);
+    }
+  });
+
+  // --- WhatsApp Floating Button ---
   if (!document.querySelector('.wa-float')) {
     const waFloat = document.createElement('a');
     waFloat.href = 'https://wa.me/6281230200098';
