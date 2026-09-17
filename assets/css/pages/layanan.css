@@ -12,6 +12,41 @@
   text-align: center;
   border: 2px dashed var(--alwahyu-primary);
   margin-top: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.bank-detail-box:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(15, 118, 110, 0.15);
+  background: linear-gradient(135deg, #dcfce7, #bbf7d0);
+}
+
+.bank-detail-box::after {
+  content: var(--copy-text, 'Klik untuk menyalin');
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 0.75rem;
+  color: var(--alwahyu-primary);
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.bank-detail-box.copied {
+  border-color: var(--alwahyu-primary-2);
+  background: linear-gradient(135deg, #dcfce7, #86efac);
+}
+
+.bank-detail-box.copied::after {
+  opacity: 1;
+  color: var(--alwahyu-dark);
+}
+
+.bank-detail-box:hover::after {
+  opacity: 1;
 }
 
 .bank-name {
@@ -789,6 +824,8 @@
   max-width: 250px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  display: block;
 }
 
 @media (min-width: 768px) {
