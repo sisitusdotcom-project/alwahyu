@@ -4,19 +4,15 @@ tabBtns.forEach(btn => {
   btn.addEventListener('click', () => {
     tabBtns.forEach(b => {
       b.classList.remove('active');
-      b.style.color = 'var(--alwahyu-text)';
-      b.style.borderBottom = 'none';
     });
     btn.classList.add('active');
-    btn.style.color = 'var(--alwahyu-primary)';
-    btn.style.borderBottom = '3px solid var(--alwahyu-primary)';
     tabContents.forEach(content => {
-      content.style.display = 'none';
+      content.classList.add('d-none');
     });
     const targetId = 'tab-' + btn.getAttribute('data-tab');
     const targetTab = document.getElementById(targetId);
     if (targetTab) {
-      targetTab.style.display = 'block';
+      targetTab.classList.remove('d-none');
     }
   });
 });

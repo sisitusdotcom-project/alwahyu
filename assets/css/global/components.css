@@ -273,6 +273,23 @@
   border-bottom: 1px solid var(--alwahyu-border);
 }
 
+/* --- Small Title & Button Utilities --- */
+.section-title-sm {
+  margin-bottom: 0;
+  text-align: left;
+  font-size: clamp(1.1rem, 4vw, 1.5rem);
+  white-space: nowrap;
+  letter-spacing: -0.5px;
+}
+
+.btn-xs {
+  padding: 4px 10px;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  border-width: 1px;
+}
+/* -------------------------------------- */
+
 .mobile-link,
 .mobile-dropdown-btn {
   width: 100%;
@@ -826,6 +843,23 @@
     margin-top: 60px;
   }
 }
+
+/* --- Progress Bar Utilities --- */
+.progress-fill {
+  height: 100%;
+  border-radius: 99px;
+}
+.progress-fill-primary {
+  background: linear-gradient(90deg, var(--alwahyu-primary), var(--alwahyu-primary-2));
+}
+.progress-fill-blue {
+  background: linear-gradient(90deg, #2596be, #3ac2ec);
+}
+.progress-fill-yellow {
+  background: linear-gradient(90deg, #c9aa00, var(--alwahyu-highlight));
+}
+.text-yellow { color: #c9aa00 !important; }
+/* ---------------------------- */
 
 .donasi-hero {
   background: linear-gradient(135deg, var(--alwahyu-primary), var(--alwahyu-primary-2));
