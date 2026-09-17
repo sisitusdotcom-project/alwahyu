@@ -1,4 +1,4 @@
-html, body {
+﻿html, body {
   overflow-x: hidden;
 }
 
@@ -98,9 +98,15 @@ p {
   font-size: var(--fs-h2);
   color: var(--alwahyu-dark);
   margin-bottom: 24px;
-  font-weight: 700;
+  font-weight: 200; /* Extra Light */
   position: relative;
   padding-bottom: 12px;
+  text-align: left !important;
+}
+
+.section-title strong {
+  font-weight: 900; /* Black / Extra Bold */
+  color: var(--alwahyu-primary);
 }
 
 .section-title::before {
@@ -477,4 +483,12 @@ p {
   border: none;
 }.title-no-divider::before, .title-no-divider::after {
   display: none !important;
+}
+
+.welcome-title {
+  font-size: var(--fs-h2);
+  color: var(--alwahyu-dark);
+  margin-bottom: 24px;
+  font-weight: 700;
+  text-align: center;
 }

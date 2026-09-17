@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+﻿document.addEventListener("DOMContentLoaded", () => {
   // --- Intersection Observer for Animations ---
   const observerOptions = {
     root: null,
@@ -89,3 +89,29 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.appendChild(waFloat);
   }
 });
+  // --- Section Title First Word Bold ---
+  document.querySelectorAll('.section-title').forEach(el => {
+    if (!el.querySelector('strong')) {
+      let walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT, null, false);
+      let node = walker.nextNode();
+      while(node) {
+        if(node.nodeValue.trim().length > 0) {
+          let words = node.nodeValue.trim().split(/\s+/);
+          let firstWord = words.shift();
+          let rest = words.join(' ');
+          
+          let strong = document.createElement('strong');
+          strong.textContent = firstWord + (rest.length > 0 ? ' ' : '');
+          
+          let restNode = document.createTextNode(rest);
+          
+          let parent = node.parentNode;
+          parent.insertBefore(strong, node);
+          parent.insertBefore(restNode, node);
+          parent.removeChild(node);
+          break;
+        }
+        node = walker.nextNode();
+      }
+    }
+  });
