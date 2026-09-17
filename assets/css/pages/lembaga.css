@@ -353,6 +353,67 @@
   }
 }
 
+/* --- Formal Subject List --- */
+.formal-list-item {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  margin-bottom: 30px;
+  border-bottom: 1px solid var(--alwahyu-border);
+  padding-bottom: 30px;
+}
+.formal-list-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+.formal-list-img {
+  flex-shrink: 0;
+  width: 140px; /* Wider for building landscape */
+}
+.formal-list-img img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.formal-list-content {
+  flex: 1;
+}
+.formal-list-content h3 {
+  font-size: var(--fs-h3);
+  color: var(--alwahyu-dark);
+  margin-bottom: 8px;
+}
+.formal-list-content p {
+  color: var(--alwahyu-text);
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+@media (max-width: 550px) {
+  .formal-list-item {
+    flex-direction: column;
+  }
+  .formal-list-img {
+    width: 100%;
+  }
+  .formal-list-img img {
+    height: 180px;
+  }
+}
+@media (min-width: 768px) {
+  .formal-list-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+  .formal-list-item {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+}
+
 .org-tree-level .org-card {
   width: 220px;
   flex-shrink: 0;
