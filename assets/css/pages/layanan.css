@@ -750,3 +750,43 @@
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
+
+@media (max-width: 768px) {
+  .timeline {
+    margin: 20px auto 40px auto;
+  }
+
+  .timeline::before {
+    left: 14px;
+    width: 2px;
+  }
+
+  .timeline-item {
+    padding-left: 42px;
+    margin-bottom: 24px;
+  }
+
+  .timeline-icon {
+    left: 0;
+    width: 30px;
+    height: 30px;
+    font-size: 0.875rem;
+    border-width: 2px;
+  }
+
+  .timeline-content {
+    background: transparent;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+  }
+  
+  .timeline-content h3 {
+    font-size: 1rem;
+    margin-bottom: 6px;
+  }
+  
+  .timeline-content p {
+    font-size: 0.875rem;
+  }
+}

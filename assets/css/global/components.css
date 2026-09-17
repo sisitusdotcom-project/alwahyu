@@ -757,31 +757,12 @@
   .layanan-split-grid,
   .pengaduan-grid {
     grid-template-columns: 1fr;
-    `n gap: 16px;
+    gap: 16px;
   }
 
   .form-grid-2 {
     grid-template-columns: 1fr;
     gap: 0;
-  }
-
-  .timeline::before {
-    left: 20px;
-  }
-
-  .timeline-item {
-    padding-left: 45px;
-  }
-
-  .timeline-icon {
-    left: 0;
-    width: 36px;
-    height: 36px;
-    font-size: var(--fs-small);
-  }
-
-  .timeline-content {
-    padding: 18px 20px;
   }
 }
 
