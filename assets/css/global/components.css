@@ -474,7 +474,7 @@
 }
 
 .card-img-cover-wrapper {
-  height: 180px;
+  height: 160px;
   width: 100%;
   overflow: hidden;
   position: relative;
@@ -489,6 +489,9 @@
 .card-no-padding {
   padding: 0;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
 }
 
 .logo-img {
