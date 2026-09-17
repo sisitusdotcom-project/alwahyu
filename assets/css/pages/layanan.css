@@ -697,14 +697,19 @@
 }
 
 .donasi-hero-icon {
-  font-size: 3rem;
-  margin-bottom: 20px;
-  color: var(--alwahyu-highlight);
+  font-size: 3.5rem;
+  margin-bottom: 15px;
+  margin-right: 12px;
+  color: var(--alwahyu-primary);
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .donasi-hero-title {
   font-size: var(--fs-h1);
   margin-bottom: 15px;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .donasi-hero-subtitle {
