@@ -1035,3 +1035,65 @@
     min-width: 280px;
   }
 }
+
+/* Preloader */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--alwahyu-light, #ffffff);
+  z-index: 999999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+#preloader.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader-pulse {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader-pulse::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 3px solid rgba(15, 23, 42, 0.08);
+  border-top-color: var(--alwahyu-primary);
+  border-left-color: var(--alwahyu-primary);
+  border-radius: 50%;
+  animation: spinLoader 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+}
+
+.loader-pulse::after {
+  content: "";
+  position: absolute;
+  width: 76px;
+  height: 76px;
+  background-image: url('/assets/img/logo/tinny-logo.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+  animation: pulseLogo 2s infinite ease-in-out;
+}
+
+@keyframes spinLoader {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes pulseLogo {
+  0%, 100% { transform: scale(0.95); opacity: 0.9; }
+  50% { transform: scale(1.05); opacity: 1; }
+}
