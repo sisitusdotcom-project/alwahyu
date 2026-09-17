@@ -13,32 +13,28 @@
   box-shadow: 0 25px 70px rgba(0, 0, 0, 0.1);
 }
 
-.login-icon-box {
-  width: 64px;
-  height: 64px;
-  background: linear-gradient(135deg, var(--alwahyu-primary), var(--alwahyu-primary-2));
-  border-radius: 18px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 16px;
+.eponpes-logo-container {
+  margin-bottom: 24px;
+  text-align: center;
 }
 
-.login-icon-box i {
-  color: white;
-  font-size: var(--fs-h2);
+.eponpes-logo-text {
+  font-size: clamp(2rem, 8vw, 2.8rem);
+  font-weight: 800;
+  margin-bottom: 4px;
+  letter-spacing: -0.02em;
+  background: linear-gradient(to right, #166534, #ca8a04, #ea580c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  line-height: 1.1;
 }
 
-.login-card h2 {
-  color: var(--alwahyu-dark);
-  font-size: var(--fs-h2);
-  margin-bottom: 6px;
-  font-weight: 700;
-}
-
-.login-card .subtitle {
-  color: #64748b;
-  font-size: var(--fs-body);
+.eponpes-logo-sub {
+  font-size: clamp(0.85rem, 3vw, 1.1rem);
+  font-weight: 600;
+  color: #064e3b;
+  letter-spacing: 0.02em;
 }
 
 .login-form {
