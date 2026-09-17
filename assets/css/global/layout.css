@@ -3,7 +3,7 @@ html, body {
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Nunito', sans-serif;
   color: var(--alwahyu-text);
   background-color: var(--alwahyu-bg);
   font-size: var(--fs-body);
@@ -475,4 +475,6 @@ p {
   width: 100%;
   height: 100%;
   border: none;
+}.title-no-divider::before, .title-no-divider::after {
+  display: none !important;
 }
