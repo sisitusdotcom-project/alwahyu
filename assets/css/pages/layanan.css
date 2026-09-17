@@ -223,7 +223,7 @@
   background: white;
   border: 1px solid var(--alwahyu-border);
   border-radius: 20px;
-  padding: 20px;
+  padding: var(--pad-card);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
 }
 
@@ -676,9 +676,8 @@
 .jam-layanan-box {
   background: white;
   border: 1px solid var(--alwahyu-border);
-  border-radius: 20px;
-  padding: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+  padding: var(--pad-card);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.03);
   margin-top: 45px;
 }
 
@@ -878,8 +877,8 @@
   
   .timeline-content {
     background: white;
-    padding: 24px 30px;
-    border-radius: 16px;
+    padding: var(--pad-card);
+    border-radius: 20px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.02);
     border: 1px solid var(--alwahyu-border);
   }

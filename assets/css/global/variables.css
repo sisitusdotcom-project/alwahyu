@@ -13,4 +13,10 @@
   --fs-h4: clamp(1rem, 1.5vw, 1.2rem);
   --fs-body: clamp(0.9rem, 1vw, 1rem);
   --fs-small: clamp(0.75rem, 1vw, 0.85rem);
+  
+  /* Global Responsive Spacing for Cards */
+  --pad-card-x: clamp(16px, 5vw, 24px);
+  --pad-card-y: clamp(20px, 5vw, 32px);
+  --pad-card: var(--pad-card-y) var(--pad-card-x);
+  --pad-card-lg: clamp(24px, 6vw, 40px);
 }

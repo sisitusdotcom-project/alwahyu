@@ -24,7 +24,9 @@
   margin-bottom: 4px;
   letter-spacing: -0.02em;
   background: linear-gradient(to right, #166534, #ca8a04, #ea580c);
+  background-clip: text;
   -webkit-background-clip: text;
+  color: transparent;
   -webkit-text-fill-color: transparent;
   display: inline-block;
   line-height: 1.1;
