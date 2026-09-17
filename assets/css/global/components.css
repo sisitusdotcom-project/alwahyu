@@ -53,9 +53,15 @@
   color: var(--alwahyu-dark);
   display: inline-block;
   font-size: var(--fs-body);
-  letter-spacing: 0.34em;
+  letter-spacing: 0.40em;
   word-spacing: 0;
   line-height: 1.1;
+}
+
+@media (min-width: 768px) {
+  .logo-text strong {
+    letter-spacing: 0.58em;
+  }
 }
 
 .logo-text span {
@@ -295,6 +301,7 @@
   white-space: nowrap;
   border-width: 1px;
 }
+
 /* -------------------------------------- */
 
 .mobile-link,
@@ -435,12 +442,14 @@
     padding: 60px 0 20px 0;
     margin-top: 60px;
   }
+
   .footer-grid {
     display: flex;
     justify-content: space-between;
     gap: 40px;
     margin-bottom: 40px;
   }
+
   .footer-col:first-child {
     max-width: 400px;
   }
@@ -549,8 +558,14 @@
 .footer-logo-title {
   color: var(--alwahyu-highlight);
   font-size: var(--fs-body);
-  letter-spacing: 0.34em;
+  letter-spacing: 0.40em;
   line-height: 1.1;
+}
+
+@media (min-width: 768px) {
+  .footer-logo-title {
+    letter-spacing: 0.58em;
+  }
 }
 
 .footer-logo-subtitle {
@@ -900,6 +915,7 @@
 }
 
 @media (min-width: 768px) {
+
   .layanan-split-grid,
   .pengaduan-grid {
     grid-template-columns: 1fr 1fr;
@@ -933,16 +949,23 @@
   height: 100%;
   border-radius: 99px;
 }
+
 .progress-fill-primary {
   background: linear-gradient(90deg, var(--alwahyu-primary), var(--alwahyu-primary-2));
 }
+
 .progress-fill-blue {
   background: linear-gradient(90deg, #2596be, #3ac2ec);
 }
+
 .progress-fill-yellow {
   background: linear-gradient(90deg, #c9aa00, var(--alwahyu-highlight));
 }
-.text-yellow { color: #c9aa00 !important; }
+
+.text-yellow {
+  color: #c9aa00 !important;
+}
+
 /* ---------------------------- */
 
 .donasi-hero {
@@ -980,7 +1003,7 @@
     padding: 30px 24px;
     border-radius: 20px;
   }
-  
+
   .donasi-grid {
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
     gap: 20px;
@@ -1020,18 +1043,18 @@
     border-radius: 20px;
     padding: 16px;
   }
-  
+
   .admin-grid {
     flex-direction: row;
     gap: 40px;
     flex-wrap: wrap;
   }
-  
+
   .admin-info-col {
     flex: 1;
     min-width: 280px;
   }
-  
+
   .admin-form-col {
     flex: 1.2;
     min-width: 280px;
@@ -1087,15 +1110,26 @@
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
   animation: pulseLogo 2s infinite ease-in-out;
 }
 
 @keyframes spinLoader {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes pulseLogo {
-  0%, 100% { transform: scale(0.95); opacity: 0.9; }
-  50% { transform: scale(1.05); opacity: 1; }
+
+  0%,
+  100% {
+    transform: scale(0.95);
+    opacity: 0.9;
+  }
+
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
 }
