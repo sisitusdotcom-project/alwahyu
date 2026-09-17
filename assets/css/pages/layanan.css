@@ -900,7 +900,7 @@
 .info-list-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 16px;
 }
 
 .info-item {
@@ -934,7 +934,12 @@
 .info-text p, .info-text span {
   font-size: 0.95rem;
   color: var(--alwahyu-text);
-  line-height: 1.6;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.info-text p:not(:last-child) {
+  margin-bottom: 2px;
 }
 
 .styled-bullet-list {
