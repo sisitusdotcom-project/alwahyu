@@ -25,9 +25,9 @@
 
 .visimisi-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
-  gap: 30px;
-  margin-bottom: 50px;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-bottom: 40px;
 }
 
 .visimisi-card {
@@ -113,8 +113,9 @@
 
 .legal-list li {
   display: grid;
-  grid-template-columns: 200px 1fr;
-  padding: 16px 0;
+  grid-template-columns: 1fr;
+  gap: 6px;
+  padding: 12px 0;
   border-bottom: 1px solid var(--alwahyu-border);
 }
 
@@ -205,19 +206,22 @@
   display: inline-block;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   .visimisi-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
   }
 
   .legal-list li {
-    grid-template-columns: 1fr;
-    gap: 6px;
+    grid-template-columns: 200px 1fr;
+    gap: 16px;
+    padding: 16px 0;
   }
 
   .visimisi-card,
   .legal-card {
-    padding: 16px;
+    padding: 24px;
   }
 }
 
