@@ -10,12 +10,18 @@
 }
 
 .navbar {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 16px;
+}
+
+@media (min-width: 768px) {
+  .navbar {
+    padding: 10px 32px;
+  }
 }
 
 .logo {
@@ -540,11 +546,20 @@
 }
 
 .footer-bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 16px 0 16px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding-top: 20px;
   text-align: center;
   color: #64748b;
   font-size: var(--fs-small);
+}
+
+@media (min-width: 768px) {
+  .footer-bottom {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
 }
 
 .feature-grid {
