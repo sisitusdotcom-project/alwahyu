@@ -25,8 +25,15 @@
 }
 
 .profile-card li {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   color: var(--alwahyu-text);
+  line-height: 1.6;
+}
+
+.profile-card li strong {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--alwahyu-dark);
 }
 
 .lulusan-tags-wrapper {

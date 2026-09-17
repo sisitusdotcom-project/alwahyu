@@ -663,6 +663,16 @@
   margin-bottom: 24px;
 }
 
+.admin-tab-list li {
+  margin-bottom: 15px;
+}
+
+.admin-tab-list li strong {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--alwahyu-dark);
+}
+
 .jam-layanan-box {
   background: white;
   border: 1px solid var(--alwahyu-border);
