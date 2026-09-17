@@ -424,7 +424,7 @@
 
 @media (min-width: 900px) {
   .footer-grid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -572,6 +572,7 @@
 .feature-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 30px rgba(15, 118, 110, 0.08);
+  border-color: var(--alwahyu-primary);
 }
 
 .feature-card .card-icon,
@@ -592,6 +593,20 @@
   background: rgba(15, 118, 110, 0.08);
   color: var(--alwahyu-primary);
   border-radius: 50%;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.card-icon i {
+  font-size: 1.5rem;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.feature-card:hover .card-icon {
+  background: rgba(15, 118, 110, 0.15);
+}
+
+.feature-card:hover .card-icon i {
+  transform: scale(1.12);
 }
 
 .card-icon svg,
@@ -625,14 +640,28 @@
 }
 
 .card-link {
+  grid-column: 1 / -1;
   color: var(--alwahyu-primary);
   text-decoration: none;
   font-weight: 600;
+  font-size: var(--fs-small);
   transition: color 0.3s;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.card-link::after {
+  content: "\2192";
+  transition: transform 0.3s;
 }
 
 .card-link:hover {
   color: var(--alwahyu-primary-2);
+}
+
+.card-link:hover::after {
+  transform: translateX(4px);
 }
 
 .news-grid-custom {
@@ -662,7 +691,7 @@
 
 .news-card-img-wrapper {
   width: 100%;
-  height: 140px;
+  height: 180px;
   overflow: hidden;
   position: relative;
   background: #f1f5f9;
