@@ -126,11 +126,6 @@ p {
   transition: width 0.3s ease;
 }
 
-.section-title.text-center::after,
-.text-center .section-title::after {
-  left: 50%;
-  transform: translateX(-50%);
-}
 
 .section-desc {
   max-width: 800px;
