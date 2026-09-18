@@ -2,11 +2,11 @@
 
 .bank-detail-box {
   background: linear-gradient(135deg, #f0fdf4, #dcfce7);
-  padding: 20px;
+  padding: var(--space-20);
   border-radius: 16px;
   text-align: center;
   border: 2px dashed var(--alwahyu-primary);
-  margin-top: 20px;
+  margin-top: var(--space-20);
   cursor: pointer;
   transition: all 0.3s ease;
   position: relative;
@@ -47,7 +47,7 @@
 .bank-name {
   font-size: var(--fs-body);
   color: #64748b;
-  margin-bottom: 8px;
+  margin-bottom: var(--space-8);
 }
 
 .bank-number {
@@ -55,7 +55,7 @@
   font-weight: 800;
   color: var(--alwahyu-dark);
   letter-spacing: clamp(1px, 1vw, 4px);
-  margin-bottom: 8px;
+  margin-bottom: var(--space-8);
   word-break: break-word;
 }
 
@@ -66,13 +66,13 @@
 
 .donation-footer {
   text-align: center;
-  margin-top: 20px;
+  margin-top: var(--space-20);
   color: var(--alwahyu-text);
 }
 
 .donation-thanks {
   text-align: center;
-  margin-top: 10px;
+  margin-top: var(--space-10);
   font-size: var(--fs-h3);
   color: var(--alwahyu-primary);
   font-weight: 700;
@@ -94,13 +94,13 @@
 
 
 .base-card h2 {
-  margin-bottom: 24px;
+  margin-bottom: var(--space-24);
 }
 
 .custom-form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: var(--space-20);
 }
 
 .form-row {
@@ -109,7 +109,7 @@
 
 .form-row label {
   display: block;
-  margin-bottom: 8px;
+  margin-bottom: var(--space-8);
   font-weight: 600;
   color: var(--alwahyu-dark);
 }
@@ -118,7 +118,7 @@
 .form-row select,
 .form-row textarea {
   width: 100%;
-  padding: 12px 16px;
+  padding: var(--space-12) var(--space-16);
   border: 1px solid var(--alwahyu-border);
   border-radius: 10px;
   font-size: var(--fs-body);
@@ -142,9 +142,9 @@
 }
 
 .info-list li {
-  margin-bottom: 15px;
+  margin-bottom: var(--space-15);
   border-bottom: 1px solid var(--alwahyu-border);
-  padding-bottom: 15px;
+  padding-bottom: var(--space-15);
   font-size: var(--fs-body);
 }
 
@@ -158,7 +158,7 @@
   background: white;
   border: 1px solid var(--alwahyu-border);
   border-radius: 16px;
-  padding: 16px;
+  padding: var(--space-16);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
   display: flex;
   flex-direction: column;
@@ -166,12 +166,12 @@
 }
 
 .badge-category {
-  padding: 4px 12px;
+  padding: var(--space-4) var(--space-12);
   border-radius: 99px;
   font-size: var(--fs-small);
   font-weight: 700;
   display: inline-block;
-  margin-bottom: 15px;
+  margin-bottom: var(--space-15);
 }
 
 .badge-green {
@@ -192,8 +192,8 @@
 .info-block {
   background: #f8fafc;
   border-radius: 8px;
-  padding: 12px 16px;
-  margin-bottom: 20px;
+  padding: var(--space-12) var(--space-16);
+  margin-bottom: var(--space-20);
   font-size: var(--fs-small);
 }
 
@@ -220,13 +220,13 @@
 .status-check-form {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  margin-top: 16px;
+  gap: var(--space-12);
+  margin-top: var(--space-16);
 }
 
 .status-check-input {
   width: 100%;
-  padding: 12px 16px;
+  padding: var(--space-12) var(--space-16);
   border: 1px solid var(--alwahyu-border);
   border-radius: 10px;
   font-size: var(--fs-body);
@@ -244,20 +244,20 @@
 
 .status-check-btn {
   width: 100%;
-  padding: 12px;
+  padding: var(--space-12);
   font-size: var(--fs-body);
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: var(--space-8);
 }
 
 .status-form-icon-text {
   font-size: var(--fs-h2);
-  margin-bottom: 12px;
+  margin-bottom: var(--space-12);
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: var(--space-10);
 }
 
 @media (max-width: 600px) {
@@ -266,7 +266,7 @@
   
 
   .bank-detail-box {
-    padding: 16px;
+    padding: var(--space-16);
   }
 }
 
@@ -290,7 +290,7 @@
 
 .timeline-item {
   position: relative;
-  margin-bottom: 24px;
+  margin-bottom: var(--space-24);
   padding-left: 42px;
   animation: fadeInUp 0.5s ease;
 }
@@ -335,7 +335,7 @@
 .timeline-content h3 {
   font-size: 1rem;
   color: var(--alwahyu-dark);
-  margin-bottom: 6px;
+  margin-bottom: var(--space-6);
   font-weight: 700;
 }
 
@@ -348,20 +348,20 @@
 .form-grid-2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  gap: var(--space-20);
 }
 
 .form-section-title {
   font-size: var(--fs-h3);
   color: var(--alwahyu-dark);
   font-weight: 700;
-  margin-top: 20px;
-  margin-bottom: 10px;
-  padding-bottom: 8px;
+  margin-top: var(--space-20);
+  margin-bottom: var(--space-10);
+  padding-bottom: var(--space-8);
   border-bottom: 2px solid var(--alwahyu-border);
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: var(--space-8);
 }
 
 .form-section-title i {
@@ -387,7 +387,7 @@
 }
 
 .js-success-title {
-  margin-bottom: 12px;
+  margin-bottom: var(--space-12);
   font-size: var(--fs-h2);
   text-align: center;
 }
@@ -395,33 +395,33 @@
 .js-success-desc {
   color: var(--alwahyu-text);
   line-height: 1.6;
-  margin-bottom: 24px;
+  margin-bottom: var(--space-24);
 }
 
 .js-account-info-box {
   background: #f8fafc;
   border: 1px solid var(--alwahyu-border);
   border-radius: 12px;
-  padding: 20px;
+  padding: var(--space-20);
   text-align: left;
-  margin-bottom: 30px;
+  margin-bottom: var(--space-30);
 }
 
 .js-account-info-title {
   font-weight: 700;
   color: var(--alwahyu-dark);
-  margin-bottom: 10px;
+  margin-bottom: var(--space-10);
   font-size: var(--fs-body);
 }
 
 .js-account-info-text {
-  margin-bottom: 6px;
+  margin-bottom: var(--space-6);
   font-size: var(--fs-body);
   color: var(--alwahyu-text);
 }
 
 .js-account-info-text.mb-12 {
-  margin-bottom: 12px;
+  margin-bottom: var(--space-12);
 }
 
 .js-account-info-note {
@@ -429,17 +429,17 @@
   color: #64748b;
   line-height: 1.4;
   border-top: 1px solid var(--alwahyu-border);
-  padding-top: 10px;
+  padding-top: var(--space-10);
 }
 
 .js-btn-primary-padded {
   display: inline-block;
-  padding: 12px 30px;
+  padding: var(--space-12) var(--space-30);
 }
 
 .js-loading-container {
   text-align: center;
-  padding: 20px;
+  padding: var(--space-20);
 }
 
 .js-loading-icon {
@@ -448,7 +448,7 @@
 }
 
 .js-loading-text {
-  margin-top: 10px;
+  margin-top: var(--space-10);
   color: var(--alwahyu-text);
 }
 
@@ -456,8 +456,8 @@
   background: #f8fafc;
   border: 1px solid var(--alwahyu-border);
   border-radius: 12px;
-  padding: 16px;
-  margin-bottom: 20px;
+  padding: var(--space-16);
+  margin-bottom: var(--space-20);
 }
 
 .js-status-header {
@@ -465,10 +465,10 @@
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid var(--alwahyu-border);
-  padding-bottom: 12px;
-  margin-bottom: 16px;
+  padding-bottom: var(--space-12);
+  margin-bottom: var(--space-16);
   flex-wrap: wrap;
-  gap: 10px;
+  gap: var(--space-10);
 }
 
 .js-status-name {
@@ -486,7 +486,7 @@
 .js-status-badge {
   background: rgba(62, 125, 55, 0.1);
   color: var(--alwahyu-primary);
-  padding: 4px 12px;
+  padding: var(--space-4) var(--space-12);
   border-radius: 99px;
   font-size: var(--fs-small);
   font-weight: 700;
@@ -496,10 +496,10 @@
   display: flex;
   justify-content: space-between;
   position: relative;
-  margin: 40px 0 20px 0;
+  margin: var(--space-40) 0 var(--space-20) 0;
   padding: 0 10px;
   overflow-x: auto;
-  gap: 20px;
+  gap: var(--space-20);
 }
 
 .js-timeline-line-bg {
@@ -549,8 +549,8 @@
 }
 
 .js-status-msg {
-  margin-top: 24px;
-  padding: 15px;
+  margin-top: var(--space-24);
+  padding: var(--space-15);
   border-radius: 8px;
   background: rgba(62, 125, 55, 0.05);
   color: var(--alwahyu-primary);
@@ -562,7 +562,7 @@
 
 .js-error-container {
   text-align: center;
-  padding: 20px;
+  padding: var(--space-20);
   border: 1px dashed #ef4444;
   background: rgba(239, 68, 68, 0.02);
   border-radius: 12px;
@@ -571,13 +571,13 @@
 .js-error-icon {
   font-size: var(--fs-h1);
   color: #ef4444;
-  margin-bottom: 12px;
+  margin-bottom: var(--space-12);
 }
 
 .js-error-title {
   font-weight: 700;
   color: #ef4444;
-  margin-bottom: 6px;
+  margin-bottom: var(--space-6);
   margin-top: 0;
 }
 
@@ -590,10 +590,10 @@
 .tabs-wrapper {
   display: flex;
   justify-content: center;
-  gap: 15px;
-  margin-bottom: 40px;
+  gap: var(--space-15);
+  margin-bottom: var(--space-40);
   border-bottom: 2px solid var(--alwahyu-border);
-  padding-bottom: 15px;
+  padding-bottom: var(--space-15);
   flex-wrap: wrap;
 }
 
@@ -603,7 +603,7 @@
   font-size: var(--fs-h3);
   font-weight: 700;
   color: var(--alwahyu-text);
-  padding: 10px 20px;
+  padding: var(--space-10) var(--space-20);
   cursor: pointer;
   transition: all 0.3s;
   border-radius: 8px;
@@ -620,44 +620,44 @@
   font-size: var(--fs-h2);
   color: var(--alwahyu-dark);
   font-weight: 700;
-  margin-bottom: 15px;
+  margin-bottom: var(--space-15);
 }
 
 .admin-tab-desc {
   color: var(--alwahyu-text);
   line-height: 1.6;
-  margin-bottom: 24px;
+  margin-bottom: var(--space-24);
 }
 
 .admin-tab-subtitle {
   font-weight: 700;
   color: var(--alwahyu-dark);
-  margin-bottom: 12px;
+  margin-bottom: var(--space-12);
   font-size: var(--fs-body);
 }
 
 .admin-tab-subtitle-bordered {
   font-weight: 700;
   color: var(--alwahyu-dark);
-  margin-bottom: 15px;
+  margin-bottom: var(--space-15);
   border-bottom: 1px solid var(--alwahyu-border);
-  padding-bottom: 10px;
+  padding-bottom: var(--space-10);
 }
 
 .admin-tab-list {
-  padding-left: 20px;
+  padding-left: var(--space-20);
   color: var(--alwahyu-text);
   line-height: 1.8;
-  margin-bottom: 24px;
+  margin-bottom: var(--space-24);
 }
 
 .admin-tab-list li {
-  margin-bottom: 15px;
+  margin-bottom: var(--space-15);
 }
 
 .admin-tab-list li strong {
   display: block;
-  margin-bottom: 4px;
+  margin-bottom: var(--space-4);
   color: var(--alwahyu-dark);
 }
 
@@ -671,27 +671,27 @@
 
 .status-check-header {
   font-size: var(--fs-h2);
-  margin-bottom: 12px;
+  margin-bottom: var(--space-12);
 }
 
 .status-check-desc {
   color: var(--alwahyu-text);
-  margin-bottom: 20px;
+  margin-bottom: var(--space-20);
   font-size: var(--fs-body);
 }
 
 .status-check-form {
   display: flex;
-  gap: 12px;
+  gap: var(--space-12);
   max-width: 600px;
-  margin-bottom: 16px;
+  margin-bottom: var(--space-16);
   flex-wrap: wrap;
 }
 
 .status-check-input {
   flex: 1;
   min-width: 250px;
-  padding: 8px 12px;
+  padding: var(--space-8) var(--space-12);
   border: 1px solid var(--alwahyu-border);
   border-radius: 8px;
   font-size: var(--fs-body);
@@ -700,19 +700,19 @@
 .status-check-btn {
   margin: 0;
   width: auto;
-  padding: 8px 16px;
+  padding: var(--space-8) var(--space-16);
   white-space: nowrap;
 }
 
 #status-result-container {
   border-top: 1px solid var(--alwahyu-border);
-  padding-top: 16px;
-  margin-top: 16px;
+  padding-top: var(--space-16);
+  margin-top: var(--space-16);
 }
 
 .form-section-header {
   font-size: var(--fs-h2);
-  margin-bottom: 20px;
+  margin-bottom: var(--space-20);
 }
 
 .form-info-text {
@@ -720,13 +720,13 @@
   color: var(--alwahyu-text);
   line-height: 1.6;
   display: block;
-  margin-top: 4px;
+  margin-top: var(--space-4);
 }
 
 .donasi-hero-icon {
   font-size: 3.5rem;
-  margin-bottom: 15px;
-  margin-right: 12px;
+  margin-bottom: var(--space-15);
+  margin-right: var(--space-12);
   color: var(--alwahyu-primary);
   display: inline-block;
   vertical-align: middle;
@@ -734,14 +734,14 @@
 
 .donasi-hero-title {
   font-size: var(--fs-h1);
-  margin-bottom: 15px;
+  margin-bottom: var(--space-15);
   display: inline-block;
   vertical-align: middle;
 }
 
 .donasi-hero-subtitle {
   font-size: var(--fs-h2);
-  margin-bottom: 15px;
+  margin-bottom: var(--space-15);
   opacity: 0.9;
 }
 
@@ -755,14 +755,14 @@
   font-size: var(--fs-h3);
   font-weight: 700;
   color: var(--alwahyu-dark);
-  margin-bottom: 8px;
+  margin-bottom: var(--space-8);
 }
 
 .donasi-card-desc {
   font-size: var(--fs-body);
   color: var(--alwahyu-text);
   line-height: 1.5;
-  margin-bottom: 20px;
+  margin-bottom: var(--space-20);
 }
 
 .donasi-progress-meta {
@@ -770,7 +770,7 @@
   justify-content: space-between;
   font-size: var(--fs-small);
   font-weight: 600;
-  margin-bottom: 6px;
+  margin-bottom: var(--space-6);
 }
 
 .donasi-progress-bar-bg {
@@ -779,7 +779,7 @@
   background: #e2e8f0;
   border-radius: 99px;
   overflow: hidden;
-  margin-bottom: 20px;
+  margin-bottom: var(--space-20);
 }
 
 .donasi-progress-bar-fill {
@@ -791,11 +791,11 @@
 .donasi-account-meta {
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 12px;
+  gap: var(--space-12);
+  padding: var(--space-12);
   background: rgba(62, 125, 55, 0.05);
   border-radius: 8px;
-  margin-bottom: 20px;
+  margin-bottom: var(--space-20);
   border: 1px solid rgba(62, 125, 55, 0.1);
 }
 
@@ -803,7 +803,7 @@
   font-size: var(--fs-body);
   font-weight: 700;
   color: var(--alwahyu-dark);
-  margin: 0 0 4px 0;
+  margin: 0 0 var(--space-4) 0;
 }
 
 .donasi-bank-text {
@@ -822,18 +822,18 @@
 
 @media (min-width: 768px) {
   .status-form-container {
-    padding: 32px;
+    padding: var(--space-32);
   }
   
   .status-check-form {
     flex-direction: row;
-    gap: 16px;
+    gap: var(--space-16);
   }
   
   .status-check-btn {
     width: auto;
     white-space: nowrap;
-    padding: 12px 24px;
+    padding: var(--space-12) var(--space-24);
   }
 
   .timeline {
@@ -847,7 +847,7 @@
   
   .timeline-item {
     padding-left: 80px;
-    margin-bottom: 40px;
+    margin-bottom: var(--space-40);
   }
   
   .timeline-icon {
@@ -868,7 +868,7 @@
   
   .timeline-content h3 {
     font-size: var(--fs-h3);
-    margin-bottom: 8px;
+    margin-bottom: var(--space-8);
   }
   
   .timeline-content p {
@@ -883,7 +883,7 @@
 .info-list-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: var(--space-16);
 }
 
 .info-item {
@@ -893,8 +893,8 @@
 
 .info-icon {
   float: left;
-  margin-right: 10px;
-  margin-bottom: 4px;
+  margin-right: var(--space-10);
+  margin-bottom: var(--space-4);
   width: 32px;
   height: 32px;
   border-radius: 50%;
@@ -910,7 +910,7 @@
   font-size: 1.05rem;
   font-weight: 700;
   color: var(--alwahyu-dark);
-  margin-bottom: 6px;
+  margin-bottom: var(--space-6);
   line-height: 1.3;
 }
 
@@ -922,7 +922,7 @@
 }
 
 .info-text p:not(:last-child) {
-  margin-bottom: 2px;
+  margin-bottom: var(--space-2);
 }
 
 .styled-bullet-list {
@@ -933,8 +933,8 @@
 
 .styled-bullet-list li {
   position: relative;
-  padding-left: 18px;
-  margin-bottom: 6px;
+  padding-left: var(--space-18);
+  margin-bottom: var(--space-6);
   font-size: 0.95rem;
   color: var(--alwahyu-text);
   line-height: 1.5;

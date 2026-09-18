@@ -19,4 +19,24 @@
   --pad-card-y: clamp(20px, 5vw, 32px);
   --pad-card: var(--pad-card-y) var(--pad-card-x);
   --pad-card-lg: clamp(24px, 6vw, 40px);
+
+  /* Global Spacing Scale */
+  --space-2: 2px;
+  --space-4: 4px;
+  --space-6: 6px;
+  --space-8: 8px;
+  --space-10: 10px;
+  --space-12: 12px;
+  --space-15: 15px;
+  --space-16: 16px;
+  --space-18: 18px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-30: 30px;
+  --space-32: 32px;
+  --space-40: 40px;
+  --space-48: 48px;
+  --space-50: 50px;
+  --space-60: 60px;
+
 }
