@@ -81,24 +81,23 @@ document.addEventListener("DOMContentLoaded", () => {
   // --- WhatsApp Floating Button ---
   if (!document.querySelector('.wa-float')) {
     const waFloat = document.createElement('a');
-    
+
     const hour = new Date().getHours();
     let greeting = 'malam';
     if (hour >= 4 && hour < 11) greeting = 'pagi';
     else if (hour >= 11 && hour < 15) greeting = 'siang';
     else if (hour >= 15 && hour < 18) greeting = 'sore';
-    
+
     const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-    
-    // Teks yang sama persis untuk kedua platform. 
-    // Menggunakan \n (enter ke baris 3) ditambah \u200B (karakter tak kasat mata) 
-    // agar WhatsApp Desktop tidak memotong enter terakhirnya.
-    const waText = "_Assalamu'alaikum Wr. Wb. 🙏_\nSelamat " + greeting + ",\n\u200B";
-    
+
     if (isMobile) {
-      waFloat.href = "https://wa.me/6281230200098?text=" + encodeURIComponent(waText);
+      // Mobile: Menggunakan format murni %0A untuk enter dan %20 untuk spasi sesuai info terbaru
+      const waTextMobile = "_Assalamu'alaikum%20Wr.%20Wb.%20🙏_%0ASelamat%20" + greeting + ",%0A%0A";
+      waFloat.href = "https://wa.me/6281230200098?text=" + waTextMobile;
     } else {
-      waFloat.href = "https://api.whatsapp.com/send?phone=6281230200098&text=" + encodeURIComponent(waText);
+      // Desktop: Jangan diotak-atik (sudah pas di baris ketiga)
+      const waTextDesktop = "_Assalamu'alaikum Wr. Wb. 🙏_\nSelamat " + greeting + ",\n\u200B";
+      waFloat.href = "https://api.whatsapp.com/send?phone=6281230200098&text=" + encodeURIComponent(waTextDesktop);
     }
     waFloat.className = 'wa-float slide-in-up animate';
     waFloat.target = '_blank';
@@ -128,36 +127,36 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
-  // --- Section Title First Word Bold ---
-  document.querySelectorAll('.section-title').forEach(el => {
-    if (!el.querySelector('strong')) {
-      let walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT, null, false);
-      let node = walker.nextNode();
-      while(node) {
-        if(node.nodeValue.trim().length > 0) {
-          let words = node.nodeValue.trim().split(/\s+/);
-          let firstWord = words.shift();
-          let rest = words.join(' ');
-          
-          let strong = document.createElement('strong');
-          strong.textContent = firstWord + (rest.length > 0 ? ' ' : '');
-          
-          let restNode = document.createTextNode(rest);
-          
-          let parent = node.parentNode;
-          parent.insertBefore(strong, node);
-          parent.insertBefore(restNode, node);
-          parent.removeChild(node);
-          break;
-        }
-        node = walker.nextNode();
+// --- Section Title First Word Bold ---
+document.querySelectorAll('.section-title').forEach(el => {
+  if (!el.querySelector('strong')) {
+    let walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT, null, false);
+    let node = walker.nextNode();
+    while (node) {
+      if (node.nodeValue.trim().length > 0) {
+        let words = node.nodeValue.trim().split(/\s+/);
+        let firstWord = words.shift();
+        let rest = words.join(' ');
+
+        let strong = document.createElement('strong');
+        strong.textContent = firstWord + (rest.length > 0 ? ' ' : '');
+
+        let restNode = document.createTextNode(rest);
+
+        let parent = node.parentNode;
+        parent.insertBefore(strong, node);
+        parent.insertBefore(restNode, node);
+        parent.removeChild(node);
+        break;
       }
+      node = walker.nextNode();
     }
-  });
+  }
+});
 
 
 // Preloader logic
-window.addEventListener('load', function() {
+window.addEventListener('load', function () {
   const preloader = document.getElementById('preloader');
   if (preloader) {
     preloader.classList.add('hidden');
@@ -170,27 +169,27 @@ window.addEventListener('load', function() {
 
 // --- Bank Box Copy Logic ---
 document.addEventListener('DOMContentLoaded', () => {
-      const bankBoxes = document.querySelectorAll('.bank-detail-box');
-      bankBoxes.forEach(box => {
-        box.addEventListener('click', () => {
-          const bankNumElement = box.querySelector('.bank-number');
-          if (!bankNumElement) return;
-          
-          const textToCopy = bankNumElement.textContent.trim();
-          navigator.clipboard.writeText(textToCopy).then(() => {
-            box.style.setProperty('--copy-text', "'Nomor Tersalin!'");
-            box.classList.add('copied');
-            
-            setTimeout(() => {
-              box.classList.remove('copied');
-              setTimeout(() => {
-                box.style.removeProperty('--copy-text');
-              }, 300); // wait for fade out
-            }, 2000);
-          }).catch(err => {
-            console.error('Gagal menyalin:', err);
-            alert('Gagal menyalin nomor rekening');
-          });
-        });
+  const bankBoxes = document.querySelectorAll('.bank-detail-box');
+  bankBoxes.forEach(box => {
+    box.addEventListener('click', () => {
+      const bankNumElement = box.querySelector('.bank-number');
+      if (!bankNumElement) return;
+
+      const textToCopy = bankNumElement.textContent.trim();
+      navigator.clipboard.writeText(textToCopy).then(() => {
+        box.style.setProperty('--copy-text', "'Nomor Tersalin!'");
+        box.classList.add('copied');
+
+        setTimeout(() => {
+          box.classList.remove('copied');
+          setTimeout(() => {
+            box.style.removeProperty('--copy-text');
+          }, 300); // wait for fade out
+        }, 2000);
+      }).catch(err => {
+        console.error('Gagal menyalin:', err);
+        alert('Gagal menyalin nomor rekening');
       });
     });
+  });
+});
