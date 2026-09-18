@@ -385,3 +385,16 @@
     margin-top: 40px;
   }
 }
+
+/* --- Extracted Inline Styles Cleanup --- */
+.insta-follow-wrap {
+  text-align: right;
+  margin-top: 24px;
+}
+
+.insta-embed-container {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  max-width: 100%;
+}

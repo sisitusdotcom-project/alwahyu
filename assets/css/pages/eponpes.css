@@ -863,3 +863,20 @@
     font-size: var(--fs-small);
   }
 }
+
+/* --- Extracted Inline Styles Cleanup --- */
+.ep-section-pt20 { padding-top: 20px; }
+.ep-dashboard { display: grid; }
+.ep-table-header { font-weight: 700; background: #f8fafc; }
+.ep-btn-block { margin-top: 0; width: 100%; }
+.ep-info-note { font-size: 0.8rem; color: #64748b; margin-top: 12px; text-align: center; line-height: 1.4; }
+.ep-form-nomt { margin-top: 0; }
+.ep-btn-auto { margin-top: 0; width: auto; }
+.ep-mb-15 { margin-bottom: 15px; }
+.ep-mb-20 { margin-bottom: 20px; }
+.ep-stat-success { background: #f0fdf4; border-color: #bbf7d0; }
+.ep-stat-danger { background: #fef2f2; border-color: #fecaca; }
+.ep-info-alert-text { text-align: left; line-height: 1.5; }
+.ep-flex-col-12 { display: flex; flex-direction: column; gap: 12px; }
+.ep-flex-col-20 { display: flex; flex-direction: column; gap: 20px; }
+.ep-invoice-nominal { font-size: 1.25rem; font-weight: 800; color: var(--alwahyu-dark); }

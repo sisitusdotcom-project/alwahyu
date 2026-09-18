@@ -113,9 +113,9 @@
         <p class='section-desc'>Portal Digital Terpadu Santri dan Wali Santri PPTQ AL WAHYU.</p>
       </div>
     </section>
-    <section class="section-padding fade-in-up delay-100" style="padding-top:20px;">
+    <section class="section-padding fade-in-up delay-100 ep-section-pt20">
       <div class="container">
-        <div class="ep-dashboard" style="display: grid;">
+        <div class="ep-dashboard">
           <div class="ep-sidebar">
             <div class="ep-profile-box">
               <div class="ep-avatar" id="userAvatar">AW</div>
@@ -174,7 +174,7 @@
                   <h3><i class="ph-fill ph-chart-line-up"></i> Progres Target Hafalan 30 Juz</h3>
                   <div class="ep-progress-container">
                     <div class="ep-progress-bar-bg">
-                      <div class="ep-progress-bar" id="santri-progress-bar" style="width: 0%;"></div>
+                      <div class="ep-progress-bar" id="santri-progress-bar"></div>
                     </div>
                     <div class="ep-progress-text">
                       <span>Capaian: <strong id="progress-juz-text">0 Juz</strong></span>
@@ -221,7 +221,7 @@
                   </div>
                   <div class="ep-card">
                     <h3><i class="ph-fill ph-megaphone"></i> Pengumuman Terbaru</h3>
-                    <div id="santri-dashboard-pengumuman-list" style="display:flex; flex-direction:column; gap:12px;">
+                    <div id="santri-dashboard-pengumuman-list" class="ep-flex-col-12">
                     </div>
                   </div>
                 </div>
@@ -229,7 +229,7 @@
               <div id="panel-santri-setoran" class="ep-tab-panel">
                 <div class="ep-card">
                   <h3><i class="ph-fill ph-paper-plane-tilt"></i> Setor Hafalan Mandiri / Online</h3>
-                  <form id="form-santri-setor" class="login-form" style="margin-top:0;">
+                  <form id="form-santri-setor" class="login-form ep-form-nomt">
                     <div class="ep-form-row">
                       <div class="form-group">
                         <label for="setor-surat">Surah / Kitab</label>
@@ -244,7 +244,7 @@
                         <input type="number" id="setor-ayat-akhir" placeholder="15" required>
                       </div>
                     </div>
-                    <button type="submit" class="btn-primary" style="margin-top:0; width:auto;"><i class="ph-fill ph-paper-plane-tilt"></i> Ajukan Setoran</button>
+                    <button type="submit" class="btn-primary ep-btn-auto"><i class="ph-fill ph-paper-plane-tilt"></i> Ajukan Setoran</button>
                   </form>
                 </div>
                 <div class="ep-card">
@@ -308,7 +308,7 @@
               <div id="panel-santri-perizinan" class="ep-tab-panel">
                 <div class="ep-card">
                   <h3><i class="ph-fill ph-calendar-plus"></i> Form Pengajuan Izin Keluar / Pulang</h3>
-                  <form id="form-santri-izin" class="login-form" style="margin-top:0;">
+                  <form id="form-santri-izin" class="login-form ep-form-nomt">
                     <div class="ep-form-row">
                       <div class="form-group">
                         <label for="izin-jenis">Jenis Izin</label>
@@ -323,11 +323,11 @@
                         <input type="date" id="izin-kembali" required>
                       </div>
                     </div>
-                    <div class="form-group" style="margin-bottom:15px;">
+                    <div class="form-group ep-mb-15">
                       <label for="izin-keterangan">Keterangan / Alasan</label>
                       <textarea id="izin-keterangan" placeholder="Berikan rincian alasan pengajuan izin..." required></textarea>
                     </div>
-                    <button type="submit" class="btn-primary" style="margin-top:0; width:auto;"><i class="ph-fill ph-paper-plane-tilt"></i> Kirim Permohonan</button>
+                    <button type="submit" class="btn-primary ep-btn-auto"><i class="ph-fill ph-paper-plane-tilt"></i> Kirim Permohonan</button>
                   </form>
                 </div>
                 <div class="ep-card">
@@ -350,7 +350,7 @@
                 </div>
               </div>
               <div id="panel-santri-pengumuman" class="ep-tab-panel">
-                <div id="santri-pengumuman-wall" style="display:flex; flex-direction:column; gap:20px;">
+                <div id="santri-pengumuman-wall" class="ep-flex-col-20">
                 </div>
               </div>
             </div>
@@ -367,9 +367,9 @@
       </div>
       <form id="form-upload-bukti">
         <input type="hidden" id="modal-invoice-id">
-        <div class="form-group" style="margin-bottom: 15px;">
+        <div class="form-group ep-mb-15">
           <label>Nominal Tagihan</label>
-          <div style="font-size: 1.25rem; font-weight: 800; color: var(--alwahyu-dark);" id="modal-invoice-nominal">Rp 1.200.000</div>
+          <div class="ep-invoice-nominal" id="modal-invoice-nominal">Rp 1.200.000</div>
         </div>
         <div class="form-group" class="mb-20">
           <label for="payment-proof-file">File Bukti Transfer (Simulasi)</label>
@@ -379,7 +379,7 @@
             <option value="struk_atm_bsi.png">struk_atm_bsi.png</option>
           </select>
         </div>
-        <button type="submit" class="btn-primary" style="margin-top:0; width:100%;"><i class="ph-fill ph-paper-plane-tilt"></i> Kirim Bukti Transfer</button>
+        <button type="submit" class="btn-primary ep-btn-block"><i class="ph-fill ph-paper-plane-tilt"></i> Kirim Bukti Transfer</button>
       </form>
     </div>
   </div>

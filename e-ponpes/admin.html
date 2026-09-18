@@ -113,9 +113,9 @@
         <p class='section-desc'>Portal Digital Tata Usaha dan Administrasi PPTQ AL WAHYU.</p>
       </div>
     </section>
-    <section class="section-padding fade-in-up delay-100" style="padding-top:20px;">
+    <section class="section-padding fade-in-up delay-100 ep-section-pt20">
       <div class="container">
-        <div class="ep-dashboard" style="display: grid;">
+        <div class="ep-dashboard">
           <div class="ep-sidebar">
             <div class="ep-profile-box">
               <div class="ep-avatar" id="userAvatar">AW</div>
@@ -198,7 +198,7 @@
                             <td>Rp 21.100.000</td>
                             <td>-</td>
                           </tr>
-                          <tr style="font-weight:700; background:#f8fafc;">
+                          <tr class="ep-table-header">
                             <td>Total Bulanan</td>
                             <td>Rp 45.600.000</td>
                             <td>Rp 30.300.000</td>
@@ -209,15 +209,15 @@
                   </div>
                   <div class="ep-card">
                     <h3><i class="ph-fill ph-currency-dollar"></i> Aksi Cepat Keuangan</h3>
-                    <button class="btn-primary" id="btn-admin-buat-tagihan" style="margin-top:0; width:100%;"><i class="ph-fill ph-plus-circle"></i> Buat Tagihan SPP Massal</button>
-                    <p style="font-size:0.8rem; color:#64748b; margin-top:12px; text-align:center; line-height:1.4;">Tombol di atas akan membuat invoice Syahriyah Juni 2026 secara otomatis untuk semua santri aktif.</p>
+                    <button class="btn-primary ep-btn-block" id="btn-admin-buat-tagihan"><i class="ph-fill ph-plus-circle"></i> Buat Tagihan SPP Massal</button>
+                    <p class="ep-info-note">Tombol di atas akan membuat invoice Syahriyah Juni 2026 secara otomatis untuk semua santri aktif.</p>
                   </div>
                 </div>
               </div>
               <div id="panel-admin-santri" class="ep-tab-panel">
                 <div class="ep-card">
                   <h3><i class="ph-fill ph-user-plus"></i> Form Pendaftaran Santri Baru</h3>
-                  <form id="form-admin-santri" class="login-form" style="margin-top:0;">
+                  <form id="form-admin-santri" class="login-form ep-form-nomt">
                     <div class="ep-form-row">
                       <div class="form-group">
                         <label for="as-nama">Nama Lengkap</label>
@@ -263,7 +263,7 @@
                         <input type="text" id="as-wali-wa" placeholder="0812xxxxxxxx" required>
                       </div>
                     </div>
-                    <button type="submit" class="btn-primary" style="margin-top:0; width:auto;"><i class="ph-fill ph-user-plus"></i> Daftarkan Santri</button>
+                    <button type="submit" class="btn-primary ep-btn-auto"><i class="ph-fill ph-user-plus"></i> Daftarkan Santri</button>
                   </form>
                 </div>
                 <div class="ep-card">
@@ -289,7 +289,7 @@
               <div id="panel-admin-pengurus" class="ep-tab-panel">
                 <div class="ep-card">
                   <h3><i class="ph-fill ph-user-circle"></i> Registrasi Ustadz/Ustadzah Baru</h3>
-                  <form id="form-admin-pengurus" class="login-form" style="margin-top:0;">
+                  <form id="form-admin-pengurus" class="login-form ep-form-nomt">
                     <div class="ep-form-row">
                       <div class="form-group">
                         <label for="ap-nama">Nama Lengkap & Gelar</label>
@@ -320,7 +320,7 @@
                         <input type="text" id="ap-mapel" placeholder="Fiqih, Nahwu" required>
                       </div>
                     </div>
-                    <button type="submit" class="btn-primary" style="margin-top:0; width:auto;"><i class="ph-fill ph-floppy-disk"></i> Daftarkan Pengurus</button>
+                    <button type="submit" class="btn-primary ep-btn-auto"><i class="ph-fill ph-floppy-disk"></i> Daftarkan Pengurus</button>
                   </form>
                 </div>
                 <div class="ep-card">
@@ -364,31 +364,31 @@
               <div id="panel-admin-pengumuman" class="ep-tab-panel">
                 <div class="ep-card">
                   <h3><i class="ph-fill ph-pencil-simple"></i> Buat & Terbitkan Pengumuman Baru</h3>
-                  <form id="form-admin-pengumuman" class="login-form" style="margin-top:0;">
-                    <div class="form-group" style="margin-bottom:15px;">
+                  <form id="form-admin-pengumuman" class="login-form ep-form-nomt">
+                    <div class="form-group ep-mb-15">
                       <label for="ap-judul">Judul Pengumuman</label>
                       <input type="text" id="ap-judul" placeholder="Jadwal Liburan Idul Adha" required>
                     </div>
-                    <div class="form-group" style="margin-bottom:15px;">
+                    <div class="form-group ep-mb-15">
                       <label for="ap-isi">Isi Pengumuman Lengkap</label>
                       <textarea id="ap-isi" placeholder="Tulis pengumuman di sini..." required></textarea>
                     </div>
-                    <button type="submit" class="btn-primary" style="margin-top:0; width:auto;"><i class="ph-fill ph-megaphone"></i> Publikasikan</button>
+                    <button type="submit" class="btn-primary ep-btn-auto"><i class="ph-fill ph-megaphone"></i> Publikasikan</button>
                   </form>
                 </div>
               </div>
               <div id="panel-admin-laporan" class="ep-tab-panel">
                 <div class="ep-card">
                   <h3><i class="ph-fill ph-file-text"></i> Laporan Keuangan SPP Keseluruhan</h3>
-                  <div class="ep-stats-grid" style="margin-bottom:20px;">
-                    <div class="ep-stat-card" style="background:#f0fdf4; border-color:#bbf7d0;">
+                  <div class="ep-stats-grid ep-mb-20">
+                    <div class="ep-stat-card ep-stat-success">
                       <div class="ep-stat-icon success"><i class="ph-fill ph-trend-up"></i></div>
                       <div class="ep-stat-info">
                         <span class="ep-stat-label">Total SPP Lunas</span>
                         <span class="ep-stat-value" id="laporan-total-masuk">Rp 0</span>
                       </div>
                     </div>
-                    <div class="ep-stat-card" style="background:#fef2f2; border-color:#fecaca;">
+                    <div class="ep-stat-card ep-stat-danger">
                       <div class="ep-stat-icon danger"><i class="ph-fill ph-trend-down"></i></div>
                       <div class="ep-stat-info">
                         <span class="ep-stat-label">Tunggakan Pending</span>

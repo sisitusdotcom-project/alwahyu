@@ -275,33 +275,7 @@
   </footer>
   <script src="/assets/js/global/navigation.js?v=1.0"></script>
   <script src="/assets/js/global/main.js?v=1.0"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const bankBoxes = document.querySelectorAll('.bank-detail-box');
-      bankBoxes.forEach(box => {
-        box.addEventListener('click', () => {
-          const bankNumElement = box.querySelector('.bank-number');
-          if (!bankNumElement) return;
-          
-          const textToCopy = bankNumElement.textContent.trim();
-          navigator.clipboard.writeText(textToCopy).then(() => {
-            box.style.setProperty('--copy-text', "'Nomor Tersalin!'");
-            box.classList.add('copied');
-            
-            setTimeout(() => {
-              box.classList.remove('copied');
-              setTimeout(() => {
-                box.style.removeProperty('--copy-text');
-              }, 300); // wait for fade out
-            }, 2000);
-          }).catch(err => {
-            console.error('Gagal menyalin:', err);
-            alert('Gagal menyalin nomor rekening');
-          });
-        });
-      });
-    });
-  </script>
+  
 </body>
 
 </html>

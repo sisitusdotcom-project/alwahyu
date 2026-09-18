@@ -1135,6 +1135,7 @@
 }
 
 .global-breadcrumbs {
+  text-align: left;
   font-size: var(--fs-small);
   color: #64748b;
   margin-bottom: 12px;
