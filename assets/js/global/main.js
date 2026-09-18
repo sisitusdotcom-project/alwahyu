@@ -88,7 +88,8 @@ document.addEventListener("DOMContentLoaded", () => {
     else if (hour >= 11 && hour < 15) greeting = 'siang';
     else if (hour >= 15 && hour < 18) greeting = 'sore';
     
-    waFloat.href = "https://wa.me/6281230200098?text=_Assalamu'alaikum+Wr.+Wb.%F0%9F%99%8F_%0ASelamat+" + greeting + "%0A%0A";
+    const waText = "_Assalamu'alaikum Wr. Wb. \uD83D\uDE4F\nSelamat " + greeting + "\n\n";
+    waFloat.href = "https://api.whatsapp.com/send?phone=6281230200098&text=" + encodeURIComponent(waText);
     waFloat.className = 'wa-float slide-in-up animate';
     waFloat.target = '_blank';
     waFloat.rel = 'noopener noreferrer';
