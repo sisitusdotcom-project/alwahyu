@@ -1179,3 +1179,51 @@
 body.mobile-menu-active .wa-float {
   display: none !important;
 }
+
+
+/* --- Back to Top Button --- */
+.back-to-top {
+  position: fixed;
+  bottom: 86px; /* Above WhatsApp button */
+  right: 16px;
+  width: 45px;
+  height: 45px;
+  background-color: rgba(156, 163, 175, 0.6); /* Gray semi-transparent */
+  color: white;
+  border-radius: 12px;
+  border: none;
+  font-size: 24px;
+  z-index: 9998;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  background-color: rgba(156, 163, 175, 1); /* Gray solid on hover */
+  transform: translateY(-3px);
+}
+
+/* Sembunyikan BTT saat mobile menu terbuka */
+body.mobile-menu-active .back-to-top {
+  display: none !important;
+}
+
+/* --- Global Form UX Enhancements --- */
+input:not(:placeholder-shown):invalid,
+select:not(:placeholder-shown):invalid,
+textarea:not(:placeholder-shown):invalid {
+  border-color: #ef4444 !important;
+  box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.1) !important;
+}

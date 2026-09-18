@@ -85,8 +85,29 @@ document.addEventListener("DOMContentLoaded", () => {
     waFloat.className = 'wa-float slide-in-up animate';
     waFloat.target = '_blank';
     waFloat.rel = 'noopener noreferrer';
-    waFloat.innerHTML = '<i class="ph-fill ph-whatsapp-logo"></i>';
+    waFloat.innerHTML = '<i class="ph ph-whatsapp-logo"></i>';
     document.body.appendChild(waFloat);
+  }
+
+  // --- Back to Top Button ---
+  if (!document.querySelector('.back-to-top')) {
+    const btt = document.createElement('button');
+    btt.className = 'back-to-top slide-in-up';
+    btt.innerHTML = '<i class="ph-bold ph-caret-up"></i>';
+    btt.setAttribute('aria-label', 'Kembali ke atas');
+    document.body.appendChild(btt);
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 400) {
+        btt.classList.add('visible');
+      } else {
+        btt.classList.remove('visible');
+      }
+    });
+
+    btt.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
   }
 });
   // --- Section Title First Word Bold ---
