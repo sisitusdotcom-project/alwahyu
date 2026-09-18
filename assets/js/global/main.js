@@ -1,4 +1,4 @@
-﻿document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
   // --- Intersection Observer for Animations ---
   const observerOptions = {
     root: null,
@@ -85,7 +85,7 @@
     waFloat.className = 'wa-float slide-in-up animate';
     waFloat.target = '_blank';
     waFloat.rel = 'noopener noreferrer';
-    waFloat.innerHTML = '<i class="ph ph-whatsapp-logo"></i>';
+    waFloat.innerHTML = '<i class="ph-fill ph-whatsapp-logo"></i>';
     document.body.appendChild(waFloat);
   }
 });

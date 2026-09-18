@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     menuBtn.addEventListener('click', () => {
       menuBtn.classList.toggle('active');
       mobilePanel.classList.toggle('show');
+      document.body.classList.toggle('mobile-menu-active');
       if (!mobilePanel.classList.contains('show')) {
         document.querySelectorAll('.mobile-dropdown-btn.open').forEach(openBtn => {
           openBtn.classList.remove('open');

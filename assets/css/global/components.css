@@ -1174,3 +1174,8 @@
   -webkit-text-fill-color: transparent !important;
   font-weight: 800;
 }
+
+/* Sembunyikan icon WA ketika mobile menu terbuka */
+body.mobile-menu-active .wa-float {
+  display: none !important;
+}
