@@ -81,7 +81,15 @@ document.addEventListener("DOMContentLoaded", () => {
   // --- WhatsApp Floating Button ---
   if (!document.querySelector('.wa-float')) {
     const waFloat = document.createElement('a');
-    waFloat.href = 'https://wa.me/6281230200098';
+    
+    const hour = new Date().getHours();
+    let greeting = 'malam';
+    if (hour >= 4 && hour < 11) greeting = 'pagi';
+    else if (hour >= 11 && hour < 15) greeting = 'siang';
+    else if (hour >= 15 && hour < 18) greeting = 'sore';
+    const waText = encodeURIComponent(`_Assalamu'alaikum Wr. Wb.🙏_\nSelamat ${greeting}\n\n`);
+    
+    waFloat.href = `https://wa.me/6281230200098?text=${waText}`;
     waFloat.className = 'wa-float slide-in-up animate';
     waFloat.target = '_blank';
     waFloat.rel = 'noopener noreferrer';
