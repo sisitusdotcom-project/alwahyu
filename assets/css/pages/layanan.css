@@ -1,4 +1,4 @@
-﻿.donation-card {
+.donation-card {
   background: white;
   padding: 16px;
   border-radius: 20px;
@@ -684,9 +684,6 @@
 .status-check-header {
   font-size: var(--fs-h2);
   margin-bottom: 12px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
 }
 
 .status-check-desc {
@@ -728,8 +725,6 @@
 .form-section-header {
   font-size: var(--fs-h2);
   margin-bottom: 20px;
-  border-bottom: 2px solid var(--alwahyu-border);
-  padding-bottom: 12px;
 }
 
 .form-info-text {
