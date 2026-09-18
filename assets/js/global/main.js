@@ -90,11 +90,16 @@ document.addEventListener("DOMContentLoaded", () => {
     
     const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
     
-    // Teks yang sama persis untuk kedua platform (2x enter di akhir)
-    const waText = "_Assalamu'alaikum Wr. Wb. 🙏_\nSelamat " + greeting + ",\n\n";
+    // Teks yang sama persis untuk kedua platform. 
+    // Menggunakan \n (enter ke baris 3) ditambah \u200B (karakter tak kasat mata) 
+    // agar WhatsApp Desktop tidak memotong enter terakhirnya.
+    const waText = "_Assalamu'alaikum Wr. Wb. 🙏_\nSelamat " + greeting + ",\n\u200B";
     
-    const waBaseUrl = isMobile ? "https://wa.me/6281230200098?text=" : "https://api.whatsapp.com/send?phone=6281230200098&text=";
-    waFloat.href = waBaseUrl + encodeURIComponent(waText);
+    if (isMobile) {
+      waFloat.href = "https://wa.me/6281230200098?text=" + encodeURIComponent(waText);
+    } else {
+      waFloat.href = "https://api.whatsapp.com/send?phone=6281230200098&text=" + encodeURIComponent(waText);
+    }
     waFloat.className = 'wa-float slide-in-up animate';
     waFloat.target = '_blank';
     waFloat.rel = 'noopener noreferrer';
