@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="id">
 
 <head>
@@ -371,13 +371,9 @@
           <label>Nominal Tagihan</label>
           <div class="ep-invoice-nominal" id="modal-invoice-nominal">Rp 1.200.000</div>
         </div>
-        <div class="form-group" class="mb-20">
-          <label for="payment-proof-file">File Bukti Transfer (Simulasi)</label>
-          <select id="payment-proof-file" required>
-            <option value="bukti_spp_juni_bsi.jpg">bukti_spp_juni_bsi.jpg</option>
-            <option value="transfer_mandiri_juni.png">transfer_mandiri_juni.png</option>
-            <option value="struk_atm_bsi.png">struk_atm_bsi.png</option>
-          </select>
+        <div class="form-group mb-20">
+          <label for="payment-proof-file">Unggah Bukti Transfer</label>
+          <input type="file" id="payment-proof-file" accept="image/*,application/pdf" style="width: 100%; padding: 10px; border: 1px solid var(--alwahyu-border); border-radius: 8px;" required>
         </div>
         <button type="submit" class="btn-primary ep-btn-block"><i class="ph-fill ph-paper-plane-tilt"></i> Kirim Bukti Transfer</button>
       </form>
