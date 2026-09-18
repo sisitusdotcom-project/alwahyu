@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
     const waText = "_Assalamu'alaikum Wr. Wb. \uD83D\uDE4F_\nSelamat " + greeting + ",\n\n";
     const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-    const waBaseUrl = isMobile ? "https://wa.me/6281230200098?text=" : "https://api.whatsapp.com/send?phone=6281230200098&text=";
+    const waBaseUrl = isMobile ? "whatsapp://send?phone=6281230200098&text=" : "https://api.whatsapp.com/send?phone=6281230200098&text=";
     waFloat.href = waBaseUrl + encodeURIComponent(waText);
     waFloat.className = 'wa-float slide-in-up animate';
     waFloat.target = '_blank';
