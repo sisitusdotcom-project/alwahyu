@@ -100,8 +100,13 @@ p {
   margin-bottom: 24px;
   font-weight: 200;
   position: relative;
-  padding-bottom: 28px; /* Extra padding for the ribbon */
+  padding-bottom: 20px;
   text-align: left !important;
+  /* Thin horizontal line across the title */
+  background-image: linear-gradient(rgba(15, 118, 110, 0.15), rgba(15, 118, 110, 0.15));
+  background-size: 100% 2px;
+  background-position: left calc(100% - 6px);
+  background-repeat: no-repeat;
 }
 
 .section-title strong {
@@ -109,34 +114,25 @@ p {
   color: var(--alwahyu-primary);
 }
 
-/* Ribbon Fold (Dark Triangle) */
 .section-title::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 12px;
-  height: 12px;
-  background-color: #0f4a46; /* Darker shade of primary for the shadow fold */
-  clip-path: polygon(0 0, 100% 0, 100% 100%);
-  border-radius: 0;
+  display: none;
 }
 
-/* Main Ribbon with Chevrons */
+/* Small Ribbon with Fold */
 .section-title::after {
   content: '';
   position: absolute;
   left: 0;
-  bottom: 12px;
-  width: 140px;
-  height: 16px;
-  background-color: var(--alwahyu-primary);
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 140 16'%3E%3Cpolygon points='0,0 100,0 112,8 100,16 0,16' /%3E%3Cpolygon points='104,0 114,0 126,8 114,16 104,16 116,8' /%3E%3Cpolygon points='118,0 128,0 140,8 128,16 118,16 130,8' /%3E%3C/svg%3E");
-  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 140 16'%3E%3Cpolygon points='0,0 100,0 112,8 100,16 0,16' /%3E%3Cpolygon points='104,0 114,0 126,8 114,16 104,16 116,8' /%3E%3Cpolygon points='118,0 128,0 140,8 128,16 118,16 130,8' /%3E%3C/svg%3E");
-  -webkit-mask-size: contain;
-  mask-size: contain;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
+  bottom: 0;
+  width: 70px;
+  height: 14px;
+  background-color: transparent;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 140 28' width='100%25' height='100%25'%3E%3Cpolygon points='0,16 12,16 12,28' fill='%230f4a46' /%3E%3Cpolygon points='0,0 100,0 112,8 100,16 0,16' fill='%230f766e' /%3E%3Cpolygon points='104,0 114,0 126,8 114,16 104,16 116,8' fill='%230f766e' /%3E%3Cpolygon points='118,0 128,0 140,8 128,16 118,16 130,8' fill='%230f766e' /%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: contain;
+  -webkit-mask-image: none;
+  mask-image: none;
   border-radius: 0;
   transition: opacity 0.3s ease;
 }
@@ -241,6 +237,7 @@ p {
   margin-bottom: 10px;
   padding-bottom: 0;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  background-image: none;
 }
 
 .page-header .section-title::before,
