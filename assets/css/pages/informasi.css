@@ -142,21 +142,6 @@
   margin-bottom: 30px;
 }
 
-.news-detail-breadcrumbs {
-  font-size: var(--fs-small);
-  color: #64748b;
-  margin-bottom: 12px;
-}
-
-.news-detail-breadcrumbs a {
-  color: #64748b;
-  text-decoration: none;
-}
-
-.news-detail-breadcrumbs a:hover {
-  color: var(--alwahyu-primary);
-}
-
 .news-detail-title {
   font-size: var(--fs-h2);
   font-weight: 800;
