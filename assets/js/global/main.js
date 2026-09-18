@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
     waFloat.className = 'wa-float slide-in-up animate';
     waFloat.target = '_blank';
     waFloat.rel = 'noopener noreferrer';
-    waFloat.innerHTML = '<i class="ph ph-whatsapp-logo"></i>';
+    waFloat.innerHTML = '<img src="/assets/img/icon/whatsapp.svg" alt="WhatsApp" style="width: 100%; height: 100%; display: block;" />';
     document.body.appendChild(waFloat);
   }
 
