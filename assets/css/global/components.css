@@ -1163,3 +1163,12 @@
   color: var(--alwahyu-primary);
   font-weight: bold;
 }
+
+.nav-eponpes-text {
+  background: linear-gradient(to right, #166534, #ca8a04, #ea580c) !important;
+  background-clip: text !important;
+  -webkit-background-clip: text !important;
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
+  font-weight: 800;
+}
