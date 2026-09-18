@@ -102,11 +102,16 @@ p {
   position: relative;
   padding-bottom: 20px;
   text-align: left !important;
-  /* Thin horizontal line across the title */
-  background-image: linear-gradient(rgba(15, 118, 110, 0.15), rgba(15, 118, 110, 0.15));
-  background-size: 100% 2px;
-  background-position: left calc(100% - 6px);
+  /* Thin horizontal line that connects perfectly to the tip of the ribbon */
+  background-image: linear-gradient(rgba(62, 125, 55, 0.2), rgba(62, 125, 55, 0.2));
+  background-size: calc(100% - 68px) 2px; /* Starts slightly inside the tip to prevent gaps */
+  background-position: 68px calc(100% - 9px); /* Centers vertically with the chevron tip */
   background-repeat: no-repeat;
+}
+
+.flex-between .section-title {
+  flex: 1;
+  margin-right: 20px;
 }
 
 .section-title strong {
@@ -127,7 +132,7 @@ p {
   width: 70px;
   height: 14px;
   background-color: transparent;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 140 28' width='100%25' height='100%25'%3E%3Cpolygon points='0,16 12,16 12,28' fill='%230f4a46' /%3E%3Cpolygon points='0,0 100,0 112,8 100,16 0,16' fill='%230f766e' /%3E%3Cpolygon points='104,0 114,0 126,8 114,16 104,16 116,8' fill='%230f766e' /%3E%3Cpolygon points='118,0 128,0 140,8 128,16 118,16 130,8' fill='%230f766e' /%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 140 28' width='100%25' height='100%25'%3E%3Cpolygon points='0,16 12,16 12,28' fill='%232c5927' /%3E%3Cpolygon points='0,0 100,0 112,8 100,16 0,16' fill='%233e7d37' /%3E%3Cpolygon points='104,0 114,0 126,8 114,16 104,16 116,8' fill='%233e7d37' /%3E%3Cpolygon points='118,0 128,0 140,8 128,16 118,16 130,8' fill='%233e7d37' /%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: left bottom;
   background-size: contain;
