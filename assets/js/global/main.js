@@ -82,27 +82,32 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!document.querySelector('.wa-float')) {
     const waFloat = document.createElement('a');
 
+    // 1. Logika ucapan waktu
     const hour = new Date().getHours();
     let greeting = 'malam';
     if (hour >= 4 && hour < 11) greeting = 'pagi';
     else if (hour >= 11 && hour < 15) greeting = 'siang';
     else if (hour >= 15 && hour < 18) greeting = 'sore';
 
+    // 2. Format teks mentah (Gunakan \n untuk enter biasa)
+    // Tidak perlu manual %20 atau %0A karena akan diurus oleh encodeURIComponent
+    const rawText = `_Assalamu'alaikum Wr. Wb. 🙏_\nSelamat ${greeting},\n\n`;
+
+    // 3. Deteksi perangkat & pembuatan link
     const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
     if (isMobile) {
-      // Mobile: Menggunakan format murni %0A untuk enter dan %20 untuk spasi sesuai info terbaru
-      const waTextMobile = "_Assalamu'alaikum%20Wr.%20Wb.%20🙏_%0ASelamat%20" + greeting + ",%0A%0A";
-      waFloat.href = "https://wa.me/6281230200098?text=" + waTextMobile;
+      waFloat.href = "https://wa.me/6281230200098?text=" + encodeURIComponent(rawText);
     } else {
-      // Desktop: Jangan diotak-atik (sudah pas di baris ketiga)
-      const waTextDesktop = "_Assalamu'alaikum Wr. Wb. 🙏_\nSelamat " + greeting + ",\n\u200B";
-      waFloat.href = "https://api.whatsapp.com/send?phone=6281230200098&text=" + encodeURIComponent(waTextDesktop);
+      waFloat.href = "https://web.whatsapp.com/send?phone=6281230200098&text=" + encodeURIComponent(rawText);
     }
+
+    // 4. Atribut elemen tombol
     waFloat.className = 'wa-float slide-in-up animate';
     waFloat.target = '_blank';
     waFloat.rel = 'noopener noreferrer';
     waFloat.innerHTML = '<img src="/assets/img/icon/whatsapp.svg" alt="WhatsApp" style="width: 100%; height: 100%; display: block;" />';
+
     document.body.appendChild(waFloat);
   }
 
