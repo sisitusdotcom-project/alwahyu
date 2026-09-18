@@ -1,9 +1,4 @@
-.donation-card {
-  background: white;
-  padding: 16px;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-}
+
 
 .bank-detail-box {
   background: linear-gradient(135deg, #f0fdf4, #dcfce7);
@@ -96,14 +91,9 @@
   color: white;
 }
 
-.form-card {
-  background: white;
-  padding: 16px;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-}
 
-.form-card h2 {
+
+.base-card h2 {
   margin-bottom: 24px;
 }
 
@@ -164,7 +154,7 @@
   padding-bottom: 0;
 }
 
-.donation-card-item {
+.base-card-item {
   background: white;
   border: 1px solid var(--alwahyu-border);
   border-radius: 16px;
@@ -272,10 +262,8 @@
 
 @media (max-width: 600px) {
 
-  .donation-card,
-  .form-card {
-    padding: 16px;
-  }
+  .base-card,
+  
 
   .bank-detail-box {
     padding: 16px;

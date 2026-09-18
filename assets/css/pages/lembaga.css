@@ -1,27 +1,8 @@
-.feature-card ul {
-  list-style: none;
-  padding: 0;
-  margin: 15px 0 0 0;
-  text-align: left;
-}
 
-.feature-card ul li {
-  margin-bottom: 10px;
-  font-size: var(--fs-body);
-  color: var(--alwahyu-text);
-  display: flex;
-  align-items: flex-start;
-  gap: 8px;
-  line-height: 1.4;
-}
 
-.feature-card ul li::before {
-  content: "✓";
-  color: var(--alwahyu-primary);
-  font-weight: bold;
-  flex-shrink: 0;
-  margin-top: 1px;
-}
+
+
+
 
 .visimisi-grid {
   display: grid;
@@ -533,9 +514,3 @@
   object-fit: contain;
 }
 
-.white-glass-card {
-  background: white;
-  padding: var(--pad-card);
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-}

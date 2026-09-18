@@ -4,14 +4,9 @@
   gap: 30px;
 }
 
-.profile-card {
-  background: white;
-  padding: var(--pad-card);
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-}
 
-.profile-card h3 {
+
+.base-card h3 {
   color: var(--alwahyu-primary);
   margin-bottom: 20px;
   font-size: var(--fs-h2);
@@ -19,18 +14,18 @@
   padding-bottom: 10px;
 }
 
-.profile-card ul,
-.profile-card ol {
+.base-card ul,
+.base-card ol {
   padding-left: 20px;
 }
 
-.profile-card li {
+.base-card li {
   margin-bottom: 15px;
   color: var(--alwahyu-text);
   line-height: 1.6;
 }
 
-.profile-card li strong {
+.base-card li strong {
   display: block;
   margin-bottom: 4px;
   color: var(--alwahyu-dark);

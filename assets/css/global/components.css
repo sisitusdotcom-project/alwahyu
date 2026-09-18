@@ -129,21 +129,9 @@
   background: #f8fafc;
 }
 
-.btn-daftar {
-  font-size: var(--fs-small);
-  padding: 8px 16px;
-  border-radius: 8px;
-  text-decoration: none;
-  color: white;
-  font-weight: 600;
-  background: linear-gradient(135deg, var(--alwahyu-primary), var(--alwahyu-primary-2));
-  transition: transform .2s, box-shadow .2s;
-}
 
-.btn-daftar:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 8px 20px rgba(15, 118, 110, .25);
-}
+
+
 
 .menu-btn {
   display: none;
@@ -399,12 +387,8 @@
     box-shadow: 0 8px 24px rgba(15, 23, 42, .06);
   }
 
-  .nav-menu,
-  .btn-daftar {
-    font-size: var(--fs-small);
-    display: none;
-  }
-
+  .nav-menu { display: none; }
+  .navbar > .btn-primary { display: none; }
   .menu-btn {
     display: block;
   }
@@ -882,23 +866,9 @@
   font-size: var(--fs-body);
 }
 
-.btn-submit {
-  position: relative;
-  width: 100%;
-  padding: 16px;
-  font-size: var(--fs-body);
-  font-weight: 700;
-  cursor: pointer;
-  border: none;
-  transition: all 0.3s ease;
-}
 
-.btn-submit:disabled {
-  background: #94a3b8;
-  cursor: not-allowed;
-  transform: none;
-  box-shadow: none;
-}
+
+
 
 .layanan-split-grid {
   display: grid;
@@ -1160,4 +1130,36 @@
 
 .page-header .global-breadcrumbs a:hover {
   color: #ffffff;
+}
+
+
+/* --- Global Base Card --- */
+.base-card {
+  background: white;
+  padding: var(--pad-card, 16px);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.feature-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0 0 0;
+  text-align: left;
+}
+
+.feature-card ul li {
+  margin-bottom: 10px;
+  font-size: var(--fs-small);
+  color: var(--alwahyu-text);
+  padding-left: 20px;
+  position: relative;
+}
+
+.feature-card ul li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--alwahyu-primary);
+  font-weight: bold;
 }

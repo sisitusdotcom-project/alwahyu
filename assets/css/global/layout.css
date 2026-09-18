@@ -351,12 +351,10 @@ p {
   display: inline-block;
 }
 
-.btn-full-lg {
+.btn-block {
   width: 100%;
-  padding: 16px;
-  font-size: var(--fs-body);
-  cursor: pointer;
-  border: none;
+  display: block;
+  text-align: center;
 }
 
 .h-100 {
