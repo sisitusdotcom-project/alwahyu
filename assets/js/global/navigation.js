@@ -38,6 +38,22 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
     });
+
+    // Tutup sidebar ketika sebuah link biasa (bukan dropdown) diklik
+    mobilePanel.querySelectorAll('a:not(.mobile-dropdown-btn)').forEach(link => {
+      link.addEventListener('click', () => {
+        menuBtn.classList.remove('active');
+        mobilePanel.classList.remove('show');
+        document.body.classList.remove('mobile-menu-active');
+        document.querySelectorAll('.mobile-dropdown-btn.open').forEach(openBtn => {
+          openBtn.classList.remove('open');
+          const submenu = openBtn.nextElementSibling;
+          if (submenu) {
+            submenu.classList.remove('open');
+          }
+        });
+      });
+    });
   }
   const navToggle = document.querySelector('[data-nav-toggle]');
   const navMenu = document.querySelector('[data-nav-menu]');
