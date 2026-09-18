@@ -87,9 +87,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (hour >= 4 && hour < 11) greeting = 'pagi';
     else if (hour >= 11 && hour < 15) greeting = 'siang';
     else if (hour >= 15 && hour < 18) greeting = 'sore';
-    const waText = encodeURIComponent(`_Assalamu'alaikum Wr. Wb.🙏_\nSelamat ${greeting}\n\n`);
     
-    waFloat.href = `https://wa.me/6281230200098?text=${waText}`;
+    waFloat.href = "https://wa.me/6281230200098?text=_Assalamu'alaikum+Wr.+Wb.%F0%9F%99%8F_%0ASelamat+" + greeting + "%0A%0A";
     waFloat.className = 'wa-float slide-in-up animate';
     waFloat.target = '_blank';
     waFloat.rel = 'noopener noreferrer';
