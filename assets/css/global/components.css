@@ -1178,13 +1178,13 @@ body.mobile-menu-active .wa-float {
   position: fixed;
   bottom: 86px; /* Above WhatsApp button */
   right: 16px;
-  width: 45px;
-  height: 45px;
+  width: 35px;
+  height: 35px;
   background-color: rgba(156, 163, 175, 0.6); /* Gray semi-transparent */
   color: white;
-  border-radius: 12px;
+  border-radius: 8px;
   border: none;
-  font-size: 24px;
+  font-size: 18px;
   z-index: 9998;
   display: flex;
   align-items: center;
